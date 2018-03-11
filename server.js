@@ -7,7 +7,7 @@ const cache = {};
 
 function send404(resp) {
     resp.writeHead(404, {'Content-Type': 'text/plain'});
-    resp.write('Error 404: resource not found. Пошел нахуй!');
+    resp.write('Error 404: resource not found!');
     resp.end();
 }
 
