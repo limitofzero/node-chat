@@ -1,6 +1,12 @@
-const path = require('path');
+const path = require('path'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin({
+    filename: '[name].[contenthash].css',
+    disable: process.env.NODE_ENV === 'development'
+});
 
 const sourcePath = 'client/src/',
         distPath = 'client/dist/';
@@ -18,8 +24,30 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.scss$/,
+                use: extractSass.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                url: false,
+                                minimize: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ],
+                    fallback: 'style-loader'
+                })
+            },
             { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
         ]
     },
     devServer: {
@@ -30,6 +58,6 @@ module.exports = {
         contentBase: path.join(__dirname, distPath)
     },
     plugins: [
-        new HtmlWebpackPlugin({template: sourcePath + 'index.html'})
+        new HtmlWebpackPlugin({template: sourcePath + 'index.html'}), new ExtractTextPlugin("boundle.css")
     ]
 };
