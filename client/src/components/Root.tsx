@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Chat from './Chat';
 import "../styles/components/c-root.scss";
 
 interface RootProps {}
@@ -9,6 +10,8 @@ export default class Root extends React.Component<RootProps> {
     }
 
     render() {
-        return <h1 className="c-root">First time in the typescript</h1>;
+        return <div className="container">
+            <div className="row"><Chat/></div>
+        </div>;
     }
 }
