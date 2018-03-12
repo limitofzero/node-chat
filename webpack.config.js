@@ -1,17 +1,11 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: 'src/index.html',
-    filename: 'index.html',
-    inject: 'body'
-});
 
 const sourcePath = 'client/src/',
         distPath = 'client/dist/';
 
 module.exports = {
-    devtool: "source-map",
     entry: [
         './' + sourcePath + 'index.tsx'
     ],
