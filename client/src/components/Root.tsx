@@ -6,9 +6,7 @@ import "../styles/components/root.scss";
 export default class Root extends React.Component<any> {
     render() {
         return <div className="root">
-            <Grid container>
-                <Chat/>
-            </Grid>
+            <Chat/>
         </div>
     }
 }

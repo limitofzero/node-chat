@@ -1,0 +1,9 @@
+.message-window {
+    border: 1px solid black;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+}

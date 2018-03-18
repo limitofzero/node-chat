@@ -1,19 +1,18 @@
 import * as React from 'react';
-import MsgProp from '../../interfaces/Message';
+import Props from '../../interfaces/MessageWindow';
 import Message from './Message';
-
-interface Props {
-    messages: Array<MsgProp>
-}
+import Grid from 'material-ui/Grid';
+import List from 'material-ui/List';
+import '../../styles/components/message-window.scss';
 
 export default class MessageWindow extends React.Component<Props> {
     render() {
-        const {messages} = this.props;
+        const {list} = this.props;
 
         return <div className="message-window">
-            <ul className="list">
-                {messages.map(ms=> <li><Message ms={ms}/></li>)}
-            </ul>;
-        </div>
+                    <List className="message-window__list">
+                        {list.map(ms=> <li key={ms.id}><Message {...ms}/></li>)}
+                    </List>
+                </div>;
     }
 }
