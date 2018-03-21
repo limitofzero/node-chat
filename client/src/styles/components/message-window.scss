@@ -1,3 +1,7 @@
 .message-window {
-    padding: 0 2rem;
+    padding: 0 1rem;
+
+    &__message {
+        margin-bottom: 1rem;
+    }
 }
