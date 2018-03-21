@@ -1,5 +1,6 @@
 .root {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
 }

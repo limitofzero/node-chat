@@ -3,6 +3,9 @@ import Grid from 'material-ui/Grid';
 import Message from '../../interfaces/Message';
 import MessageWindow from './MessageWindow';
 import ContactList from './ContactList';
+import Paper from 'material-ui/Paper';
+import '../../styles/components/chat.scss';
+import '../../styles/helpers/flexible.scss';
 
 export default class Chat extends React.Component<any> {
     state = {
@@ -18,11 +21,15 @@ export default class Chat extends React.Component<any> {
 
     render() {
         return <Grid className="chat" container spacing={8}>
-                <Grid item xs={12} md={3}>
-                    <ContactList list={this.state.contacts}/>
+                <Grid className="d-flex" item xs={12} md={3}>
+                    <Paper className="flex-1">
+                        <ContactList list={this.state.contacts}/>
+                    </Paper>
                 </Grid>
-                <Grid item xs={12} md={9}>
-                    <MessageWindow list={this.state.messages}/>
+                <Grid className="d-flex" item xs={12} md={9}>
+                    <Paper className="flex-1">
+                        <MessageWindow list={this.state.messages}/>
+                    </Paper>
                 </Grid>
             </Grid>
     }
