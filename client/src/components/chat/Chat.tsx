@@ -7,6 +7,7 @@ import Paper from 'material-ui/Paper';
 import '../../styles/components/chat.scss';
 import '../../styles/helpers/flexible.scss';
 
+
 export default class Chat extends React.Component<any> {
     state = {
         messages: [
@@ -20,8 +21,8 @@ export default class Chat extends React.Component<any> {
     }
 
     render() {
-        return <Grid className="chat" container spacing={8}>
-                <Grid className="d-flex" item xs={12} md={3}>
+        return <Grid className="chat root__content" container spacing={8}>
+                <Grid className="d-flex flex-1" item xs={12} md={3}>
                     <Paper className="flex-1">
                         <ContactList list={this.state.contacts}/>
                     </Paper>
