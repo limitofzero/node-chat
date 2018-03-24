@@ -28,7 +28,7 @@ export default class Chat extends React.Component<any> {
                     </Paper>
                 </Grid>
                 <Grid className="d-flex" item xs={12} md={9}>
-                    <Paper className="flex-1">
+                    <Paper className="d-flex flex-1">
                         <MessageWindow list={this.state.messages}/>
                     </Paper>
                 </Grid>
