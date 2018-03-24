@@ -1,0 +1,9 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    &__author {
+        margin-bottom: 0.5rem;
+    }
+}

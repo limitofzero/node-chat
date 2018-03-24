@@ -1,7 +1,18 @@
 .message-window {
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__list {
+        list-style: none;
+    }
 
     &__message {
         margin-bottom: 1rem;
+
+        &:first-child {
+            margin-top: 1rem;
+        }
     }
 }
