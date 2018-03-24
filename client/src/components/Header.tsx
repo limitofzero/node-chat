@@ -20,7 +20,7 @@ export default function Header() {
                         <Typography variant="title" color="inherit">
                             Your chat
                         </Typography>
-                        <Button color="inherit" className='header__right'>Login</Button>
+                        <Button color="inherit" className='header__right'>Logout</Button>
                     </Toolbar>
                 </AppBar>
             </Grid>
