@@ -7,6 +7,10 @@ import '../../styles/utils/margins.scss';
 export default class InputForm extends React.Component<{}> {
     state = {text: ''};
 
+    handleInputChange = (event: React.FormEvent<HTMLInputElement>) => {
+        this.setState({text: event.currentTarget.value});
+    }
+
     render() {
         return <div className='input-form'>
             <div className='input-form__text'>
@@ -16,11 +20,12 @@ export default class InputForm extends React.Component<{}> {
                     rows="3"
                     rowsMax="3"
                     fullWidth
+                    onChange={this.handleInputChange}
                     value={this.state.text}
                 />
             </div>
             <div className='d-flex'>
-                <Button  color="primary" className='ml-auto'>
+                <Button color="primary" className='ml-auto'>
                     Send
                 </Button>
             </div>
