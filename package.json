@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack-dev-server -d --output-pathinfo"
+    "start:dev": "webpack-dev-server -d --output-pathinfo",
+    "start:build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,11 @@
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "@types/react-redux": "^5.0.15",
+    "@types/socket.io-client": "^1.4.32",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "immutable": "^3.8.2",
+    "log4js": "^2.5.3",
     "material-ui": "^1.0.0-beta.37",
     "material-ui-icons": "^1.0.0-beta.36",
     "mime": "^2.2.0",
@@ -28,7 +34,8 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
     "css-loader": "^0.28.10",
