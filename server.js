@@ -17,5 +17,7 @@ io.on('connection', (socket) => {
     socket.emit('userName', name);
     
     logger.info(name + ' connected to chat');
-})
+});
+
+
 
