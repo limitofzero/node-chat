@@ -1,3 +1,5 @@
 export const ADD_CONTACT = 'ADD_CONTACT';
 export const DELETE_CONTACT = 'DELETE_CONTACT';
 export const RECEIVE_CONTACT_LIST = 'CONTACT_LIST';
+
+export const CONNECT_TO_SOCK = 'CONNECT_TO_SOCK';

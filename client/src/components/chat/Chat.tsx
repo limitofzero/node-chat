@@ -20,6 +20,10 @@ export default class Chat extends React.Component<any> {
         ]
     }
 
+    componentDidMount() {
+        
+    }
+
     render() {
         return <Grid className="chat root__content" container spacing={8}>
                 <Grid className="d-flex flex-1" item xs={12} md={3}>
