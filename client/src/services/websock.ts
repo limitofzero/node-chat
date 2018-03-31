@@ -4,7 +4,8 @@ import * as socketActions from '../actions/socketActions';
 import store from '../store';
 
 const sockActions: {[propName: string] : Function} = {
-    SOCKET_CONNECTED: socketActions.socketConnected
+    SOCKET_CONNECTED: socketActions.socketConnected,
+    ADD_CONTACT: socketActions.addContact
 }
 
 export default class WebsockService {

@@ -1,4 +1,4 @@
-import {SOCKET_CONNECTED} from '../constants/actions';
+import {SOCKET_CONNECTED, ADD_CONTACT} from '../constants/actions';
 import Contact from '../interfaces/ContactList';
 import Action from '../interfaces/PayloadAction';
 
@@ -9,3 +9,9 @@ export function socketConnected(account: Contact) : Action {
     }
 }
 
+export function addContact(contact: Contact) : Action {
+    return {
+        type: ADD_CONTACT,
+        payload: { contact }
+    }
+}

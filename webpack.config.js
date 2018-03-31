@@ -55,7 +55,8 @@ module.exports = {
             index: 'index.html',
         },
         inline: true,
-        contentBase: path.join(__dirname, distPath)
+        contentBase: path.join(__dirname, distPath),
+        port: 3000
     },
     plugins: [
         new HtmlWebpackPlugin({template: sourcePath + 'index.html'}), new ExtractTextPlugin("boundle.css")

@@ -8,13 +8,13 @@ function contactReducer(state: Contact[] = initialState, action: Action) {
     const {type, payload} = action;
     switch(type) {
         case ADD_CONTACT:
-            return state.concat(payload);
+            return state.concat(payload.contact);
         case DELETE_CONTACT:
             return state.filter(con => con.id !== payload.id);
         case RECEIVE_CONTACT_LIST:
             return RECEIVE_CONTACT_LIST;
         default:
-            return initialState;
+            return state;
     }
 }
 
