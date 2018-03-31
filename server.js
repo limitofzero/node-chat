@@ -13,9 +13,13 @@ app.use(express.static(__dirname + '/dist'));
 
 io.on('connection', (socket) => {
     const name = 'U' + (socket.id).toString().substr(1, 4);
-    socket.broadcast.emit('ADD_CONTACT', name);
-    socket.emit('RECEIVE_NAME', null);
-    socket.emit('RECEIVE_NAME', {
+    socket.broadcast.emit('ADD_CONTACT', {
+        id: socket.id, 
+        url: '', 
+        name: name
+    });
+    socket.emit('SOCKET_CONNECTED', null);
+    socket.emit('SOCKET_CONNECTED', {
         id: socket.id, 
         url: '', 
         name: name

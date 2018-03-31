@@ -3,8 +3,8 @@ import contactReducer from '../reducers/contactReducer';
 import connectReducer from '../reducers/connectReducer';
 
 const chatReducers = combineReducers({
-    contactReducer,
-    connectReducer
+    contacts: contactReducer,
+    connection: connectReducer
 });
 
 export default chatReducers;

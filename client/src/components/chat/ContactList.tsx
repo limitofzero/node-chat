@@ -4,15 +4,14 @@ import Props from '../../interfaces/ContactList';
 import Contact from './Contact';
 import '../../styles/components/contact-list.scss';
 
-export default class ContactList extends React.Component<Props> {
-    
-    render() {
-        const {list} = this.props;
+function ContactList(props: Props) {
+    const {list} = props;
 
-        return <div className='contact-list'>
-            <List>
-                {list.map(contact => <Contact key={contact.id} {...contact}/>)}
-            </List>
-        </div>
-    }
+    return <div className='contact-list'>
+        <List>
+            {list.map(contact => <Contact key={contact.id} {...contact}/>)}
+        </List>
+    </div>;
 }
+
+export default ContactList;

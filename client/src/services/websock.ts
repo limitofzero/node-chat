@@ -23,6 +23,6 @@ export default class WebsockService {
         Object.keys(sockActions).forEach(type => {
             const action: Function = sockActions[type];
             this.sock.on(type, (recieveObj: any) => store.dispatch(action(recieveObj)));
-        })
+        });
     }
 }
