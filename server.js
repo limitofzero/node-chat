@@ -5,6 +5,8 @@ const io = require('socket.io')(server);
 const log4js = require('log4js');
 const logger = log4js.getLogger();
 
+logger.level = 'debug';
+
 const port = 8080;
 server.listen(port);
 
@@ -18,6 +20,7 @@ io.on('connection', (socket) => {
         url: '', 
         name: name
     });
+
     socket.emit('SOCKET_CONNECTED', null);
     socket.emit('SOCKET_CONNECTED', {
         id: socket.id, 
