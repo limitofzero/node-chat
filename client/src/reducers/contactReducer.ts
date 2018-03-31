@@ -1,10 +1,10 @@
 import Contact from '../interfaces/Contact';
-import Action from '../interfaces/Action';
+import Action from '../interfaces/PayloadAction';
 import {ADD_CONTACT, DELETE_CONTACT, RECEIVE_CONTACT_LIST} from '../constants/actions';
 
 const initialState: Contact[] = [];
 
-function contactReducer(state: Contact[], action: Action) {
+function contactReducer(state: Contact[] = initialState, action: Action) {
     const {type, payload} = action;
     switch(type) {
         case ADD_CONTACT:

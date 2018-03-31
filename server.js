@@ -13,8 +13,13 @@ app.use(express.static(__dirname + '/dist'));
 
 io.on('connection', (socket) => {
     const name = 'U' + (socket.id).toString().substr(1, 4);
-    socket.broadcast.emit('newUser', name);
-    socket.emit('userName', name);
+    socket.broadcast.emit('ADD_CONTACT', name);
+    socket.emit('RECEIVE_NAME', null);
+    socket.emit('RECEIVE_NAME', {
+        id: socket.id, 
+        url: '', 
+        name: name
+    });
     
     logger.info(name + ' connected to chat');
 });
