@@ -10,21 +10,20 @@ logger.level = 'debug';
 const port = 8080;
 server.listen(port);
 
-logger.debug('Servar has been started...');
+logger.debug('Server has been started...');
 app.use(express.static(__dirname + '/dist'));
 
 io.on('connection', (socket) => {
     const name = 'U' + (socket.id).toString().substr(1, 4);
     socket.broadcast.emit('ADD_CONTACT', {
         id: socket.id, 
-        url: '', 
+        avatarUrl: '', 
         name: name
     });
 
-    socket.emit('SOCKET_CONNECTED', null);
     socket.emit('SOCKET_CONNECTED', {
         id: socket.id, 
-        url: '', 
+        avatarUrl: '', 
         name: name
     });
     

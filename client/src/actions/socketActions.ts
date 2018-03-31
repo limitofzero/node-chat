@@ -8,3 +8,4 @@ export function socketConnected(account: Contact) : Action {
         payload: { account }
     }
 }
+
