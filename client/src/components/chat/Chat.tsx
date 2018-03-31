@@ -4,8 +4,7 @@ import Message from '../../interfaces/Message';
 import MessageWindow from './MessageWindow';
 import ContactList from './ContactList';
 import Paper from 'material-ui/Paper';
-import * as io from 'socket.io-client';
-import { SOCKET_CONNECTED } from '../../constants/actions';
+import WebsockService from '../../services/websock';
 import '../../styles/components/chat.scss';
 import '../../styles/helpers/flexible.scss';
 
@@ -25,12 +24,7 @@ export default class Chat extends React.Component<any> {
     socket: SocketIOClient.Socket = null;
 
     componentDidMount() {
-        if(this.socket === null) {
-            this.socket = io.connect('http://localhost:3000');
-            this.socket.on(SOCKET_CONNECTED, (obj: any) => {
-                console.log(obj);
-            });
-        }
+        WebsockService.connect();
     }
 
     render() {
