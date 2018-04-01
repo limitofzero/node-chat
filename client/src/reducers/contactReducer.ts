@@ -4,7 +4,8 @@ import {ADD_CONTACT, DELETE_CONTACT, RECEIVE_CONTACT_LIST} from '../constants/ac
 
 const initialState: Contact[] = [];
 
-function contactReducer(state: Contact[] = initialState, action: Action) {
+function contactReducer(state: Contact[] = initialState, action: Action): Contact[]  {
+    console.log('action in reducer: ', action);
     const {type, payload} = action;
     switch(type) {
         case ADD_CONTACT:
@@ -12,7 +13,7 @@ function contactReducer(state: Contact[] = initialState, action: Action) {
         case DELETE_CONTACT:
             return state.filter(con => con.id !== payload.id);
         case RECEIVE_CONTACT_LIST:
-            return RECEIVE_CONTACT_LIST;
+            return payload.contacts;
         default:
             return state;
     }

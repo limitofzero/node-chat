@@ -5,7 +5,8 @@ import store from '../store';
 
 const sockActions: {[propName: string] : Function} = {
     SOCKET_CONNECTED: socketActions.socketConnected,
-    ADD_CONTACT: socketActions.addContact
+    ADD_CONTACT: socketActions.addContact,
+    RECEIVE_CONTACT_LIST: socketActions.receiveContactList
 }
 
 export default class WebsockService {
