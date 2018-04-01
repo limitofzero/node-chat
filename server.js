@@ -29,18 +29,20 @@ const getNewContact = (sockId) => {
 
 io.on('connection', (socket) => {
     const contact = getNewContact(socket.id);
-    contacts.push(contact);
     logger.info(contact.name + ' connected to chat');
 
     socket.broadcast.emit('ADD_CONTACT', contact);
     socket.emit('SOCKET_CONNECTED', contact);
     socket.emit('RECEIVE_CONTACT_LIST', contacts);
+
+    contacts.push(contact);
     
     socket.on('disconnect', (reason) => {
-        contacts = contacts.filter(contact => contact.id !== socket.id);
-        socket.broadcast.emit('DELETE_CONTACT', {id: socket.id});
+        const {id} = socket;
+        contacts = contacts.filter(contact => contact.id !== id);
+        socket.broadcast.emit('DELETE_CONTACT', {id});
 
-        logger.info(socket.id + ' disconnected from chat');
+        logger.info(id + ' disconnected from chat');
     });
 });
 

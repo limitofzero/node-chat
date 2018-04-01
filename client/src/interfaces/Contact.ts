@@ -1,5 +1,5 @@
 export default interface Contact {
-    id: number,
+    id: string,
     avatarUrl: string,
     name: string
 }
