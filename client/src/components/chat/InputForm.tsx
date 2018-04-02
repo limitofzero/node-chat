@@ -20,6 +20,7 @@ class InputForm extends React.Component<Props> {
         const {text} = this.state;
         if(text) {
             this.props.sendMessage(text);
+            this.setState({text: ''});
         }
     }
 
