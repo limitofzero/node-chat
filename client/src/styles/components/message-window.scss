@@ -7,10 +7,11 @@
     &__list {
         list-style: none;
         flex: 1;
+        overflow-y: auto;
     }
 
     &__message {
-        margin-bottom: 1rem;
+        margin: 0 1rem 1rem 1rem;
 
         &:first-child {
             margin-top: 1rem;
