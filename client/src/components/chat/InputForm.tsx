@@ -24,6 +24,10 @@ class InputForm extends React.Component<Props> {
         }
     }
 
+    handleKeyPress = (ev: any) => {
+        console.log(ev);
+    }
+
     render() {
         return <div className='input-form'>
             <div className='input-form__text'>
@@ -35,6 +39,7 @@ class InputForm extends React.Component<Props> {
                     fullWidth
                     onChange={this.handleInputChange}
                     value={this.state.text}
+                    onKeyPress={this.handleKeyPress}
                 />
             </div>
             <div className='d-flex'>
@@ -50,7 +55,7 @@ class InputForm extends React.Component<Props> {
 
 function mapDispatchToProps(dispatch: Dispatch<any>) : {sendMessage: Function} {
     return {
-        sendMessage: (msg: Message) => dispatch(sendMessage(msg))
+        sendMessage: (msg: string) => dispatch(sendMessage(msg))
     }
 }
 
