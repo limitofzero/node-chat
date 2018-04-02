@@ -8,6 +8,7 @@ import Props from '../../interfaces/Chat';
 import WebsockService from '../../services/websock';
 import '../../styles/components/chat.scss';
 import '../../styles/helpers/flexible.scss';
+import '../../styles/utils/overflow.scss';
 import { connect } from 'react-redux';
 
 class Chat extends React.Component<Props> {
@@ -21,7 +22,7 @@ class Chat extends React.Component<Props> {
 
         return <Grid className="chat root__content" container spacing={8}>
                 <Grid className="d-flex flex-1" item xs={12} md={3}>
-                    <Paper className="flex-1">
+                    <Paper className="flex-1 u-overflow-auto">
                         <ContactList list={contacts}/>
                     </Paper>
                 </Grid>
