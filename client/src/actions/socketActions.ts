@@ -1,6 +1,8 @@
-import {SOCKET_CONNECTED, ADD_CONTACT, RECEIVE_CONTACT_LIST, DELETE_CONTACT} from '../constants/actions';
+import {SOCKET_CONNECTED, ADD_CONTACT, RECEIVE_CONTACT_LIST, DELETE_CONTACT, SEND_MESSAGE, RECEIVE_MESSAGE} from '../constants/actions';
 import Contact from '../interfaces/ContactList';
 import Action from '../interfaces/PayloadAction';
+import Message from '../interfaces/Message';
+import Websock from '../services/websock';
 
 export function socketConnected(account: Contact) : Action {
     return {
@@ -27,5 +29,21 @@ export function deleteContact(deletedContact: {id: string}) : Action {
     return {
         type: DELETE_CONTACT,
         payload: deletedContact
+    }
+}
+
+export function sendMessage(message: string) : Action {
+    Websock.sendMessage(message);
+
+    return {
+        type: SEND_MESSAGE,
+        payload: { message }
+    }
+}
+
+export function receiveMessage(message: Message) : Action {
+    return {
+        type: RECEIVE_MESSAGE,
+        payload: { message }
     }
 }

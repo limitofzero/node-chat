@@ -1,14 +1,7 @@
 import * as io from 'socket.io-client';
-import { SOCKET_CONNECTED, ADD_CONTACT, DELETE_CONTACT, RECEIVE_CONTACT_LIST } from '../constants/actions';
+import { SOCKET_CONNECTED, ADD_CONTACT, DELETE_CONTACT, RECEIVE_CONTACT_LIST, RECEIVE_MESSAGE, SEND_MESSAGE } from '../constants/actions';
 import * as socketActions from '../actions/socketActions';
 import store from '../store';
-
-const sockActions: {[propName: string] : Function} = {
-    SOCKET_CONNECTED: socketActions.socketConnected,
-    ADD_CONTACT: socketActions.addContact,
-    RECEIVE_CONTACT_LIST: socketActions.receiveContactList,
-    DELETE_CONTACT: socketActions.deleteContact
-}
 
 export default class WebsockService {
     private static sock: SocketIOClient.Socket = null;
@@ -22,9 +15,23 @@ export default class WebsockService {
         this.subscribe();
     }
 
+    static sendMessage(message: string) {
+        if(this.sock) {
+            this.sock.emit(SEND_MESSAGE, message);
+        }
+    }
+
     private static subscribe(): void {
-        Object.keys(sockActions).forEach(type => {
-            const action: Function = sockActions[type];
+        const sockActionMap: {[propName: string] : Function} = {
+            SOCKET_CONNECTED: socketActions.socketConnected,
+            ADD_CONTACT: socketActions.addContact,
+            RECEIVE_CONTACT_LIST: socketActions.receiveContactList,
+            DELETE_CONTACT: socketActions.deleteContact,
+            RECEIVE_MESSAGE: socketActions.receiveMessage
+        };
+
+        Object.keys(sockActionMap).forEach(type => {
+            const action: Function = sockActionMap[type];
             this.sock.on(type, (recieveObj: any) => store.dispatch(action(recieveObj)));
         });
     }

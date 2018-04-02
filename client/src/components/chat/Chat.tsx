@@ -37,7 +37,7 @@ class Chat extends React.Component<Props> {
 function mapStateToPtops(state: any) : Props {
     return {
         contacts: state.contacts,
-        messages: []//todo
+        messages: state.messages
     }
 }
 

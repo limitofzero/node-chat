@@ -11,8 +11,8 @@ export default class MessageWindow extends React.Component<Props> {
 
         return <div className="message-window">
                     <ul className="message-window__list">
-                        {list.map(ms => <Paper className="message-window__message">
-                            <Message key={ms.id} {...ms}/></Paper>)}
+                        {list.map(ms => <Paper key={ms.id} className="message-window__message">
+                            <Message {...ms}/></Paper>)}
                     </ul>
                     <InputForm/>
                 </div>;

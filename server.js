@@ -13,7 +13,8 @@ server.listen(port);
 logger.debug('Server has been started...');
 app.use(express.static(__dirname + '/dist'));
 
-let contacts = [];
+let contacts = [],
+    messages = [];
 
 const getNewContact = (sockId) => {
     const name = 'U' + (sockId).toString().substr(1, 4);
@@ -44,7 +45,23 @@ io.on('connection', (socket) => {
 
         logger.info(id + ' disconnected from chat');
     });
+
+    socket.on('SEND_MESSAGE', (text) => {
+        logger.info('Message receive with text ', text);
+        const message = {
+            id: new Date().getTime() + 1,
+            author: contact.name,
+            text
+        }
+
+        socket.emit('RECEIVE_MESSAGE', message);
+        socket.broadcast.emit('RECEIVE_MESSAGE', message);
+    })
 });
+
+io.on('SEND_MESSAGE', (socket) => {
+    console.log('in on');
+})
 
 
 
