@@ -24,8 +24,10 @@ class InputForm extends React.Component<Props> {
         }
     }
 
-    handleKeyPress = (ev: any) => {
-        console.log(ev);
+    handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if(event.key === 'Enter') {
+            this.sendMessage();
+        }
     }
 
     render() {
