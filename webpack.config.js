@@ -51,9 +51,7 @@ module.exports = {
         ]
     },
     devServer: {
-        historyApiFallback: {
-            index: 'index.html',
-        },
+        historyApiFallback: true,
         inline: true,
         contentBase: path.join(__dirname, distPath),
         port: 3000
