@@ -1,0 +1,16 @@
+.sign-in {
+    display: flex;
+    flex: 1;
+    
+    &_form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    &_footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+}
