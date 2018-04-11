@@ -3,6 +3,7 @@ import '../../styles/components/sign-in.scss';
 import { Divider, Grid, Toolbar, Paper, AppBar, Typography, Button } from 'material-ui';
 import SignInForm from './SignInForm';
 import Header from '../Header';
+import SignInFooter from './SignInFooter';
 
 export default class SingInPage extends React.Component<{}> {
     render() {
@@ -14,14 +15,7 @@ export default class SingInPage extends React.Component<{}> {
                         <Grid item xs={10}>
                             <SignInForm/>
                             <Divider/>
-                            <Grid item className='sign-in_footer' xs={12}>
-                                <Button>
-                                    Lost your pasport?
-                                </Button>
-                                <Button>
-                                    Register
-                                </Button>
-                            </Grid>
+                            <SignInFooter/>
                         </Grid>
                     </Grid>
                 </Paper>
