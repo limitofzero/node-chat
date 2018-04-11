@@ -18,7 +18,7 @@ export default function Header(props: Props) {
     return (
         <Grid container spacing={8}>
             <Grid item xs={12}>
-                <AppBar className={classes || ''} position="static">
+                <AppBar className={''} position="static">
                     <Toolbar>
                         {menu}
                         <Typography variant="title" color="inherit">
