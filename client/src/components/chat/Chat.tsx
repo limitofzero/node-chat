@@ -22,7 +22,7 @@ class Chat extends React.Component<Props> {
         const {contacts, messages} = this.props;
 
         return <div className="d-flex d-flex-column flex-1">
-                <Header title='Your chat' withMenu={true} withLogout={true}/>
+                <Header classes='header' title='Your chat' withMenu={true} withLogout={true}/>
                 <Grid className="chat root__content" container spacing={8}>
                     <Grid className="d-flex flex-1" item xs={12} md={3}>
                         <Paper className="flex-1 u-overflow-auto">

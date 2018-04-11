@@ -5,7 +5,7 @@ import Props from '../interfaces/Header';
 import '../styles/components/header.scss';
 
 export default function Header(props: Props) {
-    const {title, withLogout, withMenu} = props;
+    const {title, withLogout, withMenu, classes} = props;
 
     const menu = withMenu ? (
     <IconButton color="inherit" aria-label="Menu"><MenuIcon/></IconButton>
@@ -18,7 +18,7 @@ export default function Header(props: Props) {
     return (
         <Grid container spacing={8}>
             <Grid item xs={12}>
-                <AppBar className='header' position="static">
+                <AppBar className={classes || ''} position="static">
                     <Toolbar>
                         {menu}
                         <Typography variant="title" color="inherit">
