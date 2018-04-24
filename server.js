@@ -5,18 +5,20 @@ const io = require('socket.io')(server);
 const log4js = require('log4js');
 const logger = log4js.getLogger();
 const path = require('path');
+const config = require('./config.js');
 
 logger.level = 'debug';
 
-const port = 8080;
+const port = config.port;
 server.listen(port);
 
-logger.debug('Server has been started...');
+logger.debug('Server has been started... ', port);
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + config.staticPath));
 
-app.get('*', function (request, response){
-    response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+app.get('*', (request, response) => {
+    const {appPath, indexFile} = config;
+    response.sendFile(path.resolve(__dirname, appPath, indexFile));
 });
 
 let contacts = [],
