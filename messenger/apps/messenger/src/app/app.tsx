@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@messenger/api-interfaces';
-import { Grid, AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Grid, AppBar, Toolbar, Typography } from '@material-ui/core';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import AuthForm from './auth/auth-form';
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -38,7 +39,7 @@ export const App = () => {
           </Grid>
         </Route>
         <Route path="/auth">
-          <h1>Test</h1>
+          <AuthForm></AuthForm>
         </Route>
       </Switch>
     </Router>
