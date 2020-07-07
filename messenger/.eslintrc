@@ -28,7 +28,8 @@
           { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
         ]
       }
-    ]
+    ],
+    "space-in-brackets": ["error", "always"]
   },
   "overrides": [
     {
