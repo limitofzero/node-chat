@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import AuthForm from './auth/auth-form';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -19,8 +20,9 @@ export const App = () => {
 
   return (
     <Router>
-      <Switch >
+      <Switch>
         <Route exact path="/">
+          <CssBaseline/>
           <Grid>
             <AppBar position='static'>
               <Toolbar>
@@ -39,6 +41,7 @@ export const App = () => {
           </Grid>
         </Route>
         <Route path="/auth">
+          <CssBaseline/>
           <AuthForm/>
         </Route>
       </Switch>
