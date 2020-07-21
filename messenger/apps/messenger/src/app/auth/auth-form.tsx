@@ -1,4 +1,4 @@
-import {Grid, AppBar, Tabs, Tab} from '@material-ui/core';
+import {Grid, AppBar, Tabs, Tab, Box} from '@material-ui/core';
 import React, { useState } from 'react';
 import {SignInForm} from "./sign-in-form";
 
@@ -19,10 +19,12 @@ export const AuthForm = () => {
             <Tab label='Sign In' value='sign-in'/>
             <Tab label='Sign up' value='sign-up'/>
           </Tabs>
-          <div hidden={form === 'sign-up'}>
-            <SignInForm/>
-          </div>
-          <div hidden={form === 'sign-in'}> This will be sign up form!</div>
+          <Box p={2}>
+            <div hidden={form === 'sign-up'}>
+              <SignInForm/>
+            </div>
+            <div hidden={form === 'sign-in'}> This will be sign up form!</div>
+          </Box>
         </AppBar>
       </Grid>
     </Grid>
