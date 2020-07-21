@@ -39,7 +39,7 @@ export const App = () => {
           </Grid>
         </Route>
         <Route path="/auth">
-          <AuthForm></AuthForm>
+          <AuthForm/>
         </Route>
       </Switch>
     </Router>
