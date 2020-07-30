@@ -4,13 +4,16 @@ import './App.css';
 import {
     BrowserRouter as Router, Route, Switch,
 } from 'react-router-dom';
+import {MainForm} from "./auth/main-form";
 
-function App() {
+import "@blueprintjs/core/lib/css/blueprint.css";
+
+const App = () => {
     return (
         <Router>
             <Switch>
                 <Route path='/auth'>
-                    <div>Auth page</div>
+                    <MainForm/>
                 </Route>
                 <Route path='/'>
                     <div className="App">
@@ -33,6 +36,6 @@ function App() {
             </Switch>
         </Router>
     );
-}
+};
 
 export default App;
