@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tab, Tabs} from "@blueprintjs/core";
+import {Card, Elevation, Navbar, Tab, Tabs} from "@blueprintjs/core";
 import './MainForm.css';
 
 type AuthForm = 'sign-in' | 'sign-up';
@@ -15,10 +15,14 @@ export const MainForm = () => {
         <div className="row">
             <div className="col-xs-4 col-xs-offset-4">
                 <div className='main-form'>
-                    <Tabs id="TabsExample" onChange={handleTabChange} selectedTabId={currentForm}>
-                        <Tab id='sign-in' title="Sign in"/>
-                        <Tab id="sign-up" title="Sign up"/>
-                    </Tabs>
+                    <Card elevation={Elevation.TWO}>
+                        <Navbar>
+                            <Tabs id="TabsExample" onChange={handleTabChange} selectedTabId={currentForm}>
+                                <Tab id='sign-in' title="Sign in"/>
+                                <Tab id="sign-up" title="Sign up"/>
+                            </Tabs>
+                        </Navbar>
+                    </Card>
                 </div>
             </div>
         </div>
