@@ -4,9 +4,10 @@ import './App.css';
 import {
     BrowserRouter as Router, Route, Switch,
 } from 'react-router-dom';
-import {MainForm} from "./auth/main-form";
+import {MainForm} from "./auth/MainForm";
 
 import "@blueprintjs/core/lib/css/blueprint.css";
+import "flexboxgrid/css/index.css";
 
 const App = () => {
     return (
