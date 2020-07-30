@@ -6,8 +6,10 @@ import {
 } from 'react-router-dom';
 import {MainForm} from "./auth/MainForm";
 
-import "@blueprintjs/core/lib/css/blueprint.css";
 import "flexboxgrid/css/index.css";
+import "@blueprintjs/core/lib/css/blueprint.css";
+import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+
 
 const App = () => {
     return (
