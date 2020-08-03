@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup, InputGroup} from "@blueprintjs/core";
+import {Checkbox, FormGroup, InputGroup} from "@blueprintjs/core";
 
 export const SignUp = () => {
     return (
@@ -14,8 +14,9 @@ export const SignUp = () => {
                 label="Password:"
                 labelFor="password"
                 labelInfo="*">
-                <InputGroup id="password" placeholder="Your password..." leftIcon='lock'/>
+                <InputGroup type='password' id="password" placeholder="Your password..." leftIcon='lock'/>
             </FormGroup>
+            <Checkbox checked={true} label="Remember me"/>
         </>
     );
 };
