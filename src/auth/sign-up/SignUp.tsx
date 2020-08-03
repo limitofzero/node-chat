@@ -1,22 +1,60 @@
 import React from 'react';
 import {Checkbox, FormGroup, InputGroup} from "@blueprintjs/core";
+import {Controller, useForm} from 'react-hook-form';
+
+interface SignInForm {
+    email: string;
+    password: string;
+    rememberMe: boolean;
+}
 
 export const SignUp = () => {
+    const defaultValues: SignInForm = {
+        email: '',
+        password: '',
+        rememberMe: true
+    };
+
+    const {handleSubmit, control} = useForm<SignInForm>({defaultValues}); // initialise the hook
+    const onSubmit = (data: SignInForm) => {
+        console.log(data);
+    };
+
     return (
-        <>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <FormGroup
                 label="Email:"
                 labelFor="email"
                 labelInfo="*">
-                <InputGroup id="email" placeholder="Your email..." leftIcon='envelope'/>
+                <Controller name='email'
+                            as={InputGroup}
+                            control={control}
+                            placeholder="Your email..."
+                            leftIcon='envelope'/>
             </FormGroup>
             <FormGroup
                 label="Password:"
                 labelFor="password"
                 labelInfo="*">
-                <InputGroup type='password' id="password" placeholder="Your password..." leftIcon='lock'/>
+                <Controller name='password'
+                            as={InputGroup}
+                            control={control}
+                            placeholder="Your password..."
+                            leftIcon='lock'/>
             </FormGroup>
-            <Checkbox checked={true} label="Remember me"/>
-        </>
+            <Controller
+                control={control}
+                name='rememberMe'
+                render={({onChange, onBlur, value}) => (
+                    <Checkbox
+                        onBlur={onBlur}
+                        onChange={e => onChange((e.target as any).checked)}
+                        checked={value}
+                        label='Remember me'
+                    />
+                )}
+            />
+            <input type="submit"/>
+        </form>
     );
 };
