@@ -4,7 +4,7 @@ import './App.css';
 import {
     BrowserRouter as Router, Route, Switch,
 } from 'react-router-dom';
-import {MainForm} from "./auth/MainForm";
+import { MainForm } from "./auth/MainForm";
 
 import "flexboxgrid/css/index.css";
 import "@blueprintjs/core/lib/css/blueprint.css";

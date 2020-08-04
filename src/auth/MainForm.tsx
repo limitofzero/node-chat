@@ -1,7 +1,7 @@
 import React from 'react';
-import {Card, Elevation, Tab, Tabs} from "@blueprintjs/core";
+import { Card, Elevation, Tab, Tabs } from "@blueprintjs/core";
 import './MainForm.css';
-import {SignUp} from "./sign-up/SignUp";
+import { SignUp } from "./sign-up/SignUp";
 
 type AuthForm = 'sign-in' | 'sign-up';
 

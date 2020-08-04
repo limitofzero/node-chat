@@ -1,6 +1,6 @@
 import React from 'react';
-import {Checkbox, FormGroup, InputGroup} from "@blueprintjs/core";
-import {Controller, useForm} from 'react-hook-form';
+import { Checkbox, FormGroup, InputGroup } from "@blueprintjs/core";
+import { Controller, useForm } from 'react-hook-form';
 
 interface SignInForm {
     email: string;
@@ -15,7 +15,7 @@ export const SignUp = () => {
         rememberMe: true
     };
 
-    const {handleSubmit, control} = useForm<SignInForm>({defaultValues}); // initialise the hook
+    const { handleSubmit, control } = useForm<SignInForm>({ defaultValues }); // initialise the hook
     const onSubmit = (data: SignInForm) => {
         console.log(data);
     };
@@ -45,7 +45,7 @@ export const SignUp = () => {
             <Controller
                 control={control}
                 name='rememberMe'
-                render={({onChange, onBlur, value}) => (
+                render={({ onChange, onBlur, value }) => (
                     <Checkbox
                         onBlur={onBlur}
                         onChange={e => onChange((e.target as any).checked)}
