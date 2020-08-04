@@ -28,11 +28,11 @@
     "run-server": "ts-node --project server/tsconfig.json server/main.ts",
     "lint-staged": "lint-staged",
     "prettier": "prettier",
-    "eslint": "eslint . --ext .tsx --ext .ts --fix"
+    "lint-fix": "eslint . --ext .tsx --ext .ts --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint && git add ."
+      "pre-commit": "npm run lint-fix"
     }
   },
   "eslintConfig": {
