@@ -1,6 +1,0 @@
-{
-  "server/**/*.{ts,js}": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}

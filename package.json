@@ -27,11 +27,12 @@
     "eject": "react-scripts eject",
     "run-server": "ts-node --project server/tsconfig.json server/main.ts",
     "lint-staged": "lint-staged",
-    "prettier": "prettier"
+    "prettier": "prettier",
+    "eslint": "eslint . --ext .tsx --ext .ts --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "eslint"
     }
   },
   "eslintConfig": {
@@ -56,8 +57,8 @@
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "eslint": "^7.6.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "ts-node": "8.10.2"
   }
