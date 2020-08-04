@@ -28,7 +28,7 @@
     "run-server": "ts-node --project server/tsconfig.json server/main.ts"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "./.eslintrc.json"
   },
   "browserslist": {
     "production": [
