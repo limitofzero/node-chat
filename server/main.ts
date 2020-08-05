@@ -1,8 +1,8 @@
 import express from 'express';
 import "reflect-metadata";
 import { createConnection } from "typeorm";
-import { typeOrmConfig } from "./db/typeorm-config";
-import { login } from "./controllers/auth";
+import { typeOrmConfig } from "./src/db/typeorm-config";
+import { login } from "./src/controllers/auth";
 
 createConnection(typeOrmConfig).then(async connection => {
     const app = express();

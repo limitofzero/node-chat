@@ -1,9 +1,15 @@
 import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
 import dotenv from 'dotenv';
+import { resolve } from 'path';
 
 dotenv.config();
 
 const { env } = process;
+
+const ENTITIES_PATH = './entity/**/*.ts';
+const MIGRATIONS_PATH = './migrations/**/*.ts';
+
+const resolvePathTo = (relPath: string) => resolve(__dirname, relPath);
 
 export const typeOrmConfig: PostgresConnectionOptions = {
     type: 'postgres',
@@ -15,6 +21,10 @@ export const typeOrmConfig: PostgresConnectionOptions = {
     synchronize: true,
     logging: false,
     entities: [
-        './db/**/*.ts'
-    ]
+        resolvePathTo(ENTITIES_PATH)
+    ],
+    migrations: [
+        resolvePathTo(MIGRATIONS_PATH)
+    ],
+    migrationsRun: true
 };
