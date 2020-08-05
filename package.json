@@ -28,6 +28,7 @@
     "run-server": "ts-node --project server/tsconfig.json server/main.ts",
     "lint-staged": "lint-staged",
     "prettier": "prettier",
+    "lint": "eslint . --ext .tsx --ext .ts",
     "lint-fix": "eslint . --ext .tsx --ext .ts --fix"
   },
   "husky": {
