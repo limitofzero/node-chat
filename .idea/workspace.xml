@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(client): add input groups for auth form">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.ts" afterDir="false" />
-    </list>
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(client): add input groups for auth form" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="336">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -204,43 +198,6 @@
               <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-chat" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="cors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-chat" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -389,7 +346,7 @@
       <workItem from="1596573112710" duration="2173000" />
       <workItem from="1596656024676" duration="5252000" />
       <workItem from="1596712596559" duration="383000" />
-      <workItem from="1596826503470" duration="536000" />
+      <workItem from="1596826503470" duration="2264000" />
     </task>
     <task id="LOCAL-00001" summary="(feature): recreate application">
       <created>1593193611779</created>
@@ -580,24 +537,30 @@
       <option name="project" value="LOCAL" />
       <updated>1596662709924</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat(server): add cors middlewar">
+      <created>1596827562538</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1596827562538</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32087000" />
+    <option name="totallyTimeSpent" value="33815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29297996" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29297996" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" weight="0.3295129" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38083538" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38083538" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992629" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -606,7 +569,7 @@
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32923833" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3108108" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3108108" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32923833" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32923833" />
@@ -661,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="(feature): add tab value" />
     <MESSAGE value="(feature): add tab visibility" />
     <MESSAGE value="fix hidden tabs" />
     <MESSAGE value="add fields for sign in form" />
@@ -686,7 +648,8 @@
     <MESSAGE value="feat(client): add lint for husky" />
     <MESSAGE value="feat(server): add user scheme and migrations" />
     <MESSAGE value="feat(client): add parsing body for requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(client): add parsing body for requests" />
+    <MESSAGE value="feat(server): add cors middlewar" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(server): add cors middlewar" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="debuggerHistoryManager">
@@ -972,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="336">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
