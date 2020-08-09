@@ -25,14 +25,14 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="c9f46b1a-8b4a-4e62-9124-64c5f77f2fca">
-        <schema name="information_schema" object-types="function, table, sequence, view" />
-        <schema name="public" object-types="column, function, constraint, dataset trigger, table, index, sequence, view" />
+        <schema name="pg_catalog" object-types="view, table, function" />
+        <schema name="public" object-types="view, column, constraint, index, dataset trigger, table, sequence, function" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="c9f46b1a-8b4a-4e62-9124-64c5f77f2fca">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="Connection" type="STANDARD" schema="public" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -40,6 +40,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="c9f46b1a-8b4a-4e62-9124-64c5f77f2fca" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="c9f46b1a-8b4a-4e62-9124-64c5f77f2fca" dataset="public.user" active-filter-id="1f1d95de-7a11-479d-9947-1ca39ec1833b">
+      <filter id="1f1d95de-7a11-479d-9947-1ca39ec1833b" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

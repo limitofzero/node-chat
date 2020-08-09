@@ -1,21 +1,31 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
+import bcrypt from "bcrypt";
 
 @Entity()
 @Unique(["username"])
 export class User {
     @PrimaryGeneratedColumn()
-    id: number;
+    public id: number;
 
     @Column({ length: 100 })
-    username: string;
+    public username: string;
 
     @Column({ length: 150 })
-    email: string;
+    public email: string;
 
     @Column()
-    password: string;
+    public password: string;
 
     @Column()
     @CreateDateColumn()
-    createdAt: Date;
+    public createdAt: Date;
+
+    public hashPassword(): void {
+        // todo salt
+        this.password = bcrypt.hashSync(this.password, 8);
+    }
+
+    public isPasswordValid(password: string): boolean {
+        return bcrypt.compareSync(password, this.password);
+    }
 }

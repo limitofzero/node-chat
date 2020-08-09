@@ -7,6 +7,7 @@ export class CreateFirstUser1596659507467 implements MigrationInterface {
         const user = new User();
         user.email = "test@mail.ru";
         user.password = "password";
+        user.hashPassword();
         user.username = "admin";
         const userRepository = getRepository(User);
         await userRepository.save(user);
