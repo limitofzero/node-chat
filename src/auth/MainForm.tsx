@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Elevation, Tab, Tabs } from "@blueprintjs/core";
 import './MainForm.css';
-import { SignUp } from "./sign-up/SignUp";
+import { SignIn } from "./sign-up/SignIn";
 
 type AuthForm = 'sign-in' | 'sign-up';
 
@@ -18,7 +18,7 @@ export const MainForm = () => {
                 <div className='main-form'>
                     <Card elevation={Elevation.TWO}>
                         <Tabs id="TabsExample" onChange={handleTabChange} selectedTabId={currentForm}>
-                            <Tab id='sign-in' title="Sign in" panel={<SignUp/>}/>
+                            <Tab id='sign-in' title="Sign in" panel={<SignIn/>}/>
                             <Tab id="sign-up" title="Sign up"/>
                         </Tabs>
                     </Card>
