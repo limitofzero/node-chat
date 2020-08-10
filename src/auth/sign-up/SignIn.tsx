@@ -21,31 +21,31 @@ export const SignIn = () => {
                 label="Email:"
                 labelFor="email"
                 labelInfo="*">
-                <Controller name='email'
+                <Controller name="email"
                             as={InputGroup}
                             control={control}
                             placeholder="Your email..."
-                            leftIcon='envelope'/>
+                            leftIcon="envelope"/>
             </FormGroup>
             <FormGroup
                 label="Password:"
                 labelFor="password"
                 labelInfo="*">
-                <Controller name='password'
+                <Controller name="password"
                             as={InputGroup}
                             control={control}
                             placeholder="Your password..."
-                            leftIcon='lock'/>
+                            leftIcon="lock"/>
             </FormGroup>
             <Controller
                 control={control}
-                name='rememberMe'
+                name="rememberMe"
                 render={({ onChange, onBlur, value }) => (
                     <Checkbox
                         onBlur={onBlur}
                         onChange={e => onChange((e.target as any).checked)}
                         checked={value}
-                        label='Remember me'
+                        label="Remember me"
                     />
                 )}
             />

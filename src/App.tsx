@@ -15,10 +15,10 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                <Route path='/auth'>
+                <Route path="/auth">
                     <MainForm/>
                 </Route>
-                <Route path='/'>
+                <Route path="/">
                     <div className="App">
                         <header className="App-header">
                             <img src={logo} className="App-logo" alt="logo"/>

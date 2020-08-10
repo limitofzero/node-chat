@@ -15,10 +15,10 @@ export const MainForm = () => {
     return (
         <div className="row">
             <div className="col-xs-4 col-xs-offset-4">
-                <div className='main-form'>
+                <div className="main-form">
                     <Card elevation={Elevation.TWO}>
                         <Tabs id="TabsExample" onChange={handleTabChange} selectedTabId={currentForm}>
-                            <Tab id='sign-in' title="Sign in" panel={<SignIn/>}/>
+                            <Tab id="sign-in" title="Sign in" panel={<SignIn/>}/>
                             <Tab id="sign-up" title="Sign up"/>
                         </Tabs>
                     </Card>
