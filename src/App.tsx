@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 import {
     BrowserRouter as Router, Route, Switch,
-} from 'react-router-dom';
+} from "react-router-dom";
 import { MainForm } from "./auth/MainForm";
 
 import "flexboxgrid/css/index.css";

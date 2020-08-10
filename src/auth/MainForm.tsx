@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Card, Elevation, Tab, Tabs } from "@blueprintjs/core";
-import './MainForm.css';
+import "./MainForm.css";
 import { SignIn } from "./sign-up/SignIn";
 
-type AuthForm = 'sign-in' | 'sign-up';
+type AuthForm = "sign-in" | "sign-up";
 
 export const MainForm = () => {
-    const [currentForm, setForm] = React.useState<AuthForm>('sign-in');
+    const [currentForm, setForm] = React.useState<AuthForm>("sign-in");
 
     const handleTabChange = (newTabId: AuthForm) => {
         setForm(newTabId);
