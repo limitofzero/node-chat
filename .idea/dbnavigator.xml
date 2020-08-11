@@ -80,7 +80,7 @@
           <database value="chat_db" />
           <type value="USER_PASSWORD" />
           <user value="root" />
-          <deprecated-pwd value="cGFzc3dvcmQ=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
