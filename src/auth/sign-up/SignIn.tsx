@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox, FormGroup, InputGroup } from "@blueprintjs/core";
 import { Controller, useForm } from "react-hook-form";
-import { SignInForm } from "../../../shared-models/auth/sign-in/sign-in-form";
+import { SignInForm } from "shared-models/auth/sign-in/sign-in-form";
 
 export const SignIn = () => {
     const defaultValues: SignInForm = {
