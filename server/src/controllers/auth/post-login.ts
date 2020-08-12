@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { User } from "../../db/entity/user";
-import { SignInForm } from "../../../../shared-models/auth/sign-in/sign-in-form";
 import jwt from "jsonwebtoken";
-import { SuccessLogin } from "../../../../shared-models";
+import { SuccessLogin } from "shared-models/auth/sign-in/success-login";
+import { SignInForm } from "shared-models/auth/sign-in/sign-in-form";
 
 export const login = async (request: Request, response: Response): Promise<Response<SuccessLogin>> => {
     const { email, password } = request.body as SignInForm;
