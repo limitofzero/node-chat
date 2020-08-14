@@ -11,6 +11,7 @@ import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { store } from "./auth/store/reducer";
 import { configureStore } from "@reduxjs/toolkit";
 import { Main } from "./main/Main";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 const rootStore = configureStore({
     reducer: store
@@ -25,7 +26,10 @@ const App = () => {
                       <MainForm/>
                   </Route>
                   <Route path="/">
-                      <Main/>
+                      <ProtectedRoute
+                        component={Main}
+                        isActive={false}
+                        redirectTo="/auth"/>
                   </Route>
               </Switch>
           </Router>
