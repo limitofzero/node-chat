@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import {
     BrowserRouter as Router, Route, Switch,
@@ -11,6 +10,7 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { store } from "./auth/store/reducer";
 import { configureStore } from "@reduxjs/toolkit";
+import { Main } from "./main/Main";
 
 const rootStore = configureStore({
     reducer: store
@@ -25,22 +25,7 @@ const App = () => {
                       <MainForm/>
                   </Route>
                   <Route path="/">
-                      <div className="App">
-                          <header className="App-header">
-                              <img src={logo} className="App-logo" alt="logo"/>
-                              <p>
-                                  Edit <code>src/App.tsx</code> and save to reload.
-                              </p>
-                              <a
-                                className="App-link"
-                                href="https://reactjs.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                  Learn React
-                              </a>
-                          </header>
-                      </div>
+                      <Main/>
                   </Route>
               </Switch>
           </Router>
