@@ -7,11 +7,6 @@
       "esnext"
     ],
     "baseUrl": ".",
-    "paths": {
-      "shared-models/*": [
-        "shared-models/*"
-      ]
-    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
