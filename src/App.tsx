@@ -25,12 +25,11 @@ const App = () => {
                   <Route path="/auth">
                       <MainForm/>
                   </Route>
-                  <Route path="/">
-                      <ProtectedRoute
-                        component={Main}
-                        isActive={false}
-                        redirectTo="/auth"/>
-                  </Route>
+                <ProtectedRoute
+                  path="/"
+                  component={Main}
+                  isActive={false}
+                  redirectTo="/auth"/>
               </Switch>
           </Router>
       </Provider>
