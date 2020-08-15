@@ -26,4 +26,14 @@ export const {
   startSignIn
 } = authSlice.actions;
 
+export const signIn = (form: SignInForm): Promise<SuccessLogin> => {
+  return fetch("http://localhost:3000/login", {
+    method: "POST",
+    body: JSON.stringify(form),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(resp => resp.json());
+};
+
 export const store = authSlice.reducer;

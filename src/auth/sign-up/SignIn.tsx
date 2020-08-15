@@ -2,8 +2,12 @@ import React from "react";
 import { Checkbox, FormGroup, InputGroup } from "@blueprintjs/core";
 import { Controller, useForm } from "react-hook-form";
 import { SignInForm } from "shared-models/auth/sign-in/sign-in-form";
+import { connect } from "react-redux";
+import { Dispatch } from "redux";
+import { signIn, startSignIn, signInSuccess } from "../store/reducer";
+import { SuccessLogin } from "../../../shared-models/auth/sign-in/success-login";
 
-export const SignIn = () => {
+const SignInComponent = ({ startSignIn, endSignIn }: any) => {
     const defaultValues: SignInForm = {
         email: "",
         password: "",
@@ -12,7 +16,9 @@ export const SignIn = () => {
 
     const { handleSubmit, control } = useForm<SignInForm>({ defaultValues }); // initialise the hook
     const onSubmit = (data: SignInForm) => {
-        console.log(data);
+      startSignIn(data);
+      signIn(data)
+        .then(resp => endSignIn(resp));
     };
 
     return (
@@ -53,3 +59,12 @@ export const SignIn = () => {
         </form>
     );
 };
+
+const mapDispatchToProps = (dispatch: Dispatch) => {
+  return {
+    startSignIn: (form: SignInForm) => dispatch(startSignIn(form)),
+    endSignIn: (resp: SuccessLogin) => dispatch(signInSuccess(resp))
+  };
+};
+
+export const SignIn = connect(null, mapDispatchToProps)(SignInComponent);
