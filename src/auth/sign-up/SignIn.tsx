@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { signIn, startSignIn, signInSuccess } from "../store/reducer";
 import { SuccessLogin } from "../../../shared-models/auth/sign-in/success-login";
+import { useHistory } from "react-router";
 
 const SignInComponent = ({ startSignIn, endSignIn }: any) => {
     const defaultValues: SignInForm = {
@@ -14,11 +15,14 @@ const SignInComponent = ({ startSignIn, endSignIn }: any) => {
         rememberMe: true
     };
 
+  const history = useHistory();
+
     const { handleSubmit, control } = useForm<SignInForm>({ defaultValues }); // initialise the hook
     const onSubmit = (data: SignInForm) => {
       startSignIn(data);
       signIn(data)
-        .then(resp => endSignIn(resp));
+        .then(resp => endSignIn(resp))
+        .then(() => history.push("/"));
     };
 
     return (

@@ -15,11 +15,10 @@ const MainPage = ({ token }: Auth) => {
                         path="/auth"
                         isActive={!token}
                         redirectTo="/"/>
-        <ProtectedRoute
-          path="/"
-          component={ChatWindow}
-          isActive={!!token}
-          redirectTo="/auth"/>
+        <ProtectedRoute path="/"
+                        component={ChatWindow}
+                        isActive={!!token}
+                        redirectTo="/auth"/>
       </Switch>
     </Router>
   );
