@@ -22,9 +22,10 @@ const App = () => {
       <Provider store={rootStore}>
           <Router>
               <Switch>
-                  <Route path="/auth">
-                      <MainForm/>
-                  </Route>
+                <ProtectedRoute component={MainForm}
+                                path="/auth"
+                                isActive={true}
+                                redirectTo="/"/>
                 <ProtectedRoute
                   path="/"
                   component={Main}
