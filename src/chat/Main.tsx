@@ -4,10 +4,12 @@ import { MainForm } from "../auth/MainForm";
 import { ChatWindow } from "./ChatWindow";
 import { BrowserRouter as Router } from "react-router-dom";
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import { Auth } from "../auth/store/reducer";
 
-const MainPage = ({ token }: Auth) => {
+export const Main = () => {
+  const token = useSelector((state: Auth) => state.token);
+
   return (
     <Router>
       <Switch>
@@ -23,7 +25,3 @@ const MainPage = ({ token }: Auth) => {
     </Router>
   );
 };
-
-export const Main = connect(
-  (state: Auth) => ({ token: state.token })
-)(MainPage);
