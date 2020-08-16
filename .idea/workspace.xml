@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/sign-up/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/sign-up/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/store/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chat/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,10 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/auth/sign-up/SignIn.tsx">
+        <entry file="file://$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="361">
+              <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -102,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth/store/reducer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="256">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -177,9 +174,10 @@
         <option value="$PROJECT_DIR$/src/main/ChatWindow.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/chat/Main.tsx" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/auth/store/reducer.ts" />
         <option value="$PROJECT_DIR$/src/auth/sign-up/SignIn.tsx" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx" />
       </list>
     </option>
   </component>
@@ -227,7 +225,7 @@
               <item name="node-chat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sign-up" type="462c0819:PsiDirectoryNode" />
+              <item name="sign-in" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,7 +384,7 @@
       <workItem from="1597256948753" duration="2601000" />
       <workItem from="1597427654820" duration="8939000" />
       <workItem from="1597488365947" duration="2978000" />
-      <workItem from="1597590709305" duration="1580000" />
+      <workItem from="1597590709305" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="(feature): recreate application">
       <created>1593193611779</created>
@@ -703,11 +701,25 @@
       <option name="project" value="LOCAL" />
       <updated>1597591857552</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="feature: add authorization">
+      <created>1597607454620</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1597607454620</updated>
+    </task>
+    <task id="LOCAL-00047" summary="refactor: rename folder">
+      <created>1597607502630</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1597607502630</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58681000" />
+    <option name="totallyTimeSpent" value="58955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -794,8 +806,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(client): add input groups for auth form" />
-    <MESSAGE value="feat(client): add lint-staged" />
     <MESSAGE value="feat(client): add lint fix" />
     <MESSAGE value="feat(client): fix husky" />
     <MESSAGE value="feat(client): add lint for husky" />
@@ -819,7 +829,9 @@
     <MESSAGE value="feature: add protected route for auth" />
     <MESSAGE value="refactor: rename main component" />
     <MESSAGE value="feature: add protecting routes by token" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add protecting routes by token" />
+    <MESSAGE value="feature: add authorization" />
+    <MESSAGE value="refactor: rename folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename folder" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="debuggerHistoryManager">
@@ -1160,6 +1172,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1169,21 +1184,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth/store/reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="256">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth/sign-up/SignIn.tsx">
+    <entry file="file://$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="361">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

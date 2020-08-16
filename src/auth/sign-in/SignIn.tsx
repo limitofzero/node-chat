@@ -44,6 +44,7 @@ const SignInComponent = ({ startSignIn, endSignIn }: any) => {
                 <Controller name="password"
                             as={InputGroup}
                             control={control}
+                            type="password"
                             placeholder="Your password..."
                             leftIcon="lock"/>
             </FormGroup>
