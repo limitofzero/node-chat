@@ -1,7 +1,7 @@
 import logo from "../logo.svg";
 import React from "react";
 
-export const Main = () => {
+export const ChatWindow = () => {
   return (
     <div className="App">
       <header className="App-header">

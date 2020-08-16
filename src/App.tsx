@@ -10,7 +10,7 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { store } from "./auth/store/reducer";
 import { configureStore } from "@reduxjs/toolkit";
-import { Main } from "./main/Main";
+import { ChatWindow } from "./main/ChatWindow";
 import { ProtectedRoute } from "./ProtectedRoute";
 
 const rootStore = configureStore({
@@ -28,7 +28,7 @@ const App = () => {
                                 redirectTo="/"/>
                 <ProtectedRoute
                   path="/"
-                  component={Main}
+                  component={ChatWindow}
                   isActive={false}
                   redirectTo="/auth"/>
               </Switch>
