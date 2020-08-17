@@ -14,7 +14,6 @@ export const SignIn = () => {
     };
 
   const history = useHistory();
-
   const dispatch = useDispatch();
 
   const { handleSubmit, control } = useForm<SignInForm>({ defaultValues });
@@ -60,7 +59,7 @@ export const SignIn = () => {
                     />
                 )}
             />
-            <input type="submit"/>
+          <button className="bp3-button" type="submit">Login</button>
         </form>
     );
 };
