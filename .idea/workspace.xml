@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="refactor: rewrite Main.tsx on hooks">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feature: auth fail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/sign-in/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/store/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +99,7 @@
       <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="npm.run-server">
     <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -135,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.run-server" />
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.migration:run" />
         <item itemvalue="npm.lint-fix" />
         <item itemvalue="npm.eslint" />
@@ -194,14 +211,7 @@
       <workItem from="1597778294980" duration="8000" />
       <workItem from="1597778731285" duration="260000" />
       <workItem from="1597779134110" duration="12000" />
-      <workItem from="1597779154215" duration="692000" />
-    </task>
-    <task id="LOCAL-00002" summary="(feature): add material ui">
-      <created>1593251961764</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1593251961764</updated>
+      <workItem from="1597779154215" duration="1405000" />
     </task>
     <task id="LOCAL-00003" summary="(feature): add tab value">
       <created>1595104951540</created>
@@ -539,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597609070522</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feature: auth fail">
+      <created>1597780022115</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1597780022115</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -581,7 +598,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(server): add user scheme and migrations" />
     <MESSAGE value="feat(client): add parsing body for requests" />
     <MESSAGE value="feat(server): add cors middlewar" />
     <MESSAGE value="fix: path" />
@@ -606,7 +622,8 @@
     <MESSAGE value="feature: password field" />
     <MESSAGE value="refactor: rewrite on hooks" />
     <MESSAGE value="refactor: rewrite Main.tsx on hooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rewrite Main.tsx on hooks" />
+    <MESSAGE value="feature: auth fail" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: auth fail" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -618,14 +635,38 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
+    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog" timestamp="1597780284586">
+      <screen x="52" y="23" width="1740" height="1097" />
+    </state>
+    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1597779960915">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597779960915" />
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1597779960914">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597779960914" />
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1597779960914">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597779960914" />
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1597779960915">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597779960915" />
     <state x="433" y="335" key="SettingsEditor" timestamp="1597777403376">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597780024955">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597780024955" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
