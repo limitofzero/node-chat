@@ -17,13 +17,15 @@ const authSlice = createSlice({
     startSignIn: (state, _: PayloadAction<SignInForm>) => state,
     signInSuccess: (state, action: PayloadAction<SuccessLogin>) => {
       state.token = action.payload.token;
-    }
+    },
+    signInFail: (state) => state
   }
 });
 
 export const {
   signInSuccess,
-  startSignIn
+  startSignIn,
+  signInFail
 } = authSlice.actions;
 
 export const signIn = (form: SignInForm): Promise<SuccessLogin> => {
@@ -33,7 +35,13 @@ export const signIn = (form: SignInForm): Promise<SuccessLogin> => {
     headers: {
       "Content-Type": "application/json"
     }
-  }).then(resp => resp.json());
+  }).then(resp => {
+    if (resp.ok) {
+      return resp.json();
+    } else {
+      throw new Error("Error");
+    }
+  });
 };
 
 export const store = authSlice.reducer;

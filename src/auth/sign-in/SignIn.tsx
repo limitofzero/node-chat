@@ -3,7 +3,7 @@ import { Checkbox, FormGroup, InputGroup } from "@blueprintjs/core";
 import { Controller, useForm } from "react-hook-form";
 import { SignInForm } from "shared-models/auth/sign-in/sign-in-form";
 import { useDispatch } from "react-redux";
-import { signIn, startSignIn, signInSuccess } from "../store/reducer";
+import { signIn, startSignIn, signInSuccess, signInFail } from "../store/reducer";
 import { useHistory } from "react-router";
 
 export const SignIn = () => {
@@ -21,7 +21,8 @@ export const SignIn = () => {
       dispatch(startSignIn(data));
       signIn(data)
         .then(resp => dispatch(signInSuccess(resp)))
-        .then(() => history.push("/"));
+        .then(() => history.push("/"))
+        .catch(_ => dispatch(signInFail()));
     };
 
     return (
