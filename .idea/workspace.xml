@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="refactor: move validators">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="refactor: add auth router in express">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/auth/post-login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/auth/post-login.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,14 +215,7 @@
       <workItem from="1597826326792" duration="691000" />
       <workItem from="1597863077415" duration="1501000" />
       <workItem from="1597864770076" duration="576000" />
-      <workItem from="1597867916552" duration="1447000" />
-    </task>
-    <task id="LOCAL-00006" summary="add fields for sign in form">
-      <created>1595186429300</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1595186429300</updated>
+      <workItem from="1597867916552" duration="1772000" />
     </task>
     <task id="LOCAL-00007" summary="add sign-in form">
       <created>1595275378622</created>
@@ -561,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597869739338</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="refactor: add auth router in express">
+      <created>1597870371219</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1597870371219</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -603,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: set up eslint 6.6.0 for react" />
     <MESSAGE value="refactor: rename signup" />
     <MESSAGE value="refactor: add bcrypt" />
     <MESSAGE value="refactor: eslint double qoutes" />
@@ -628,7 +626,8 @@
     <MESSAGE value="feature: add token saving in localstorage" />
     <MESSAGE value="feature: add validation for fields in auth" />
     <MESSAGE value="refactor: move validators" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: move validators" />
+    <MESSAGE value="refactor: add auth router in express" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add auth router in express" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -640,38 +639,39 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog" timestamp="1597780284586">
-      <screen x="52" y="23" width="1740" height="1097" />
+    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597870631727" />
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1597869711387">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1597870635773">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597869711387" />
-    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1597869711387">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597870635773" />
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1597870635772">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597869711386" />
-    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1597869711386">
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597870635772" />
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1597870635772">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597869711386" />
-    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1597869711387">
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597870635772" />
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1597870635773">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597869711387" />
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597870635773" />
     <state x="433" y="335" key="SettingsEditor" timestamp="1597777403376">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597869743187">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597870445154">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597869743187" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597870445154" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

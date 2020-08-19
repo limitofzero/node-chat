@@ -21,9 +21,13 @@ export const login = async (request: Request, response: Response): Promise<Respo
     const userRep = getRepository(User);
 
     return userRep.findOneOrFail({ where: { email } })
-      .then(user => user.isPasswordValid(password) ? returnToken(user) : { error: "Invalid password" })
+      .then(user => user.isPasswordValid(password) ? returnToken(user) : throwError())
       .then(result => response.json(result))
-      .catch(err => response.send(err));
+      .catch(err => response.json({ error: err.message }));
+};
+
+const throwError = () => {
+    throw new Error("Email or password is not valid");
 };
 
 const returnToken = (user: User): SuccessLogin => {
