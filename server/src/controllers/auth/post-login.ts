@@ -4,7 +4,12 @@ import { User } from "../../db/entity/user";
 import jwt from "jsonwebtoken";
 import { SuccessLogin } from "shared-models/auth/sign-in/success-login";
 import { SignInForm } from "shared-models/auth/sign-in/sign-in-form";
-import { validationResult } from "express-validator";
+import { body, ValidationChain, validationResult } from "express-validator";
+
+export const loginValidators: ValidationChain[] = [
+    body("email").notEmpty(),
+    body("password").notEmpty()
+];
 
 export const login = async (request: Request, response: Response): Promise<Response<SuccessLogin>> => {
     const errors = validationResult(request);
