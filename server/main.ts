@@ -2,9 +2,9 @@ import express from "express";
 import "reflect-metadata";
 import { createConnection } from "typeorm";
 import { typeOrmConfig } from "./src/db/typeorm-config";
-import { login, loginValidators } from "./src/controllers/auth";
 import bodyParser from "body-parser";
 import cors from "cors";
+import { auth } from "./src/controllers/auth";
 
 createConnection(typeOrmConfig).then(async connection => {
     const app = express();
@@ -15,7 +15,7 @@ createConnection(typeOrmConfig).then(async connection => {
     }
 
     const port = process.env.PORT;
-    app.post("/login", loginValidators, login);
+    app.use(auth);
 
     app.listen(port, () => console.log(`Server started on ${port}`));
 }).catch(err => console.log(err));
