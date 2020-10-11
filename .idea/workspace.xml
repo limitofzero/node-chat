@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feature: add expiresIn for jwt">
-      <change afterPath="$PROJECT_DIR$/src/auth/sign-in/user-token.utils.ts" afterDir="false" />
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feature: add token expiration check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-models/auth/sign-in/user-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared-models/auth/sign-in/user-token.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chat/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/Main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,7 @@
       <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="npm.run-server">
     <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -156,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.run-server" />
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.migration:run" />
         <item itemvalue="npm.lint-fix" />
         <item itemvalue="npm.eslint" />
@@ -220,14 +215,9 @@
       <workItem from="1597863077415" duration="1501000" />
       <workItem from="1597864770076" duration="576000" />
       <workItem from="1597867916552" duration="1909000" />
-      <workItem from="1597926927214" duration="5146000" />
-    </task>
-    <task id="LOCAL-00009" summary="add box for auth forms">
-      <created>1595362795185</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1595362795185</updated>
+      <workItem from="1597926927214" duration="5236000" />
+      <workItem from="1598705775801" duration="197000" />
+      <workItem from="1600459710239" duration="107000" />
     </task>
     <task id="LOCAL-00010" summary="add baseline">
       <created>1595364191010</created>
@@ -565,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597938061088</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="feature: add token expiration check">
+      <created>1597942396958</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1597942396958</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -607,7 +604,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: eslint double qoutes" />
     <MESSAGE value="refactor: eslint double quotes in jsx" />
     <MESSAGE value="feature: jwt authorization" />
     <MESSAGE value="refactor: add aliases" />
@@ -632,7 +628,8 @@
     <MESSAGE value="refactor: add auth router in express" />
     <MESSAGE value="feature: error if user not found" />
     <MESSAGE value="feature: add expiresIn for jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add expiresIn for jwt" />
+    <MESSAGE value="feature: add token expiration check" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add token expiration check" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -653,82 +650,82 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1597940566411">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1600459816835">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597940566411" />
-    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1597940566410">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816835" />
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1600459816834">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597940566410" />
-    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1597940566409">
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1600459816833">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597940566409" />
-    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1597940566411">
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816833" />
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1600459816834">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597940566411" />
-    <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597937344442">
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
+    <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344442" />
+    <state width="885" height="384" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437285" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom/48.23.1744.1097@48.23.1744.1097" timestamp="1597937207040" />
-    <state width="885" height="384" key="GridCell.Tab.1.center" timestamp="1597937344441">
+    <state width="885" height="384" key="GridCell.Tab.1.center" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344441" />
+    <state width="885" height="384" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437285" />
     <state width="885" height="384" key="GridCell.Tab.1.center/48.23.1744.1097@48.23.1744.1097" timestamp="1597937207039" />
-    <state width="885" height="384" key="GridCell.Tab.1.left" timestamp="1597937344440">
+    <state width="885" height="384" key="GridCell.Tab.1.left" timestamp="1597942437284">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344440" />
+    <state width="885" height="384" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437284" />
     <state width="885" height="384" key="GridCell.Tab.1.left/48.23.1744.1097@48.23.1744.1097" timestamp="1597937207038" />
-    <state width="885" height="384" key="GridCell.Tab.1.right" timestamp="1597937344441">
+    <state width="885" height="384" key="GridCell.Tab.1.right" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344441" />
+    <state width="885" height="384" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437285" />
     <state width="885" height="384" key="GridCell.Tab.1.right/48.23.1744.1097@48.23.1744.1097" timestamp="1597937207039" />
-    <state width="885" height="384" key="GridCell.Tab.2.bottom" timestamp="1597937344443">
+    <state width="885" height="384" key="GridCell.Tab.2.bottom" timestamp="1597942437287">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.2.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344443" />
-    <state width="885" height="384" key="GridCell.Tab.2.center" timestamp="1597937344442">
+    <state width="885" height="384" key="GridCell.Tab.2.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437287" />
+    <state width="885" height="384" key="GridCell.Tab.2.center" timestamp="1597942437286">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.2.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344442" />
-    <state width="885" height="384" key="GridCell.Tab.2.left" timestamp="1597937344442">
+    <state width="885" height="384" key="GridCell.Tab.2.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437286" />
+    <state width="885" height="384" key="GridCell.Tab.2.left" timestamp="1597942437286">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.2.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344442" />
-    <state width="885" height="384" key="GridCell.Tab.2.right" timestamp="1597937344443">
+    <state width="885" height="384" key="GridCell.Tab.2.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437286" />
+    <state width="885" height="384" key="GridCell.Tab.2.right" timestamp="1597942437287">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.2.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344443" />
-    <state width="885" height="384" key="GridCell.Tab.3.bottom" timestamp="1597937344444">
+    <state width="885" height="384" key="GridCell.Tab.2.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437287" />
+    <state width="885" height="384" key="GridCell.Tab.3.bottom" timestamp="1597942437289">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.3.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344444" />
-    <state width="885" height="384" key="GridCell.Tab.3.center" timestamp="1597937344444">
+    <state width="885" height="384" key="GridCell.Tab.3.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437289" />
+    <state width="885" height="384" key="GridCell.Tab.3.center" timestamp="1597942437288">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.3.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344444" />
-    <state width="885" height="384" key="GridCell.Tab.3.left" timestamp="1597937344443">
+    <state width="885" height="384" key="GridCell.Tab.3.center/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437288" />
+    <state width="885" height="384" key="GridCell.Tab.3.left" timestamp="1597942437287">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.3.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344443" />
-    <state width="885" height="384" key="GridCell.Tab.3.right" timestamp="1597937344444">
+    <state width="885" height="384" key="GridCell.Tab.3.left/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437287" />
+    <state width="885" height="384" key="GridCell.Tab.3.right" timestamp="1597942437288">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="384" key="GridCell.Tab.3.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597937344444" />
+    <state width="885" height="384" key="GridCell.Tab.3.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437288" />
     <state x="433" y="335" key="SettingsEditor" timestamp="1597777403376">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597938064283">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597942399789">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597938064283" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597942399789" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
