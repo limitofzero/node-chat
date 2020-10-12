@@ -1,0 +1,22 @@
+version: "2.2"
+services:
+  app:
+    container_name: node_chat
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+
+  postgres:
+    container_name: postgres-node-chat
+    image: postgres
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: chat_db
