@@ -1,5 +1,5 @@
 import { Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/common";
-import { from, Observable, of, throwError } from "rxjs";
+import { from, Observable, throwError } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
 import { LoginRequestDto } from "./login-request.dto";
