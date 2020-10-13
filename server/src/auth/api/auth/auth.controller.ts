@@ -36,7 +36,7 @@ export class AuthController {
     const token = jwt.sign({
         username,
         email
-    }, process.env.SALT || "", { expiresIn });
+    }, process.env.SALT ?? "", { expiresIn });
 
     return { token };
   }
