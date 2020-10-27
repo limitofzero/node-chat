@@ -40,11 +40,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "run-server": "ts-node --project server/tsconfig.json server/main.ts",
+    "run-server": "ts-node-dev --project server/tsconfig.json server/main.ts",
     "lint-staged": "lint-staged",
     "prettier": "prettier",
     "lint": "eslint . --ext .tsx --ext .ts",
-    "lint-fix": "eslint . --ext .tsx --ext .ts --fix"
+    "lint-fix": "eslint . --ext .tsx --ext .ts --fix",
+    "docker:dev": "docker-compose up"
   },
   "husky": {
     "hooks": {
@@ -81,6 +82,7 @@
     "eslint": "6.6.0",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
-    "ts-node": "8.10.2"
+    "ts-node": "8.10.2",
+    "ts-node-dev": "1.0.0"
   }
 }
