@@ -15,7 +15,6 @@ export class AuthController {
   @Post("login")
   public login(@Body() loginRequest: LoginRequestDto): Observable<{token: string} | HttpException> {
     const { password, email, rememberMe } = loginRequest;
-    console.log(loginRequest);
     return from(this.userRep.findOne({ email }))
       .pipe(
         map(user => user?.isPasswordValid(password) ? this.returnToken(user, rememberMe) : null),
@@ -48,7 +47,6 @@ export class AuthController {
   @Post("register")
   public register(@Body() registerRequest: RegisterRequestDto): Observable<null> {
     const { email, username } = registerRequest;
-    console.log("here")
     return from(this.userRep.findOne({ email, username }))
       .pipe(
         map(user => !user ? this.userRep.create(registerRequest) : null),
