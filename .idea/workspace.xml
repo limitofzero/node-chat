@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feature: add token expiration check">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +96,7 @@
       <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.run-server">
+  <component name="RunManager" selected="npm.start (1)">
     <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -151,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.run-server" />
         <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.run-server" />
         <item itemvalue="npm.migration:run" />
         <item itemvalue="npm.lint-fix" />
         <item itemvalue="npm.eslint" />
@@ -218,13 +216,7 @@
       <workItem from="1597926927214" duration="5236000" />
       <workItem from="1598705775801" duration="197000" />
       <workItem from="1600459710239" duration="107000" />
-    </task>
-    <task id="LOCAL-00010" summary="add baseline">
-      <created>1595364191010</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1595364191010</updated>
+      <workItem from="1604167377821" duration="370000" />
     </task>
     <task id="LOCAL-00011" summary="feat(client) recreate app with create-react-app">
       <created>1596133979313</created>
@@ -562,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597942396958</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="feat(): add material">
+      <created>1604167609732</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1604167609732</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -604,7 +603,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: eslint double quotes in jsx" />
     <MESSAGE value="feature: jwt authorization" />
     <MESSAGE value="refactor: add aliases" />
     <MESSAGE value="feature: path" />
@@ -629,7 +627,8 @@
     <MESSAGE value="feature: error if user not found" />
     <MESSAGE value="feature: add expiresIn for jwt" />
     <MESSAGE value="feature: add token expiration check" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add token expiration check" />
+    <MESSAGE value="feat(): add material" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add material" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
