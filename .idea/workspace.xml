@@ -21,9 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/db/entity/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/db/entity/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/proxy.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +95,12 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
-    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.dev:docker:up">
+    <configuration name="dev:docker:up" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="eslint" />
+        <script value="dev:docker:up" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -144,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.run-server" />
         <item itemvalue="npm.migration:run" />
         <item itemvalue="npm.lint-fix" />
-        <item itemvalue="npm.eslint" />
       </list>
     </recent_temporary>
   </component>
@@ -210,14 +215,7 @@
       <workItem from="1597926927214" duration="5236000" />
       <workItem from="1598705775801" duration="197000" />
       <workItem from="1600459710239" duration="107000" />
-      <workItem from="1604167377821" duration="4760000" />
-    </task>
-    <task id="LOCAL-00013" summary="feat(client) add main form and styles">
-      <created>1596135817972</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1596135817972</updated>
+      <workItem from="1604167377821" duration="6895000" />
     </task>
     <task id="LOCAL-00014" summary="feat(client) add grid">
       <created>1596136541625</created>
@@ -555,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604171083245</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="feat(): add form">
+      <created>1604172190684</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1604172190684</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -597,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: path" />
     <MESSAGE value="feature: add auth store" />
     <MESSAGE value="feature: add main.tsx" />
     <MESSAGE value="feature: add protected route" />
@@ -622,7 +626,8 @@
     <MESSAGE value="feat(): add material" />
     <MESSAGE value="feat(): add routing" />
     <MESSAGE value="feat(): add tab routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add tab routing" />
+    <MESSAGE value="feat(): add form" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add form" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -634,10 +639,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604171083056">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604172190526">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171083056" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604172190526" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -647,25 +652,29 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1604171684720">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1604175531628">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171684720" />
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304988" />
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175531628" />
     <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816835" />
-    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1604171684718">
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1604175531626">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171684718" />
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304986" />
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175531626" />
     <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
-    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1604171684717">
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1604175531625">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171684716" />
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304985" />
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175531625" />
     <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816833" />
-    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1604171684719">
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1604175531627">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171684719" />
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304987" />
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175531627" />
     <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -723,10 +732,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604171086165">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604172193271">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604171086165" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604172193271" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597942399789" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -736,6 +745,15 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597778798148" />
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1604174395090">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604174395090" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604175380549">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175284435" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

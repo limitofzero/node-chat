@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Email</mat-label>
@@ -19,5 +19,5 @@
       remember me
     </mat-checkbox>
   </p>
-
+  <button type="submit" mat-button>Sign in</button>
 </form>

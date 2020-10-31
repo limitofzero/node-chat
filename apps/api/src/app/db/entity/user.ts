@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
-import bcrypt from "bcrypt";
+import { compareSync, hashSync } from "bcrypt";
 
 @Entity()
 @Unique(["username"])
@@ -22,10 +22,10 @@ export class User {
 
     public hashPassword(): void {
         // todo salt
-        this.password = bcrypt.hashSync(this.password, 8);
+      this.password = hashSync(this.password, 8);
     }
 
     public isPasswordValid(password: string): boolean {
-        return bcrypt.compareSync(password, this.password);
+      return compareSync(password, this.password);
     }
 }
