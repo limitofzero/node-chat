@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/db/entity/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/db/entity/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/proxy.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,14 +205,7 @@
       <workItem from="1597926927214" duration="5236000" />
       <workItem from="1598705775801" duration="197000" />
       <workItem from="1600459710239" duration="107000" />
-      <workItem from="1604167377821" duration="6895000" />
-    </task>
-    <task id="LOCAL-00014" summary="feat(client) add grid">
-      <created>1596136541625</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1596136541625</updated>
+      <workItem from="1604167377821" duration="7204000" />
     </task>
     <task id="LOCAL-00015" summary="feat(client) add working tabs">
       <created>1596137031963</created>
@@ -560,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604172190684</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="feat(): add login mechanism">
+      <created>1604175630749</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1604175630749</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -602,7 +592,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: add auth store" />
     <MESSAGE value="feature: add main.tsx" />
     <MESSAGE value="feature: add protected route" />
     <MESSAGE value="feature: finalize the protected route component" />
@@ -627,7 +616,8 @@
     <MESSAGE value="feat(): add routing" />
     <MESSAGE value="feat(): add tab routing" />
     <MESSAGE value="feat(): add form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add form" />
+    <MESSAGE value="feat(): add login mechanism" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add login mechanism" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -639,10 +629,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604172190526">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604175630544">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604172190526" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175630544" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -732,10 +722,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604172193271">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604175632595">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604172193271" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604175632595" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597942399789" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
