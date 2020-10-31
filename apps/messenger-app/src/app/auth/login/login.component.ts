@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
+import { SessionStore } from "../../session/session.store";
 
 @UntilDestroy()
 @Component({
@@ -14,7 +15,8 @@ export class LoginComponent {
 
   constructor(
     private readonly fb: FormBuilder,
-    private readonly auth: AuthService
+    private readonly auth: AuthService,
+    private readonly session: SessionStore
   ) {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
@@ -30,6 +32,8 @@ export class LoginComponent {
 
     this.auth.signIn(this.form.value).pipe(
       untilDestroyed(this)
-    ).subscribe();
+    ).subscribe({
+      next: ({ token }) => this.session.update({ token })
+    });
   }
 }

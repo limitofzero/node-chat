@@ -12,6 +12,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { AuthService } from "./auth.service";
+import { SessionModule } from "../session/session.module";
 
 @NgModule({
   declarations: [AuthFormComponent, LoginComponent],
@@ -26,7 +27,8 @@ import { AuthService } from "./auth.service";
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    SessionModule
   ],
   providers: [
     AuthService
