@@ -9,8 +9,9 @@ import { LoginComponent } from "./login/login.component";
       {
         path: "", component: AuthFormComponent,
         children: [
-          { path: "login", component: LoginComponent },
-          { path: "", redirectTo: "login", pathMatch: "full" }
+          { path: "sign-in", component: LoginComponent },
+          { path: "sign-up", component: LoginComponent },
+          { path: "", redirectTo: "sign-in", pathMatch: "full" }
         ]
       }
     ])

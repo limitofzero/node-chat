@@ -1,3 +1,14 @@
 <main>
-  <router-outlet></router-outlet>
+  <mat-card>
+    <nav mat-tab-nav-bar>
+      <ng-container *ngFor="let link of links">
+        <a mat-tab-link
+           [routerLink]="link.link"
+           [active]="(activeLink | async) === link.link"> {{link.label}} </a>
+      </ng-container>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+  </mat-card>
 </main>

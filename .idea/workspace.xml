@@ -19,23 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="" />
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>react-router</find>
-      <find>row</find>
-      <find>row-</find>
-      <find>eslint</find>
-      <find>shared-models</find>
-      <find>react</find>
-      <find>SignInForm</find>
-      <find>localho</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,7 +56,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -86,14 +81,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/shared-models/auth/sign-in" />
       <recent name="$PROJECT_DIR$/server/src/db" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/server/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start (1)">
@@ -216,14 +212,7 @@
       <workItem from="1597926927214" duration="5236000" />
       <workItem from="1598705775801" duration="197000" />
       <workItem from="1600459710239" duration="107000" />
-      <workItem from="1604167377821" duration="370000" />
-    </task>
-    <task id="LOCAL-00011" summary="feat(client) recreate app with create-react-app">
-      <created>1596133979313</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1596133979313</updated>
+      <workItem from="1604167377821" duration="3649000" />
     </task>
     <task id="LOCAL-00012" summary="feat(client) add react router dom">
       <created>1596134496640</created>
@@ -561,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604167609732</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="feat(): add routing">
+      <created>1604167990277</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1604167990277</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView">
@@ -603,7 +599,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: jwt authorization" />
     <MESSAGE value="refactor: add aliases" />
     <MESSAGE value="feature: path" />
     <MESSAGE value="feature: add auth store" />
@@ -628,7 +623,8 @@
     <MESSAGE value="feature: add expiresIn for jwt" />
     <MESSAGE value="feature: add token expiration check" />
     <MESSAGE value="feat(): add material" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add material" />
+    <MESSAGE value="feat(): add routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add routing" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -640,6 +636,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604167990102">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167990102" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -649,21 +649,25 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1600459816835">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1604167841446">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167841446" />
     <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816835" />
-    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1600459816834">
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1604167841444">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167841444" />
     <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
-    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1600459816833">
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1604167841443">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167841443" />
     <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816833" />
-    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1600459816834">
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1604167841445">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167841445" />
     <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1600459816834" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -721,9 +725,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1597777403376" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1597942399789">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604167992854">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604167992854" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597942399789" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
