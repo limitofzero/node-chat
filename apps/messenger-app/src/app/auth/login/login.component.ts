@@ -30,10 +30,12 @@ export class LoginComponent {
       return;
     }
 
+    this.session.setLoading(true);
     this.auth.signIn(this.form.value).pipe(
       untilDestroyed(this)
     ).subscribe({
-      next: ({ token }) => this.session.update({ token })
+      next: ({ token }) => this.session.update({ token }),
+      complete: () => this.session.setLoading(false)
     });
   }
 }
