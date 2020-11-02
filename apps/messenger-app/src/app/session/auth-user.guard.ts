@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from "@angular/router";
 import { Observable, of } from "rxjs";
 import { SessionQuery } from "./session.query";
-import { switchMap } from "rxjs/operators";
+import { switchMap, tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -18,6 +18,7 @@ export class AuthUserGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.session.isLoaded().pipe(
+      tap(console.log),
       switchMap(isAuth => isAuth ? of(true) : this.router.navigate(["auth"]))
     );
   }

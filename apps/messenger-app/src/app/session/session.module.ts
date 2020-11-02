@@ -1,7 +1,5 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { SessionStore } from "./session.store";
-import { SessionQuery } from "./session.query";
 
 
 @NgModule({
@@ -9,7 +7,7 @@ import { SessionQuery } from "./session.query";
   imports: [
     CommonModule
   ],
-  providers: [SessionStore, SessionQuery]
+  providers: []
 })
 export class SessionModule {
 }
