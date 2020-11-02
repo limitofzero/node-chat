@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from "@angular/router";
 import { Observable, of } from "rxjs";
 import { SessionQuery } from "./session.query";
-import { switchMap, tap } from "rxjs/operators";
+import { switchMap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"

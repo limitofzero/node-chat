@@ -13,9 +13,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { AuthService } from "./auth.service";
 import { SessionModule } from "../session/session.module";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
-  declarations: [AuthFormComponent, LoginComponent],
+  declarations: [AuthFormComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

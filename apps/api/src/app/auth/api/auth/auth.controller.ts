@@ -45,8 +45,9 @@ export class AuthController {
   }
 
   @Post("register")
-  public register(@Body() registerRequest: RegisterRequestDto): Observable<null> {
+  public register(@Body() registerRequest: RegisterRequestDto): Observable<void> {
     const { email, username } = registerRequest;
+    console.log("here");
     return from(this.userRep.findOne({ email, username }))
       .pipe(
         map(user => !user ? this.userRep.create(registerRequest) : null),
