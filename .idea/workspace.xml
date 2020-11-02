@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/session/session.query.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/session/session.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/session/session.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.run-server" />
         <item itemvalue="npm.migration:run" />
         <item itemvalue="npm.lint-fix" />
@@ -211,14 +212,7 @@
       <workItem from="1600459710239" duration="107000" />
       <workItem from="1604167377821" duration="8306000" />
       <workItem from="1604215956368" duration="487000" />
-      <workItem from="1604340298817" duration="2439000" />
-    </task>
-    <task id="LOCAL-00018" summary="feat(client) remove navbar">
-      <created>1596448574484</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1596448574484</updated>
+      <workItem from="1604340298817" duration="3938000" />
     </task>
     <task id="LOCAL-00019" summary="feat(client) add .idea dir in gitignore">
       <created>1596448648732</created>
@@ -556,17 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1604216312615</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="feat(): remove api prefix">
+      <created>1604343400212</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1604343400212</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -598,7 +590,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: add auth fetch" />
     <MESSAGE value="feature: add protected route for auth" />
     <MESSAGE value="refactor: rename main component" />
     <MESSAGE value="feature: add protecting routes by token" />
@@ -623,7 +614,8 @@
     <MESSAGE value="feat(): add akite" />
     <MESSAGE value="feat(): add session store" />
     <MESSAGE value="feat(): add loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add loader" />
+    <MESSAGE value="feat(): remove api prefix" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): remove api prefix" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -635,10 +627,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604216312345">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604343399961">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176998761" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604343399961" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604216312345" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -649,30 +641,30 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1604216496100">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom" timestamp="1604344213631">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304988" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176982294" />
-    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1604216496100" />
-    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1604216496099">
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604343723866" />
+    <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1604344213631" />
+    <state width="885" height="293" key="GridCell.Tab.0.center" timestamp="1604344213629">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304986" />
-    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176982291" />
-    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1604216496099" />
-    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1604216496099">
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604343723864" />
+    <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1604344213629" />
+    <state width="885" height="293" key="GridCell.Tab.0.left" timestamp="1604344213628">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304985" />
-    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176982290" />
-    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1604216496099" />
-    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1604216496100">
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604343723863" />
+    <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1604344213628" />
+    <state width="885" height="293" key="GridCell.Tab.0.right" timestamp="1604344213630">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304987" />
-    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176982293" />
-    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1604216496100" />
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604343723865" />
+    <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1604344213630" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -742,15 +734,17 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597778798148" />
-    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1604176415154">
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1604344181571">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176415154" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604342729248">
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604344181571" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604344112326">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604342729248" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604344112326" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
