@@ -14,6 +14,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { AuthService } from "./auth.service";
 import { SessionModule } from "../session/session.module";
 import { RegisterComponent } from "./register/register.component";
+import { NotificationsModule } from "../notifications/notifications.module";
 
 @NgModule({
   declarations: [AuthFormComponent, LoginComponent, RegisterComponent],
@@ -29,7 +30,8 @@ import { RegisterComponent } from "./register/register.component";
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    SessionModule
+    SessionModule,
+    NotificationsModule
   ],
   providers: [
     AuthService

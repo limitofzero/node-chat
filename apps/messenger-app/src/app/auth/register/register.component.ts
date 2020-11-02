@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { Router } from "@angular/router";
+import { NotificationService } from "../../notifications/notification.service";
 
 @UntilDestroy()
 @Component({
@@ -16,7 +17,8 @@ export class RegisterComponent {
   constructor(
     private readonly fb: FormBuilder,
     private readonly auth: AuthService,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly notification: NotificationService
   ) {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
@@ -33,7 +35,10 @@ export class RegisterComponent {
     this.auth.signUp(this.form.value).pipe(
       untilDestroyed(this)
     ).subscribe({
-      next: () => this.router.navigate([".."])
+      next: () => {
+        this.notification.show({ message: "You was registered" });
+        this.router.navigate([".."]);
+      }
     });
   }
 }
