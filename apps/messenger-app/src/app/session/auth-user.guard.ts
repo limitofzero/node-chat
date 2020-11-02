@@ -14,7 +14,7 @@ export class AuthUserGuard implements CanActivate {
   ) {
   }
 
-  canActivate(
+  public canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.session.isLoaded().pipe(
