@@ -11,6 +11,6 @@ export class AuthService {
   }
 
   public signIn(form: LoginRequestDto): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>("api/login", form);
+    return this.http.post<{ token: string }>("login", form);
   }
 }
