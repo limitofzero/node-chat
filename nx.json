@@ -28,12 +28,17 @@
     },
     "messenger-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["messenger-app"]
+      "implicitDependencies": [
+        "messenger-app"
+      ]
     },
     "api": {
       "tags": []
     },
     "api-interfaces": {
+      "tags": []
+    },
+    "dto": {
       "tags": []
     }
   }

@@ -2,10 +2,9 @@ import { Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/commo
 import { from, Observable, throwError } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
-import { LoginRequestDto } from "./login-request.dto";
 import { map, mapTo, switchMap } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
-import { RegisterRequestDto } from "./register-request.dto";
+import { RegisterRequestDto, LoginRequestDto } from "@messenger/dto";
 import * as jwt from "jsonwebtoken";
 
 @Controller()

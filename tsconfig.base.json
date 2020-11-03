@@ -16,7 +16,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@messenger/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@messenger/api-interfaces": [
+        "libs/api-interfaces/src/index.ts"
+      ],
+      "@messenger/dto": [
+        "libs/dto/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

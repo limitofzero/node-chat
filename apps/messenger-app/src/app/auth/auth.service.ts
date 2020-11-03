@@ -1,8 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { LoginRequestDto } from "../../../../api/src/app/auth/api/auth/login-request.dto";
-import { RegisterRequestDto } from "../../../../api/src/app/auth/api/auth/register-request.dto";
+import { LoginRequestDto, RegisterRequestDto } from "@messenger/dto";
 
 @Injectable()
 export class AuthService {

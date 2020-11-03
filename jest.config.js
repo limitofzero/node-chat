@@ -1,7 +1,8 @@
 module.exports = {
   projects: [
-    '<rootDir>/apps/messenger-app',
-    '<rootDir>/apps/api',
-    '<rootDir>/libs/api-interfaces',
+    "<rootDir>/apps/messenger-app",
+    "<rootDir>/apps/api",
+    "<rootDir>/libs/api-interfaces",
+    "<rootDir>/libs/dto"
   ],
 };
