@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(): add new flow for sending">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,14 +214,7 @@
       <workItem from="1604215956368" duration="487000" />
       <workItem from="1604340298817" duration="8245000" />
       <workItem from="1604426178082" duration="5018000" />
-      <workItem from="1604512627449" duration="5513000" />
-    </task>
-    <task id="LOCAL-00028" summary="feat(server): add cors middlewar">
-      <created>1596827562538</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1596827562538</updated>
+      <workItem from="1604512627449" duration="6601000" />
     </task>
     <task id="LOCAL-00029" summary="fix: path">
       <created>1596899512432</created>
@@ -560,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604518834927</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="feat(): save new user">
+      <created>1604519482783</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1604519482783</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +592,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: add token saving in localstorage" />
     <MESSAGE value="feature: add validation for fields in auth" />
     <MESSAGE value="refactor: move validators" />
     <MESSAGE value="refactor: add auth router in express" />
@@ -618,7 +616,8 @@
     <MESSAGE value="feat(): add mailer" />
     <MESSAGE value="feat(): add .env to env ignore" />
     <MESSAGE value="feat(): add env params for configuring email" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add env params for configuring email" />
+    <MESSAGE value="feat(): save new user" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): save new user" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -630,15 +629,15 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604519452703">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604519482608">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519452703" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519482608" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604428863046" />
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1604519452326">
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1604519468496">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519452326" />
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519468496" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597870631727" />
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
@@ -752,11 +751,11 @@
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604176415154" />
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604346838756" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604518020276">
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604520407102">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518020276" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604520407102" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604436220247" />
   </component>
   <component name="debuggerHistoryManager">

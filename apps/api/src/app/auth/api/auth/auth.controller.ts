@@ -59,20 +59,33 @@ export class AuthController {
   }
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {
-    return (user ? this.sendAuthEmail(user) : throwError(new HttpException("User was not created", 404))).pipe(
+    return (user ? this.sendVerificationEmail(user) : throwError(new HttpException("User was not created", 404))).pipe(
       mergeMap(() => this.userRep.save(user)),
       mapTo(null)
     );
   }
 
-  private sendAuthEmail(user: User): Observable<void> {
+  private generateEmailVerificationToken(user: User): string {
+    const { username } = user;
+    const expiresIn = "24h";
+
+    return jwt.sign({
+      username
+    }, process.env.SALT ?? "", { expiresIn });
+  }
+
+  private sendVerificationEmail(user: User): Observable<void> {
+    const token = this.generateEmailVerificationToken(user);
+    const host = "http://localhost:4200";
     const email = user.email;
+
+
     return this.mail.sendEmail({
-      from: "\"Fred Foo 👻\" <foo@example.com>",
+      from: "\"limitofzero 👻\" <limitofzero@gmail.com>",
       to: email,
-      subject: "Hello ✔", // Subject line
-      text: "Hello world?", // plain text body
-      html: "<b>Hello world?</b>" // html body
+      subject: "Hello ✔",
+      text: "You were registered!!!",
+      html: `Verification link: ${host}/auth/confirmation?token=${token}` // html body
     });
   }
 
