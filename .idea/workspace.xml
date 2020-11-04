@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(): add .env to env ignore">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(): add new flow for sending">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,14 +215,7 @@
       <workItem from="1604215956368" duration="487000" />
       <workItem from="1604340298817" duration="8245000" />
       <workItem from="1604426178082" duration="5018000" />
-      <workItem from="1604512627449" duration="4846000" />
-    </task>
-    <task id="LOCAL-00027" summary="feat(client): add parsing body for requests">
-      <created>1596662709924</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1596662709924</updated>
+      <workItem from="1604512627449" duration="5513000" />
     </task>
     <task id="LOCAL-00028" summary="feat(server): add cors middlewar">
       <created>1596827562538</created>
@@ -559,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604518115938</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="feat(): add env params for configuring email">
+      <created>1604518834927</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1604518834927</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +593,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: auth fail" />
     <MESSAGE value="feature: add token saving in localstorage" />
     <MESSAGE value="feature: add validation for fields in auth" />
     <MESSAGE value="refactor: move validators" />
@@ -617,7 +617,8 @@
     <MESSAGE value="feat(): add dto lib" />
     <MESSAGE value="feat(): add mailer" />
     <MESSAGE value="feat(): add .env to env ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add .env to env ignore" />
+    <MESSAGE value="feat(): add env params for configuring email" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add env params for configuring email" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -629,44 +630,44 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604518582551">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604519452703">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518582551" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519452703" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604428863046" />
-    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1604518581969">
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1604519452326">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="49" y="79" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518581969" />
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519452326" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597870631727" />
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="885" height="292" key="GridCell.Tab.0.bottom" timestamp="1604518018139">
+    <state width="885" height="292" key="GridCell.Tab.0.bottom" timestamp="1604518843017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304988" />
-    <state width="885" height="292" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518018139" />
+    <state width="885" height="292" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518843017" />
     <state width="885" height="164" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1604437569451" />
-    <state width="885" height="292" key="GridCell.Tab.0.center" timestamp="1604518018138">
+    <state width="885" height="292" key="GridCell.Tab.0.center" timestamp="1604518843016">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304986" />
-    <state width="885" height="292" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518018138" />
+    <state width="885" height="292" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518843016" />
     <state width="885" height="164" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1604437569450" />
-    <state width="885" height="292" key="GridCell.Tab.0.left" timestamp="1604518018138">
+    <state width="885" height="292" key="GridCell.Tab.0.left" timestamp="1604518843015">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304985" />
-    <state width="885" height="292" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518018138" />
+    <state width="885" height="292" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518843015" />
     <state width="885" height="164" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1604437569450" />
-    <state width="885" height="292" key="GridCell.Tab.0.right" timestamp="1604518018139">
+    <state width="885" height="292" key="GridCell.Tab.0.right" timestamp="1604518843017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304987" />
-    <state width="885" height="292" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518018139" />
+    <state width="885" height="292" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518843017" />
     <state width="885" height="164" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1604437569450" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1597942437285">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -724,10 +725,14 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1604435273021" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604428865690">
+    <state x="677" y="182" key="VCS.ChangeListViewerDialog" timestamp="1604519376567">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604177001576" />
+    <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519376567" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604518838960">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518838960" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604428865690" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />

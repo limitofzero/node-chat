@@ -2,7 +2,7 @@ import { Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/commo
 import { from, Observable, throwError } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
-import { catchError, map, mapTo, switchMap } from "rxjs/operators";
+import { map, mapTo, mergeMap } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
 import { RegisterRequestDto, LoginRequestDto } from "@messenger/dto";
 import * as jwt from "jsonwebtoken";
@@ -54,9 +54,15 @@ export class AuthController {
     return from(this.userRep.findOne({ email, username }))
       .pipe(
         map(user => !user ? this.userRep.create(registerRequest) : null),
-        switchMap(user => user ? this.sendAuthEmail(user) : throwError(new HttpException("User was not created", 404))),
-        mapTo(null)
+        mergeMap(user => this.sendEmailAndSaveUser(user))
       );
+  }
+
+  private sendEmailAndSaveUser(user: User | null): Observable<void> {
+    return (user ? this.sendAuthEmail(user) : throwError(new HttpException("User was not created", 404))).pipe(
+      mergeMap(() => this.userRep.save(user)),
+      mapTo(null)
+    );
   }
 
   private sendAuthEmail(user: User): Observable<void> {

@@ -12,8 +12,8 @@ export class MailTransporterService {
     const port = Number.parseInt(ENV.EMAIL_PORT);
 
     this.transporter = createTransport({
+      port,
       host: ENV.EMAIL_HOST,
-      port: port,
       secure: true,
       auth: {
         user: ENV.EMAIL_LOGIN,
