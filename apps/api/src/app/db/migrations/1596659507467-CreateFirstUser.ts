@@ -9,6 +9,7 @@ export class CreateFirstUser1596659507467 implements MigrationInterface {
         user.password = "password";
         user.hashPassword();
         user.username = "admin";
+      user.isActive = true;
         const userRepository = getRepository(User);
         await userRepository.save(user);
     }

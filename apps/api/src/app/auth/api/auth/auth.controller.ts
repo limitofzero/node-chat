@@ -53,9 +53,22 @@ export class AuthController {
     const { email, username } = registerRequest;
     return from(this.userRep.findOne({ email, username }))
       .pipe(
-        map(user => !user ? this.userRep.create(registerRequest) : null),
+        map(user => !user ? this.createUser(registerRequest) : null),
         mergeMap(user => this.sendEmailAndSaveUser(user))
       );
+  }
+
+  private createUser(request: RegisterRequestDto): User {
+    const { username, email, password } = request;
+    const user = new User();
+
+    user.username = username;
+    user.email = email;
+    user.isActive = false;
+    user.password = password;
+    user.hashPassword();
+
+    return user;
   }
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {

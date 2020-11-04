@@ -4,28 +4,31 @@ import { compareSync, hashSync } from "bcrypt";
 @Entity()
 @Unique(["username"])
 export class User {
-    @PrimaryGeneratedColumn()
-    public id: number;
+  @PrimaryGeneratedColumn()
+  public id: number;
 
-    @Column({ length: 100 })
-    public username: string;
+  @Column({ length: 100 })
+  public username: string;
 
-    @Column({ length: 150 })
-    public email: string;
+  @Column({ length: 150 })
+  public email: string;
 
-    @Column()
-    public password: string;
+  @Column()
+  public password: string;
 
-    @Column()
-    @CreateDateColumn()
-    public createdAt: Date;
+  @Column()
+  @CreateDateColumn()
+  public createdAt: Date;
 
-    public hashPassword(): void {
-        // todo salt
-      this.password = hashSync(this.password, 8);
-    }
+  @Column()
+  public isActive: boolean;
 
-    public isPasswordValid(password: string): boolean {
-      return compareSync(password, this.password);
-    }
+  public hashPassword(): void {
+    // todo salt
+    this.password = hashSync(this.password, 8);
+  }
+
+  public isPasswordValid(password: string): boolean {
+    return compareSync(password, this.password);
+  }
 }

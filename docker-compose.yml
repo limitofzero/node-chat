@@ -1,4 +1,9 @@
-version: "2.2"
+version: "3"
+
+volumes:
+  node_chat_db:
+    name: node_chat_db
+
 services:
   app:
     container_name: node_chat
@@ -16,7 +21,7 @@ services:
     container_name: postgres-node-chat
     image: postgres
     volumes:
-      - ./data:/data/db
+      - node_chat_db:/data/db
     ports:
       - "5432:5432"
     environment:
