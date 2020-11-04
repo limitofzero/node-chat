@@ -8,13 +8,16 @@ export class MailTransporterService {
   private transporter: Transporter = null;
 
   constructor() {
+    const ENV = process.env;
+    const port = Number.parseInt(ENV.EMAIL_PORT);
+
     this.transporter = createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
+      host: ENV.EMAIL_HOST,
+      port: port,
       secure: true,
       auth: {
-        user: "limitofzero2@gmail.com",
-        pass: "m*?u3B-=zx$F"
+        user: ENV.EMAIL_LOGIN,
+        pass: ENV.EMAIL_PASSWORD
       }
     });
   }

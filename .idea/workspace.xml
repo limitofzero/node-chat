@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(): add mailer">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(): add .env to env ignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/mail/mail-transporter.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +214,7 @@
       <workItem from="1604215956368" duration="487000" />
       <workItem from="1604340298817" duration="8245000" />
       <workItem from="1604426178082" duration="5018000" />
-      <workItem from="1604512627449" duration="4229000" />
-    </task>
-    <task id="LOCAL-00026" summary="feat(server): add user scheme and migrations">
-      <created>1596661641712</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1596661641712</updated>
+      <workItem from="1604512627449" duration="4846000" />
     </task>
     <task id="LOCAL-00027" summary="feat(client): add parsing body for requests">
       <created>1596662709924</created>
@@ -559,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604518038239</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="feat(): add .env to env ignore">
+      <created>1604518115938</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1604518115938</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +592,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: rewrite Main.tsx on hooks" />
     <MESSAGE value="feature: auth fail" />
     <MESSAGE value="feature: add token saving in localstorage" />
     <MESSAGE value="feature: add validation for fields in auth" />
@@ -617,7 +616,8 @@
     <MESSAGE value="feat(): add navigationg after login" />
     <MESSAGE value="feat(): add dto lib" />
     <MESSAGE value="feat(): add mailer" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add mailer" />
+    <MESSAGE value="feat(): add .env to env ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add .env to env ignore" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -629,14 +629,15 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604518098838">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604518582551">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518098838" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518582551" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604428863046" />
-    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1597870631727">
+    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog" timestamp="1604518581969">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="49" y="79" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518581969" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597870631727" />
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
@@ -732,9 +733,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597778760770" />
-    <state x="595" y="299" width="602" height="522" key="find.popup" timestamp="1604428250284">
+    <state x="595" y="299" width="602" height="522" key="find.popup" timestamp="1604518483656">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604518483656" />
     <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604428250284" />
     <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog" timestamp="1597778798148">
       <screen x="0" y="0" width="1792" height="1120" />
