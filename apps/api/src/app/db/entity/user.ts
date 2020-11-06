@@ -24,8 +24,8 @@ export class User {
   public isConfirmed: boolean;
 
   public hashPassword(): void {
-    // todo salt
-    this.password = hashSync(this.password, 8);
+    const salt = Number.parseInt(process.env.SALT);
+    this.password = hashSync(this.password, salt);
   }
 
   public isPasswordValid(password: string): boolean {
