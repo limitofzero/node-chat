@@ -64,7 +64,7 @@ export class AuthController {
 
     user.username = username;
     user.email = email;
-    user.isActive = false;
+    user.isConfirmed = false;
     user.password = password;
     user.hashPassword();
 

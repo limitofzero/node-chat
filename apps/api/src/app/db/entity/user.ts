@@ -21,7 +21,7 @@ export class User {
   public createdAt: Date;
 
   @Column()
-  public isActive: boolean;
+  public isConfirmed: boolean;
 
   public hashPassword(): void {
     // todo salt
