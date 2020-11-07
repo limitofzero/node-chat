@@ -20,8 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-form/auth-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +221,7 @@
       <workItem from="1604696032460" duration="362000" />
       <workItem from="1604696412532" duration="109000" />
       <workItem from="1604736546592" duration="1457000" />
-      <workItem from="1604772976322" duration="2322000" />
-    </task>
-    <task id="LOCAL-00036" summary="refactor: add aliases">
-      <created>1597258025055</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1597258025056</updated>
+      <workItem from="1604772976322" duration="2437000" />
     </task>
     <task id="LOCAL-00037" summary="feature: path">
       <created>1597258321758</created>
@@ -567,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604774721159</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="feat(): share -&gt; shareReplay">
+      <created>1604776566631</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1604776566631</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +599,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): add routing" />
     <MESSAGE value="feat(): add tab routing" />
     <MESSAGE value="feat(): add form" />
     <MESSAGE value="feat(): add login mechanism" />
@@ -625,7 +623,8 @@
     <MESSAGE value="feat(): expose db port" />
     <MESSAGE value="feat(): add Akita prod mode" />
     <MESSAGE value="feat(): add env variables for yml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add env variables for yml file" />
+    <MESSAGE value="feat(): share -&gt; shareReplay" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): share -&gt; shareReplay" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -638,11 +637,11 @@
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696353958" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604774720815">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604776566409">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604738310476" />
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604774720815" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604776566409" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -651,11 +650,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="394" y="285" key="DBNavigator.ProjectSettingsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604695954992" />
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1604774697973">
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1604776545926">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604522721886" />
-    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1604774697973" />
+    <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1604776545926" />
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
     <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -746,11 +745,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519376567" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604774724357">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604776568961">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604738313629" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604774724357" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604776568961" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

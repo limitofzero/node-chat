@@ -38,7 +38,6 @@ export class LoginComponent {
     ).subscribe({
       next: ({ token }) => {
         this.session.update({ token });
-        console.log("sess val: ", this.session.getValue());
         this.router.navigate(["../../"]);
       },
       complete: () => this.session.setLoading(false)
