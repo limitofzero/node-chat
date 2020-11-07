@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +221,8 @@
       <workItem from="1604695346284" duration="667000" />
       <workItem from="1604696032460" duration="362000" />
       <workItem from="1604696412532" duration="109000" />
-      <workItem from="1604736546592" duration="759000" />
-    </task>
-    <task id="LOCAL-00034" summary="refactor: eslint double quotes in jsx">
-      <created>1597085314994</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1597085314994</updated>
+      <workItem from="1604736546592" duration="1457000" />
+      <workItem from="1604772976322" duration="864000" />
     </task>
     <task id="LOCAL-00035" summary="feature: jwt authorization">
       <created>1597172802975</created>
@@ -566,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604696384544</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="feat(): add Akita prod mode">
+      <created>1604738310754</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1604738310755</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +600,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: add token expiration check" />
     <MESSAGE value="feat(): add material" />
     <MESSAGE value="feat(): add routing" />
     <MESSAGE value="feat(): add tab routing" />
@@ -624,7 +624,8 @@
     <MESSAGE value="refactor(): rename isActive" />
     <MESSAGE value="refactor(): add login service" />
     <MESSAGE value="feat(): expose db port" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): expose db port" />
+    <MESSAGE value="feat(): add Akita prod mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add Akita prod mode" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -637,10 +638,10 @@
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696353958" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604696384332">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604738310476">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696384332" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604738310476" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604691794103" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -745,10 +746,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604519376567" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604696386681">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604738313629">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696386681" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604738313629" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604428865690" />
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -768,12 +769,12 @@
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604520743440" />
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604346838756" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604738272064">
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604773950744">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604738272064" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604691503674" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604773950744" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
