@@ -4,7 +4,6 @@ import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
-import { MailTransporterService } from "../../../mail/mail-transporter.service";
 import { Repository } from "typeorm";
 import * as jwt from "jsonwebtoken";
 
@@ -12,7 +11,6 @@ import * as jwt from "jsonwebtoken";
 export class LoginService {
   constructor(
     @InjectRepository(User) private readonly userRep: Repository<User>,
-    private readonly mail: MailTransporterService
   ) {
   }
 

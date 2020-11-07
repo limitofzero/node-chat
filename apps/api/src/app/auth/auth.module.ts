@@ -4,6 +4,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { User } from "../db/entity/user";
 import { MailTransporterService } from "../mail/mail-transporter.service";
 import { LoginService } from "./api/auth/login.service";
+import { RegisterService } from "./api/auth/register.service";
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { LoginService } from "./api/auth/login.service";
   ],
   providers: [
     MailTransporterService,
-    LoginService
+    LoginService,
+    RegisterService
   ],
   controllers: [
     AuthController
