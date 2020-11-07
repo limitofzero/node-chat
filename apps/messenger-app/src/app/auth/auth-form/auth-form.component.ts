@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Observable } from "rxjs";
 import { Router } from "@angular/router";
-import { map, share, startWith } from "rxjs/operators";
+import { map, shareReplay, startWith } from "rxjs/operators";
 
 @Component({
   selector: "messenger-auth-form",
@@ -31,7 +31,7 @@ export class AuthFormComponent {
       map(split => split[split.length - 1]),
       map(lastPart => this.links.find(link => link.link === lastPart)),
       map(link => link?.link ?? ""),
-      share()
+      shareReplay()
     );
   }
 }
