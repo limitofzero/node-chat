@@ -6,7 +6,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { RegisterRequestDto, LoginRequestDto } from "@messenger/dto";
 import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
-import { map, mapTo, mergeMap, tap } from "rxjs/operators";
+import { catchError, map, mapTo, mergeMap, tap } from "rxjs/operators";
 import { verify } from "jsonwebtoken";
 
 @Controller()
@@ -39,7 +39,10 @@ export class AuthController {
         }
       }),
       mergeMap(user => user ? this.userRep.save(user) : of(null)),
-      mapTo(null)
+      mapTo(null),
+      catchError(error => {
+        return of(error);
+      })
     );
   }
 }

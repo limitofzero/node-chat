@@ -22,8 +22,6 @@
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/session/session.query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/session/session.query.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,14 +225,7 @@
       <workItem from="1604772976322" duration="5702000" />
       <workItem from="1604846586630" duration="405000" />
       <workItem from="1604847023408" duration="34000" />
-      <workItem from="1604861411788" duration="2205000" />
-    </task>
-    <task id="LOCAL-00040" summary="feature: add protected route">
-      <created>1597437954003</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1597437954003</updated>
+      <workItem from="1604861411788" duration="2511000" />
     </task>
     <task id="LOCAL-00041" summary="feature: finalize the protected route component">
       <created>1597490683001</created>
@@ -572,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604861559679</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="feat(): add confirm-user endpoint">
+      <created>1604863858778</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1604863858779</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +603,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): add akite" />
     <MESSAGE value="feat(): add session store" />
     <MESSAGE value="feat(): add loader" />
     <MESSAGE value="feat(): remove api prefix" />
@@ -630,7 +627,8 @@
     <MESSAGE value="feat(): remove console.log" />
     <MESSAGE value="refactor(): create register service" />
     <MESSAGE value="feat(): add secret" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): add secret" />
+    <MESSAGE value="feat(): add confirm-user endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add confirm-user endpoint" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -643,10 +641,10 @@
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696353958" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604861559377">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604863858567">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604861559377" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604863858567" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604781428679" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -751,10 +749,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604862971985" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604861561675">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604863860538">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604861561675" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604863860538" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604781431145" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
