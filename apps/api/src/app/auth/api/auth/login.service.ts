@@ -36,7 +36,7 @@ export class LoginService {
     const token = jwt.sign({
       username,
       email
-    }, process.env.SALT ?? "", { expiresIn });
+    }, process.env.SECRET ?? "", { expiresIn });
 
     return { token };
   }

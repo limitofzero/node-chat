@@ -51,7 +51,7 @@ export class RegisterService {
 
     return sign({
       username
-    }, process.env.SALT ?? "", { expiresIn });
+    }, process.env.SECRET ?? "", { expiresIn });
   }
 
   private sendVerificationEmail(user: User): Observable<void> {
@@ -61,7 +61,7 @@ export class RegisterService {
 
 
     return this.mail.sendEmail({
-      from: "\"limitofzero 👻\" <limitofzero@gmail.com>",
+      from: "\"limitofzero 👻\" <limitofzero2@gmail.com>",
       to: email,
       subject: "Hello ✔",
       text: "You were registered!!!",

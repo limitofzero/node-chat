@@ -25,4 +25,9 @@ export class AuthController {
   public register(@Body() registerRequest: RegisterRequestDto): Observable<void> {
     return this.registerService.createUserAndSendConfirmationEmail(registerRequest);
   }
+
+  @Post("verify-user")
+  public verify(@Body() verifyRequest: { token: string }): Observable<void> {
+
+  }
 }
