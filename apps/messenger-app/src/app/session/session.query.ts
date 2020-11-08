@@ -12,7 +12,6 @@ export class SessionQuery extends Query<SessionState> {
 
   public isLoaded(): Observable<boolean> {
     return this.select().pipe(
-      tap(val => console.log("val: ", val)),
       map(data => !!data.token)
     );
   }

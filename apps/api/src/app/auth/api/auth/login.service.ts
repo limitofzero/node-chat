@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { LoginRequestDto } from "@messenger/dto";
 import { from, Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
 import { Repository } from "typeorm";
