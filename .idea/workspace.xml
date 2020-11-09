@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/register.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/register.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/confirm-email/confirm-email.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/session/auth-user.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/session/auth-user.guard.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,14 +231,7 @@
       <workItem from="1604847023408" duration="34000" />
       <workItem from="1604861411788" duration="2606000" />
       <workItem from="1604903141775" duration="685000" />
-      <workItem from="1604952168476" duration="3311000" />
-    </task>
-    <task id="LOCAL-00044" summary="refactor: rename main component">
-      <created>1597591275561</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1597591275561</updated>
+      <workItem from="1604952168476" duration="4416000" />
     </task>
     <task id="LOCAL-00045" summary="feature: add protecting routes by token">
       <created>1597591857552</created>
@@ -575,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604952817590</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="feat(): add showing error for invalid confirm token">
+      <created>1604955553428</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1604955553428</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +609,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): add auth guard" />
     <MESSAGE value="refactor(): add auth guard" />
     <MESSAGE value="refactor(): add registration" />
     <MESSAGE value="refactor(): add notifications" />
@@ -633,7 +633,8 @@
     <MESSAGE value="feat(): catch json decode error" />
     <MESSAGE value="fix(): styles for auth forms" />
     <MESSAGE value="fix(): fix main auth width" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(): fix main auth width" />
+    <MESSAGE value="feat(): add showing error for invalid confirm token" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): add showing error for invalid confirm token" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -646,10 +647,10 @@
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696353958" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604952817443">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1604955553165">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604952817443" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604955553165" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1604781428679" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -754,10 +755,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604862971985" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604952820012">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1604955555421">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604952820012" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604955555421" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604781431145" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -767,10 +768,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597778760770" />
-    <state x="595" y="299" width="602" height="522" key="find.popup" timestamp="1604863314630">
+    <state x="595" y="299" width="602" height="522" key="find.popup" timestamp="1604956645242">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604863314630" />
+    <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604956645242" />
     <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604691526458" />
     <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog" timestamp="1597778798148">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -781,11 +782,11 @@
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604953305571" />
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604346838756" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604955185089">
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604955884980">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604955185089" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604955884980" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604776116162" />
   </component>
   <component name="debuggerHistoryManager">

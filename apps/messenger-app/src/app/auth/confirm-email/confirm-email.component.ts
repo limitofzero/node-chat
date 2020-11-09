@@ -14,8 +14,8 @@ import { BehaviorSubject, Observable } from "rxjs";
 })
 export class ConfirmEmailComponent implements OnInit {
   public token: Observable<string>;
-  public loading = new BehaviorSubject<boolean>(true);
-  public error = new BehaviorSubject<string>(null);
+  public readonly loading = new BehaviorSubject<boolean>(true);
+  public readonly error = new BehaviorSubject<string>(null);
 
   constructor(
     private readonly route: ActivatedRoute,

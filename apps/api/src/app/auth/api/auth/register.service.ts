@@ -46,11 +46,11 @@ export class RegisterService {
   }
 
   private generateEmailVerificationToken(user: User): string {
-    const { username } = user;
+    const { email } = user;
     const expiresIn = "24h";
 
     return sign({
-      username
+      email
     }, process.env.SECRET ?? "", { expiresIn });
   }
 
@@ -65,7 +65,7 @@ export class RegisterService {
       to: email,
       subject: "Hello ✔",
       text: "You were registered!!!",
-      html: `Verification link: ${host}/auth/confirmation?token=${token}` // html body
+      html: `Verification link: ${host}/auth/confirm-email?confirm-token=${token}` // html body
     });
   }
 }

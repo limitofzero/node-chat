@@ -1,15 +1,25 @@
 <main>
-  <ng-container *ngIf="!(token | async)">
-    <h1>Token is undefined</h1>
-  </ng-container>
-
-  <ng-container *ngIf="(token | async)">
-    <ng-container *ngIf="(loading | async)">
-      <mat-spinner></mat-spinner>
+  <mat-card>
+    <ng-container *ngIf="!(token | async)">
+      <h1>Token is undefined</h1>
     </ng-container>
 
-    <ng-container *ngIf="(error | async) as error">
-      {{ error }}
+    <ng-container *ngIf="(token | async)">
+      <ng-container *ngIf="(loading | async)">
+        <mat-spinner></mat-spinner>
+      </ng-container>
+
+      <ng-container *ngIf="(error | async) as error">
+        <div class="error">
+          {{ error }}
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="!(error | async) && !(loading | async)">
+        <div>
+          You are verified! Go to <a routerLink="../login"></a> to sign in.
+        </div>
+      </ng-container>
     </ng-container>
-  </ng-container>
+  </mat-card>
 </main>
