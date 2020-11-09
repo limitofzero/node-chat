@@ -1,0 +1,15 @@
+<main>
+  <ng-container *ngIf="!(token | async)">
+    <h1>Token is undefined</h1>
+  </ng-container>
+
+  <ng-container *ngIf="(token | async)">
+    <ng-container *ngIf="(loading | async)">
+      <mat-spinner></mat-spinner>
+    </ng-container>
+
+    <ng-container *ngIf="(error | async) as error">
+      {{ error }}
+    </ng-container>
+  </ng-container>
+</main>

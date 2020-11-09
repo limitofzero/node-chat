@@ -3,6 +3,7 @@ import { RouterModule } from "@angular/router";
 import { AuthFormComponent } from "./auth-form/auth-form.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 
 @NgModule({
   imports: [
@@ -14,6 +15,10 @@ import { RegisterComponent } from "./register/register.component";
           { path: "sign-up", component: RegisterComponent },
           { path: "", redirectTo: "sign-in", pathMatch: "full" }
         ]
+      },
+      {
+        path: "confirm-email",
+        component: ConfirmEmailComponent
       }
     ])
   ],

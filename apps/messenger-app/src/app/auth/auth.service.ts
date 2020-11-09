@@ -17,4 +17,8 @@ export class AuthService {
   public signUp(form: RegisterRequestDto): Observable<void> {
     return this.http.post<void>("api/register", form);
   }
+
+  public confirmEmail(token: string): Observable<void> {
+    return this.http.post<void>("api/confirm-user", { token });
+  }
 }

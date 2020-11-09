@@ -15,9 +15,11 @@ import { AuthService } from "./auth.service";
 import { SessionModule } from "../session/session.module";
 import { RegisterComponent } from "./register/register.component";
 import { NotificationsModule } from "../notifications/notifications.module";
+import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 @NgModule({
-  declarations: [AuthFormComponent, LoginComponent, RegisterComponent],
+  declarations: [AuthFormComponent, LoginComponent, RegisterComponent, ConfirmEmailComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -31,7 +33,8 @@ import { NotificationsModule } from "../notifications/notifications.module";
     ReactiveFormsModule,
     MatButtonModule,
     SessionModule,
-    NotificationsModule
+    NotificationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     AuthService
