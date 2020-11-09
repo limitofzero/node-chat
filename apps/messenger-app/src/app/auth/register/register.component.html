@@ -1,24 +1,18 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="email" formControlName="email">
-      <mat-hint>Enter your email</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Username</mat-label>
-      <input type="email" matInput placeholder="email" formControlName="username">
-      <mat-hint>Enter your username</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Password</mat-label>
-      <input type="password" matInput placeholder="password" formControlName="password">
-      <mat-hint>Enter your password</mat-hint>
-    </mat-form-field>
-  </p>
+  <mat-form-field appearance="standard">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="email" formControlName="email">
+    <mat-hint>Enter your email</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Username</mat-label>
+    <input type="email" matInput placeholder="email" formControlName="username">
+    <mat-hint>Enter your username</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="password" formControlName="password">
+    <mat-hint>Enter your password</mat-hint>
+  </mat-form-field>
   <button type="submit" mat-button>Sign up</button>
 </form>
