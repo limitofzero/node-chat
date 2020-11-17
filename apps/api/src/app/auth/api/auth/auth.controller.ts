@@ -8,13 +8,15 @@ import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
 import { catchError, map, mapTo, mergeMap, tap } from "rxjs/operators";
 import { verify } from "jsonwebtoken";
+import { TokenService } from "../token/token.service";
 
 @Controller()
 export class AuthController {
   constructor(
     @InjectRepository(User) private readonly userRep: Repository<User>,
     private readonly loginService: LoginService,
-    private readonly registerService: RegisterService
+    private readonly registerService: RegisterService,
+    private readonly token: TokenService
   ) {
   }
 
@@ -31,7 +33,7 @@ export class AuthController {
   @Post("confirm-user")
   public verify(@Body() verifyRequest: { token: string }): Observable<void> {
     return of(null).pipe(
-      map(() => verify(verifyRequest.token, process.env.SECRET) as Object),
+      map(() => this.token.verifyJWT(verifyRequest.token) as Object),
       mergeMap(({ email }: { email: string }) => this.userRep.findOne({ email })),
       tap(user => {
         if (user) {

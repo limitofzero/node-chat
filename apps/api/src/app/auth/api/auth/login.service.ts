@@ -1,16 +1,17 @@
-import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import { BadRequestException, HttpException, Injectable } from "@nestjs/common";
 import { LoginRequestDto } from "@messenger/dto";
 import { from, Observable } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
 import { Repository } from "typeorm";
-import * as jwt from "jsonwebtoken";
+import { TokenService } from "../token/token.service";
 
 @Injectable()
 export class LoginService {
   constructor(
     @InjectRepository(User) private readonly userRep: Repository<User>,
+    private readonly token: TokenService
   ) {
   }
 
@@ -32,17 +33,13 @@ export class LoginService {
   private returnToken(user: User, rememberMe: boolean): { token: string } {
     const { username, email } = user;
     const expiresIn = this.getExpiresIn(rememberMe);
-
-    const token = jwt.sign({
-      username,
-      email
-    }, process.env.SECRET ?? "", { expiresIn });
+    const token = this.token.createJWT({ username, email }, { expiresIn });
 
     return { token };
   }
 
   private throwUserDoesntExist(): HttpException {
-    throw new HttpException("User with this email/password doesn't exist", HttpStatus.UNAUTHORIZED);
+    throw new BadRequestException("User with this email/password doesn't exist");
   }
 
   private getExpiresIn(rememberMe: boolean): string {

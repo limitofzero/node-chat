@@ -5,6 +5,7 @@ import { User } from "../db/entity/user";
 import { MailTransporterService } from "../mail/mail-transporter.service";
 import { LoginService } from "./api/auth/login.service";
 import { RegisterService } from "./api/auth/register.service";
+import { TokenService } from "./api/token/token.service";
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { RegisterService } from "./api/auth/register.service";
   providers: [
     MailTransporterService,
     LoginService,
-    RegisterService
+    RegisterService,
+    TokenService
   ],
   controllers: [
     AuthController

@@ -1,4 +1,4 @@
-import { HttpException, Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
 import { Repository } from "typeorm";
@@ -6,12 +6,13 @@ import { from, Observable, throwError } from "rxjs";
 import { map, mapTo, mergeMap } from "rxjs/operators";
 import { RegisterRequestDto } from "@messenger/dto";
 import { MailTransporterService } from "../../../mail/mail-transporter.service";
-import { sign } from "jsonwebtoken";
+import { TokenService } from "../token/token.service";
 
 @Injectable()
 export class RegisterService {
   constructor(
     @InjectRepository(User) private readonly userRep: Repository<User>,
+    private readonly token: TokenService,
     private readonly mail: MailTransporterService
   ) {
   }
@@ -39,7 +40,7 @@ export class RegisterService {
   }
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {
-    return (user ? this.sendVerificationEmail(user) : throwError(new HttpException("User was not created", 404))).pipe(
+    return (user ? this.sendVerificationEmail(user) : throwError(new BadRequestException("User was not created"))).pipe(
       mergeMap(() => this.userRep.save(user)),
       mapTo(null)
     );
@@ -49,9 +50,7 @@ export class RegisterService {
     const { email } = user;
     const expiresIn = "24h";
 
-    return sign({
-      email
-    }, process.env.SECRET ?? "", { expiresIn });
+    return this.token.createJWT({ email }, { expiresIn });
   }
 
   private sendVerificationEmail(user: User): Observable<void> {
