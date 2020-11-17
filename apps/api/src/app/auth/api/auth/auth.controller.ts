@@ -1,4 +1,4 @@
-import { Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/common";
+import { BadRequestException, Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/common";
 import { Observable, of } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
@@ -43,7 +43,7 @@ export class AuthController {
       mergeMap(user => user ? this.userRep.save(user) : of(null)),
       mapTo(null),
       catchError(error => {
-        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+        throw new BadRequestException(error);
       })
     );
   }
