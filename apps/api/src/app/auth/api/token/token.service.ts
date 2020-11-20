@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { sign, verify } from "jsonwebtoken";
+import { Observable, of, throwError } from "rxjs";
 
 export type TokenPayload = any;
 
@@ -9,13 +10,22 @@ export interface JWTOptions {
 
 @Injectable()
 export class TokenService {
-  public createJWT(payload: TokenPayload, options: JWTOptions) {
+  public createJWT(payload: TokenPayload, options: JWTOptions): Observable<string> {
     const secret = process.env.SECRET ?? "";
     const { expiresIn } = options;
-    return sign(payload, secret, { expiresIn });
+
+    return of(sign(payload, secret, { expiresIn }));
   }
 
-  public verifyJWT(token: string): string | object {
-    return verify(token, process.env.SECRET);
+  public verifyJWT<T>(token: string): Observable<T> {
+    let payload: T = null;
+
+    try {
+      payload = verify(token, process.env.SECRET) as unknown as T;
+    } catch (e) {
+      return throwError(e);
+    }
+
+    return of(payload);
   }
 }

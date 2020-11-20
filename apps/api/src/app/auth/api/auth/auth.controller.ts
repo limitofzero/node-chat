@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, HttpException, HttpStatus, Post } from "@nestjs/common";
+import { BadRequestException, Body, Controller, HttpException, Post } from "@nestjs/common";
 import { Observable, of } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
@@ -6,8 +6,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { RegisterRequestDto, LoginRequestDto } from "@messenger/dto";
 import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
-import { catchError, map, mapTo, mergeMap, tap } from "rxjs/operators";
-import { verify } from "jsonwebtoken";
+import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
 
 @Controller()
@@ -32,8 +31,7 @@ export class AuthController {
 
   @Post("confirm-user")
   public verify(@Body() verifyRequest: { token: string }): Observable<void> {
-    return of(null).pipe(
-      map(() => this.token.verifyJWT(verifyRequest.token) as Object),
+    return this.token.verifyJWT(verifyRequest.token).pipe(
       mergeMap(({ email }: { email: string }) => this.userRep.findOne({ email })),
       tap(user => {
         if (user) {

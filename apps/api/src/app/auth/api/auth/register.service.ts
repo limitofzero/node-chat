@@ -46,7 +46,7 @@ export class RegisterService {
     );
   }
 
-  private generateEmailVerificationToken(user: User): string {
+  private generateEmailVerificationToken(user: User): Observable<string> {
     const { email } = user;
     const expiresIn = "24h";
 
@@ -54,17 +54,17 @@ export class RegisterService {
   }
 
   private sendVerificationEmail(user: User): Observable<void> {
-    const token = this.generateEmailVerificationToken(user);
-    const host = "http://localhost:4200";
+    const host = "http://localhost:4200"; // todo add to env
     const email = user.email;
 
-
-    return this.mail.sendEmail({
-      from: "\"limitofzero 👻\" <limitofzero2@gmail.com>",
-      to: email,
-      subject: "Hello ✔",
-      text: "You were registered!!!",
-      html: `Verification link: ${host}/auth/confirm-email?confirm-token=${token}` // html body
-    });
+    return this.generateEmailVerificationToken(user).pipe(
+      mergeMap(token => this.mail.sendEmail({
+        from: "\"limitofzero 👻\" <limitofzero2@gmail.com>",
+        to: email,
+        subject: "Hello ✔",
+        text: "You were registered!!!",
+        html: `Verification link: ${host}/auth/confirm-email?confirm-token=${token}` // html body
+      }))
+    );
   }
 }

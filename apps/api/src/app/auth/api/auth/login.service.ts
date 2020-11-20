@@ -1,7 +1,7 @@
-import { BadRequestException, HttpException, Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { LoginRequestDto } from "@messenger/dto";
-import { from, Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { from, Observable, throwError } from "rxjs";
+import { map, mergeMap } from "rxjs/operators";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
 import { Repository } from "typeorm";
@@ -19,27 +19,20 @@ export class LoginService {
     const { password, email, rememberMe } = loginRequest;
     return from(this.userRep.findOne({ email }))
       .pipe(
-        map(user => user?.isPasswordValid(password) ? this.returnToken(user, rememberMe) : null),
-        map(token => {
-          if (token) {
-            return token;
-          }
-
-          this.throwUserDoesntExist();
-        })
+        mergeMap(user => user?.isPasswordValid(password) ?
+          this.returnToken(user, rememberMe) :
+          throwError(new BadRequestException("User with this email/password doesn't exist"))
+        )
       );
   }
 
-  private returnToken(user: User, rememberMe: boolean): { token: string } {
+  private returnToken(user: User, rememberMe: boolean): Observable<{ token: string }> {
     const { username, email } = user;
     const expiresIn = this.getExpiresIn(rememberMe);
-    const token = this.token.createJWT({ username, email }, { expiresIn });
 
-    return { token };
-  }
-
-  private throwUserDoesntExist(): HttpException {
-    throw new BadRequestException("User with this email/password doesn't exist");
+    return this.token.createJWT({ username, email }, { expiresIn }).pipe(
+      map(token => ({ token }))
+    );
   }
 
   private getExpiresIn(rememberMe: boolean): string {
