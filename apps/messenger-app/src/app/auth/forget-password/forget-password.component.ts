@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { ForgetPasswordDto } from "@messenger/dto";
+import { BehaviorSubject } from "rxjs";
 
 @UntilDestroy()
 @Component({
@@ -12,6 +13,7 @@ import { ForgetPasswordDto } from "@messenger/dto";
 })
 export class ForgetPasswordComponent {
   public readonly form: FormGroup;
+  public readonly resetPasswordEmail = new BehaviorSubject<string>(null);
 
   constructor(
     private readonly fb: FormBuilder,
@@ -30,6 +32,8 @@ export class ForgetPasswordComponent {
     const formValue: ForgetPasswordDto = this.form.value;
     this.auth.forgetPassword(formValue).pipe(
       untilDestroyed(this)
-    ).subscribe();
+    ).subscribe({
+      next: () => this.resetPasswordEmail.next(formValue.email)
+    });
   }
 }

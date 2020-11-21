@@ -18,7 +18,7 @@ import { NotificationsModule } from "../notifications/notifications.module";
 import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { NgxCaptchaModule } from "ngx-captcha";
-import { ForgetPasswordComponent } from "./reset-password/forget-password.component";
+import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
 
 @NgModule({
   declarations: [
