@@ -4,6 +4,7 @@ import { AuthFormComponent } from "./auth-form/auth-form.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
+import { ForgetPasswordComponent } from "./reset-password/forget-password.component";
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
         children: [
           { path: "sign-in", component: LoginComponent },
           { path: "sign-up", component: RegisterComponent },
+          { path: "forget-password", component: ForgetPasswordComponent },
           { path: "", redirectTo: "sign-in", pathMatch: "full" }
         ]
       },
