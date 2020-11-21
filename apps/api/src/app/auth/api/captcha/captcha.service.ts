@@ -12,15 +12,17 @@ export interface CaptchaResponse {
 @Injectable()
 export class CaptchaService {
   private readonly secret = process.env.CAPTCHA_SECRET_KEY;
+  private readonly captchaApi = process.env.CAPTCHA_API;
+
   constructor(
     private readonly http: HttpService
   ) {
   }
 
   public validateCaptcha(response: string): Observable<boolean> {
-    return this.http.post<CaptchaResponse>(
-      `https://www.google.com/recaptcha/api/siteverify?response=${response}&secret=${this.secret}`
-    ).pipe(
+    const request = `${this.captchaApi}?response=${response}&secret=${this.secret}`;
+
+    return this.http.post<CaptchaResponse>(request).pipe(
       mergeMap(response => {
         console.log(response.data);
         if (response.status === 200) {
