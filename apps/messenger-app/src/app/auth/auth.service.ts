@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { LoginRequestDto, RegisterRequestDto } from "@messenger/dto";
+import { ForgetPasswordDto, LoginRequestDto, RegisterRequestDto } from "@messenger/dto";
 
 @Injectable()
 export class AuthService {
@@ -20,5 +20,9 @@ export class AuthService {
 
   public confirmEmail(token: string): Observable<void> {
     return this.http.post<void>("api/confirm-user", { token });
+  }
+
+  public forgetPassword(form: ForgetPasswordDto): Observable<void> {
+    return this.http.post<void>("api/forget-password", form);
   }
 }

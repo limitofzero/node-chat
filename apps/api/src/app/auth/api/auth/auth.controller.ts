@@ -1,5 +1,5 @@
 import { BadRequestException, Body, Controller, HttpException, Post } from "@nestjs/common";
-import { Observable, of } from "rxjs";
+import { defer, EMPTY, Observable, of } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
 import { InjectRepository } from "@nestjs/typeorm";
@@ -8,6 +8,8 @@ import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
 import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
+import { ForgetPasswordDto } from "@messenger/dto";
+import { MailTransporterService } from "../../../mail/mail-transporter.service";
 
 @Controller()
 export class AuthController {
@@ -15,7 +17,8 @@ export class AuthController {
     @InjectRepository(User) private readonly userRep: Repository<User>,
     private readonly loginService: LoginService,
     private readonly registerService: RegisterService,
-    private readonly token: TokenService
+    private readonly token: TokenService,
+    private readonly mail: MailTransporterService
   ) {
   }
 
@@ -44,5 +47,35 @@ export class AuthController {
         throw new BadRequestException(error);
       })
     );
+  }
+
+  @Post("forget-password")
+  public forgetPassword(@Body() forgetPasswordRequest: ForgetPasswordDto): Observable<void> {
+    const { email } = forgetPasswordRequest;
+    console.log(email);
+    return defer(() => this.userRep.findOne({ email })).pipe(
+      mergeMap(user => user ? this.handleForgetPasswordRequest(user) : EMPTY)
+    );
+  }
+
+  private handleForgetPasswordRequest(user: User): Observable<void> {
+    const expiresIn = "24h";
+    const { email } = user;
+
+    return this.token.createJWT({ email }, { expiresIn }).pipe(
+      mergeMap(token => this.sendResetPasswordEmail(email, token))
+    );
+  }
+
+  private sendResetPasswordEmail(email: string, token: string): Observable<void> {
+    const host = "http://localhost:4200"; // todo add to env
+
+    return this.mail.sendEmail({
+      from: "\"limitofzero 👻\" <limitofzero2@gmail.com>",
+      to: email,
+      subject: "Hello ✔",
+      text: "Reset password",
+      html: `Reset password link: ${host}/auth/reset-password?reset-token=${token}` // html body
+    });
   }
 }

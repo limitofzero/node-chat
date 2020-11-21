@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/dto/src/lib/auth/forget-password.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/token/token.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/token/token.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/reset-password/forget-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/reset-password/forget-password.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/dto/src/lib/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/dto/src/lib/auth/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,14 +228,7 @@
       <workItem from="1605618787044" duration="5799000" />
       <workItem from="1605900272864" duration="2291000" />
       <workItem from="1605965014388" duration="3330000" />
-      <workItem from="1605976833407" duration="7564000" />
-    </task>
-    <task id="LOCAL-00053" summary="feature: add validation for fields in auth">
-      <created>1597869363298</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1597869363299</updated>
+      <workItem from="1605976833407" duration="9504000" />
     </task>
     <task id="LOCAL-00054" summary="refactor: move validators">
       <created>1597869739338</created>
@@ -570,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605983905204</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="feat(front): reset password component">
+      <created>1605986124898</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1605986124898</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): add env params for configuring email" />
     <MESSAGE value="feat(): save new user" />
     <MESSAGE value="feat(): add sending verification token" />
     <MESSAGE value="feat(): add user creation" />
@@ -628,7 +630,8 @@
     <MESSAGE value="feat(backend): validate captcha" />
     <MESSAGE value="feat(backend): worked validate captcha" />
     <MESSAGE value="refactor(backend): captcha url" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(backend): captcha url" />
+    <MESSAGE value="feat(front): reset password component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(front): reset password component" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -641,10 +644,10 @@
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1605983905049">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1605986124737">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605983905049" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605986124737" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969856460" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -664,29 +667,29 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1605985471012">
+    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1605988019638">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304988" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605985471012" />
+    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605988019638" />
     <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1605985471011">
+    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1605988019636">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304986" />
-    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605985471011" />
+    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605988019636" />
     <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1605985471010">
+    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1605988019635">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304985" />
-    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605985471010" />
+    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605988019635" />
     <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866258" />
-    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1605985471011">
+    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1605988019637">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="293" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175304987" />
-    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605985471011" />
+    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605988019637" />
     <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1605978950053">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -761,10 +764,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604862971985" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1605983907694">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1605986127106">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605983907694" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605986127106" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969859083" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
