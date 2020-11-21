@@ -3,27 +3,34 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
 import { Repository } from "typeorm";
 import { from, Observable, throwError } from "rxjs";
-import { map, mapTo, mergeMap } from "rxjs/operators";
+import { catchError, map, mapTo, mergeMap } from "rxjs/operators";
 import { RegisterRequestDto } from "@messenger/dto";
 import { MailTransporterService } from "../../../mail/mail-transporter.service";
 import { TokenService } from "../token/token.service";
+import { CaptchaService } from "../captcha/captcha.service";
 
 @Injectable()
 export class RegisterService {
   constructor(
     @InjectRepository(User) private readonly userRep: Repository<User>,
     private readonly token: TokenService,
-    private readonly mail: MailTransporterService
+    private readonly mail: MailTransporterService,
+    private readonly captcha: CaptchaService
   ) {
   }
 
   public createUserAndSendConfirmationEmail(registerRequest: RegisterRequestDto): Observable<void> {
-    const { email, username } = registerRequest;
-    return from(this.userRep.findOne({ email, username }))
-      .pipe(
-        map(user => !user ? this.createUser(registerRequest) : null),
-        mergeMap(user => this.sendEmailAndSaveUser(user))
-      );
+    const { email, username, recaptcha } = registerRequest;
+
+    return this.captcha.validateCaptcha(recaptcha).pipe(
+      mergeMap(() => this.userRep.findOne({ email, username })),
+      map(user => !user ? this.createUser(registerRequest) : null), // todo error
+      mergeMap(user => this.sendEmailAndSaveUser(user)),
+      catchError((err: any) => {
+        console.log(err);
+        return throwError(new BadRequestException(err));
+      })
+    );
   }
 
   private createUser(request: RegisterRequestDto): User {
