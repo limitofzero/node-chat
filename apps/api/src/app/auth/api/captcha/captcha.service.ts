@@ -1,6 +1,6 @@
 import { HttpService, Injectable } from "@nestjs/common";
 import { Observable, of, throwError } from "rxjs";
-import { map, mergeMap } from "rxjs/operators";
+import { mergeMap } from "rxjs/operators";
 
 export interface CaptchaResponse {
   success: boolean;
@@ -11,6 +11,7 @@ export interface CaptchaResponse {
 
 @Injectable()
 export class CaptchaService {
+  private readonly secret = process.env.CAPTCHA_SECRET_KEY;
   constructor(
     private readonly http: HttpService
   ) {
@@ -18,11 +19,7 @@ export class CaptchaService {
 
   public validateCaptcha(response: string): Observable<boolean> {
     return this.http.post<CaptchaResponse>(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        secret: process.env.CAPTCHA_SECRET_KEY,
-        response
-      }
+      `https://www.google.com/recaptcha/api/siteverify?response=${response}&secret=${this.secret}`
     ).pipe(
       mergeMap(response => {
         console.log(response.data);
