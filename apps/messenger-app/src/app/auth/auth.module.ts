@@ -17,9 +17,15 @@ import { RegisterComponent } from "./register/register.component";
 import { NotificationsModule } from "../notifications/notifications.module";
 import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { NgxCaptchaModule } from "ngx-captcha";
 
 @NgModule({
-  declarations: [AuthFormComponent, LoginComponent, RegisterComponent, ConfirmEmailComponent],
+  declarations: [
+    AuthFormComponent,
+    LoginComponent,
+    RegisterComponent,
+    ConfirmEmailComponent
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -34,7 +40,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     MatButtonModule,
     SessionModule,
     NotificationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgxCaptchaModule
   ],
   providers: [
     AuthService

@@ -4,6 +4,7 @@ import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { Router } from "@angular/router";
 import { NotificationService } from "../../notifications/notification.service";
+import { environment } from "../../../environments/environment";
 
 @UntilDestroy()
 @Component({
@@ -13,6 +14,7 @@ import { NotificationService } from "../../notifications/notification.service";
 })
 export class RegisterComponent {
   public form: FormGroup;
+  public captchaKey = environment.recaptchaKey;
 
   constructor(
     private readonly fb: FormBuilder,
@@ -23,7 +25,8 @@ export class RegisterComponent {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
       username: fb.control("", [Validators.required]),
-      password: fb.control("", [Validators.required])
+      password: fb.control("", [Validators.required]),
+      recaptcha: fb.control("", [Validators.required])
     });
   }
 

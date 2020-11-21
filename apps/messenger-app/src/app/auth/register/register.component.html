@@ -14,5 +14,10 @@
     <input type="password" matInput placeholder="password" formControlName="password">
     <mat-hint>Enter your password</mat-hint>
   </mat-form-field>
+  <ngx-recaptcha2 [siteKey]="captchaKey"
+                  [useGlobalDomain]="false"
+                  theme="dark"
+                  formControlName="recaptcha">
+  </ngx-recaptcha2>
   <button type="submit" mat-button>Sign up</button>
 </form>
