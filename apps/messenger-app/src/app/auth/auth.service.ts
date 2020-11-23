@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { ForgetPasswordDto, LoginRequestDto, RegisterRequestDto } from "@messenger/dto";
+import { Observable, of } from "rxjs";
+import { ForgetPasswordDto, LoginRequestDto, RegisterRequestDto, ResetPasswordDto } from "@messenger/dto";
 
 @Injectable()
 export class AuthService {
@@ -24,5 +24,10 @@ export class AuthService {
 
   public forgetPassword(form: ForgetPasswordDto): Observable<void> {
     return this.http.post<void>("api/forget-password", form);
+  }
+
+  public resetPassword(data: ResetPasswordDto): Observable<void> {
+    return of(null);
+    // return this.http.post<void>("api/reset-password", data);
   }
 }

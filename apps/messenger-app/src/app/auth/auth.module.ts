@@ -19,6 +19,7 @@ import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { NgxCaptchaModule } from "ngx-captcha";
 import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
+import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ForgetPasswordComponent } from "./forget-password/forget-password.compo
     LoginComponent,
     RegisterComponent,
     ConfirmEmailComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,

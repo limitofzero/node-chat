@@ -5,6 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
+import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 
 @NgModule({
   imports: [
@@ -21,6 +22,10 @@ import { ForgetPasswordComponent } from "./forget-password/forget-password.compo
       {
         path: "confirm-email",
         component: ConfirmEmailComponent
+      },
+      {
+        path: "reset-password",
+        component: ResetPasswordComponent
       }
     ])
   ],

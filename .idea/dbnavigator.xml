@@ -170,7 +170,7 @@
           <database value="postgres" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="cGFzc3dvcmQ=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
