@@ -1,12 +1,12 @@
 import { BadRequestException, Body, Controller, HttpException, Post } from "@nestjs/common";
-import { defer, EMPTY, Observable, of } from "rxjs";
+import { defer, EMPTY, Observable, of, throwError } from "rxjs";
 import { Repository } from "typeorm";
 import { User } from "../../../db/entity/user";
 import { InjectRepository } from "@nestjs/typeorm";
-import { RegisterRequestDto, LoginRequestDto } from "@messenger/dto";
+import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto } from "@messenger/dto";
 import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
-import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
+import { catchError, mapTo, mergeMap, switchMap, tap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
 import { ForgetPasswordDto } from "@messenger/dto";
 import { MailTransporterService } from "../../../mail/mail-transporter.service";
@@ -49,10 +49,33 @@ export class AuthController {
     );
   }
 
+  @Post("reset-password")
+  public resetPassword(@Body() resetPasswordRequest: ResetPasswordDto): Observable<void> {
+    // todo compare passwords
+    const { token, newPassword, repeatNewPassword } = resetPasswordRequest;
+
+    return this.token.verifyJWT<{ email: string }>(token).pipe(
+      mergeMap(({ email }) => this.userRep.findOne({ email })),
+      switchMap(user => {
+        if (user) {
+          user.password = newPassword;
+          user.hashPassword();
+          return this.userRep.save(user);
+        }
+
+        return throwError(new BadRequestException("Email is invalid"));
+      }),
+      mapTo(null),
+      catchError(error => {
+        throw new BadRequestException(error);
+      })
+    );
+  }
+
   @Post("forget-password")
   public forgetPassword(@Body() forgetPasswordRequest: ForgetPasswordDto): Observable<void> {
     const { email } = forgetPasswordRequest;
-    console.log(email);
+
     return defer(() => this.userRep.findOne({ email })).pipe(
       mergeMap(user => user ? this.handleForgetPasswordRequest(user) : EMPTY)
     );
@@ -75,7 +98,7 @@ export class AuthController {
       to: email,
       subject: "Hello ✔",
       text: "Reset password",
-      html: `Reset password link: ${host}/auth/reset-password?reset-token=${token}` // html body
+      html: `Reset password link: ${host}/auth/reset-password?reset-password-token=${token}` // html body
     });
   }
 }

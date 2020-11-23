@@ -27,7 +27,6 @@ export class AuthService {
   }
 
   public resetPassword(data: ResetPasswordDto): Observable<void> {
-    return of(null);
-    // return this.http.post<void>("api/reset-password", data);
+    return this.http.post<void>("api/reset-password", data);
   }
 }

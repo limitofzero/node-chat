@@ -37,7 +37,6 @@ export class ResetPasswordComponent implements OnInit {
     this.token.pipe(
       take(1),
       switchMap(token => this.authApi.resetPassword({ ...form, token })),
-      tap(() => console.log("succ")),
       switchMap(() => this.router.navigate([".."])),
       untilDestroyed(this)
     ).subscribe();
