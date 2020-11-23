@@ -7,6 +7,7 @@ import { LoginService } from "./api/auth/login.service";
 import { RegisterService } from "./api/auth/register.service";
 import { TokenService } from "./api/token/token.service";
 import { CaptchaService } from "./api/captcha/captcha.service";
+import { MailService } from "./api/email/mail.service";
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { CaptchaService } from "./api/captcha/captcha.service";
     LoginService,
     RegisterService,
     TokenService,
-    CaptchaService
+    CaptchaService,
+    MailService
   ],
   controllers: [
     AuthController

@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(front): add reset password form">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/reset-password/reset-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/reset-password/reset-password.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/auth.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,14 +226,7 @@
       <workItem from="1605965014388" duration="3330000" />
       <workItem from="1605976833407" duration="10968000" />
       <workItem from="1606149733242" duration="241000" />
-      <workItem from="1606159752958" duration="4057000" />
-    </task>
-    <task id="LOCAL-00058" summary="feature: add token expiration check">
-      <created>1597942396958</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1597942396958</updated>
+      <workItem from="1606159752958" duration="4854000" />
     </task>
     <task id="LOCAL-00059" summary="feat(): add material">
       <created>1604167609732</created>
@@ -572,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606162801848</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="feat(back): add reset password supprot">
+      <created>1606164033820</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1606164033820</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +604,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor(): add login service" />
     <MESSAGE value="feat(): expose db port" />
     <MESSAGE value="feat(): add Akita prod mode" />
     <MESSAGE value="feat(): add env variables for yml file" />
@@ -630,7 +628,8 @@
     <MESSAGE value="feat(front): change text when email was sent" />
     <MESSAGE value="fix(front): eslint" />
     <MESSAGE value="feat(front): add reset password form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(front): add reset password form" />
+    <MESSAGE value="feat(back): add reset password supprot" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(back): add reset password supprot" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -643,10 +642,10 @@
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
     <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606162941547">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606164033567">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162941547" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164033567" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969856460" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -666,29 +665,29 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606162858994">
+    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606164282783">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162858994" />
+    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282783" />
     <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606162858992">
+    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606164282782">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
-    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162858992" />
+    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282782" />
     <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606162858991">
+    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606164282781">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
-    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162858991" />
+    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282781" />
     <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866258" />
-    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606162858993">
+    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606164282782">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
-    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162858993" />
+    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282782" />
     <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1606031096038">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -771,10 +770,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605989081342" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606162939671">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606164623805">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606162939671" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164623805" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969859083" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -793,10 +792,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597778798148" />
-    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1606160329962">
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1606164279317">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606160329962" />
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164279317" />
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604346838756" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1606163559265">
       <screen x="0" y="0" width="1792" height="1120" />

@@ -9,7 +9,7 @@ import { RegisterService } from "./register.service";
 import { catchError, mapTo, mergeMap, switchMap, tap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
 import { ForgetPasswordDto } from "@messenger/dto";
-import { MailTransporterService } from "../../../mail/mail-transporter.service";
+import { MailService } from "../email/mail.service";
 
 @Controller()
 export class AuthController {
@@ -18,7 +18,7 @@ export class AuthController {
     private readonly loginService: LoginService,
     private readonly registerService: RegisterService,
     private readonly token: TokenService,
-    private readonly mail: MailTransporterService
+    private readonly mail: MailService
   ) {
   }
 
@@ -82,23 +82,6 @@ export class AuthController {
   }
 
   private handleForgetPasswordRequest(user: User): Observable<void> {
-    const expiresIn = "24h";
-    const { email } = user;
-
-    return this.token.createJWT({ email }, { expiresIn }).pipe(
-      mergeMap(token => this.sendResetPasswordEmail(email, token))
-    );
-  }
-
-  private sendResetPasswordEmail(email: string, token: string): Observable<void> {
-    const host = "http://localhost:4200"; // todo add to env
-
-    return this.mail.sendEmail({
-      from: "\"limitofzero 👻\" <limitofzero2@gmail.com>",
-      to: email,
-      subject: "Hello ✔",
-      text: "Reset password",
-      html: `Reset password link: ${host}/auth/reset-password?reset-password-token=${token}` // html body
-    });
+    return this.mail.sendResetPasswordEmail(user);
   }
 }
