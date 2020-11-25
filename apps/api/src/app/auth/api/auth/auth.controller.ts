@@ -55,20 +55,27 @@ export class AuthController {
     const { token, newPassword, repeatNewPassword } = resetPasswordRequest;
 
     return this.token.verifyJWT<{ email: string }>(token).pipe(
+      catchError(error => {
+        throw new BadRequestException(error);
+      }),
       mergeMap(({ email }) => this.userRep.findOne({ email })),
-      switchMap(user => {
+      mergeMap(user => {
         if (user) {
-          user.password = newPassword;
-          user.hashPassword();
-          return this.userRep.save(user);
+          return of(user);
         }
 
         return throwError(new BadRequestException("Email is invalid"));
       }),
-      mapTo(null),
-      catchError(error => {
-        throw new BadRequestException(error);
-      })
+      mergeMap(user => {
+        if (repeatNewPassword !== newPassword) {
+          return throwError(new BadRequestException("Passwords fields are not equal"));
+        }
+
+        user.password = newPassword;
+        user.hashPassword();
+        return this.userRep.save(user);
+      }),
+      mapTo(null)
     );
   }
 
