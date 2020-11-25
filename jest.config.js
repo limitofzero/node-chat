@@ -3,6 +3,7 @@ module.exports = {
     "<rootDir>/apps/messenger-app",
     "<rootDir>/apps/api",
     "<rootDir>/libs/api-interfaces",
-    "<rootDir>/libs/dto"
+    "<rootDir>/libs/dto",
+    "<rootDir>/libs/form-errors"
   ],
 };

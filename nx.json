@@ -40,6 +40,9 @@
     },
     "dto": {
       "tags": []
+    },
+    "form-errors": {
+      "tags": []
     }
   }
 }
