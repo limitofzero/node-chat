@@ -24,13 +24,13 @@ export class CaptchaService {
 
     return this.http.post<CaptchaResponse>(request).pipe(
       mergeMap(response => {
-        console.log(response.data);
         if (response.status === 200) {
           const data = response.data;
 
           if (response.data.success) {
             return of(true);
           } else {
+            // todo handle errors
             return throwError({ message: data["error-codes"][0] });
           }
         }

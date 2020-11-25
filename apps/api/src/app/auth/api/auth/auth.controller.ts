@@ -1,6 +1,6 @@
 import { Body, Controller, HttpException, Post } from "@nestjs/common";
-import { Observable, of } from "rxjs";
-import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto } from "@messenger/dto";
+import { Observable } from "rxjs";
+import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto, ConfirmEmailDto } from "@messenger/dto";
 import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
 import { ForgetPasswordDto } from "@messenger/dto";
@@ -26,7 +26,7 @@ export class AuthController {
   }
 
   @Post("confirm-user")
-  public verify(@Body() verifyRequest: { token: string }): Observable<void> {
+  public verify(@Body() verifyRequest: ConfirmEmailDto): Observable<void> {
     return this.registerService.confirmUser(verifyRequest.token);
   }
 
