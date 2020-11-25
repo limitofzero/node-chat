@@ -1,23 +1,16 @@
-import { BadRequestException, Body, Controller, HttpException, Post } from "@nestjs/common";
+import { Body, Controller, HttpException, Post } from "@nestjs/common";
 import { Observable, of } from "rxjs";
-import { Repository } from "typeorm";
-import { User } from "../../../db/entity/user";
-import { InjectRepository } from "@nestjs/typeorm";
 import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto } from "@messenger/dto";
 import { LoginService } from "./login.service";
 import { RegisterService } from "./register.service";
-import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
-import { TokenService } from "../token/token.service";
 import { ForgetPasswordDto } from "@messenger/dto";
 import { ResetPasswordService } from "./reset-password.service";
 
 @Controller()
 export class AuthController {
   constructor(
-    @InjectRepository(User) private readonly userRep: Repository<User>,
     private readonly loginService: LoginService,
     private readonly registerService: RegisterService,
-    private readonly token: TokenService,
     private readonly resetPasswordService: ResetPasswordService
   ) {
   }
@@ -34,19 +27,7 @@ export class AuthController {
 
   @Post("confirm-user")
   public verify(@Body() verifyRequest: { token: string }): Observable<void> {
-    return this.token.verifyJWT(verifyRequest.token).pipe(
-      mergeMap(({ email }: { email: string }) => this.userRep.findOne({ email })),
-      tap(user => {
-        if (user) {
-          user.isConfirmed = true;
-        }
-      }),
-      mergeMap(user => user ? this.userRep.save(user) : of(null)),
-      mapTo(null),
-      catchError(error => {
-        throw new BadRequestException(error);
-      })
-    );
+    return this.registerService.confirmUser(verifyRequest.token);
   }
 
   @Post("reset-password")
