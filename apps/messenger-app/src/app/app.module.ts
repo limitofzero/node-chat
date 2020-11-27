@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { MainModule } from "./main/main.module";
 import { SessionModule } from "./session/session.module";
+import { FormErrorsModule } from "@messenger/form-errors";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,11 @@ import { SessionModule } from "./session/session.module";
     BrowserAnimationsModule,
     AppRoutingModule,
     MainModule,
-    SessionModule
+    SessionModule,
+    FormErrorsModule.forRoot({
+      required: () => "This field is required",
+      email: () => "This field is not containing email"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

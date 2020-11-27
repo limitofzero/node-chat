@@ -4,6 +4,7 @@ import { ControlErrorDirective } from "./error-controls/control-error.directive"
 import { ErrorTextFnMap, FORM_ERRORS } from "./errors-token";
 import { ControlErrorComponent } from "./error-controls/control-error/control-error.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { FormSubmitDirective } from "./error-controls/form-submit.directive";
 
 @NgModule({
   imports: [
@@ -12,10 +13,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
   ],
   declarations: [
     ControlErrorDirective,
-    ControlErrorComponent
+    ControlErrorComponent,
+    FormSubmitDirective
   ],
   exports: [
-    ControlErrorDirective
+    ControlErrorDirective,
+    ControlErrorComponent,
+    FormSubmitDirective
   ]
 })
 export class FormErrorsModule {

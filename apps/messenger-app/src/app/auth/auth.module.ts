@@ -20,6 +20,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { NgxCaptchaModule } from "ngx-captcha";
 import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
+import { FormErrorsModule } from "../../../../../libs/form-errors/src";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
     SessionModule,
     NotificationsModule,
     MatProgressSpinnerModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    FormErrorsModule
   ],
   providers: [
     AuthService
