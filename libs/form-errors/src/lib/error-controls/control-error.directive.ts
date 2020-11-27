@@ -79,7 +79,9 @@ export class ControlErrorDirective implements OnInit {
     this.ref.instance.error = text;
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
+    this.onBlur.complete();
+
     if (this.ref) {
       this.errorHintCreator.destroyComponent(this.ref);
     }

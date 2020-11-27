@@ -227,14 +227,7 @@
       <workItem from="1606159752958" duration="5680000" />
       <workItem from="1606205201917" duration="1000" />
       <workItem from="1606334479735" duration="3012000" />
-      <workItem from="1606497314508" duration="5576000" />
-    </task>
-    <task id="LOCAL-00068" summary="feat(): add auth guard">
-      <created>1604344995876</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1604344995876</updated>
+      <workItem from="1606497314508" duration="5631000" />
     </task>
     <task id="LOCAL-00069" summary="refactor(): add auth guard">
       <created>1604345078814</created>
@@ -572,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606507719016</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="feat(front): add on blur error">
+      <created>1606507894277</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1606507894277</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +605,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(): styles for auth forms" />
     <MESSAGE value="fix(): fix main auth width" />
     <MESSAGE value="feat(): add showing error for invalid confirm token" />
     <MESSAGE value="feat(): add verification flow" />
@@ -630,7 +629,8 @@
     <MESSAGE value="feat(front): add library for reducing form error boilerplate" />
     <MESSAGE value="feat(front): control error directive" />
     <MESSAGE value="feat(front): add mat errors for auth forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(front): add mat errors for auth forms" />
+    <MESSAGE value="feat(front): add on blur error" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(front): add on blur error" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -638,11 +638,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606507718839">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606507894100">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336994346" />
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507718839" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507894100" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -761,11 +761,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605989081342" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606507727369">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606507896697">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336997385" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507727369" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507896697" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
