@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/messenger-app/src/app/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/control-error/control-error.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/control-error/control-error.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/form-errors/src/lib/form-errors.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/form-errors.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/control-error.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/control-error.directive.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,14 +227,7 @@
       <workItem from="1606159752958" duration="5680000" />
       <workItem from="1606205201917" duration="1000" />
       <workItem from="1606334479735" duration="3012000" />
-      <workItem from="1606497314508" duration="5309000" />
-    </task>
-    <task id="LOCAL-00067" summary="feat(): remove api prefix">
-      <created>1604343400212</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1604343400212</updated>
+      <workItem from="1606497314508" duration="5576000" />
     </task>
     <task id="LOCAL-00068" summary="feat(): add auth guard">
       <created>1604344995876</created>
@@ -576,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606507035947</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="feat(front): add mat errors for auth forms">
+      <created>1606507719016</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1606507719016</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +605,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): catch json decode error" />
     <MESSAGE value="fix(): styles for auth forms" />
     <MESSAGE value="fix(): fix main auth width" />
     <MESSAGE value="feat(): add showing error for invalid confirm token" />
@@ -634,7 +629,8 @@
     <MESSAGE value="refactor(back): add confirm email dto" />
     <MESSAGE value="feat(front): add library for reducing form error boilerplate" />
     <MESSAGE value="feat(front): control error directive" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(front): control error directive" />
+    <MESSAGE value="feat(front): add mat errors for auth forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(front): add mat errors for auth forms" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -642,11 +638,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606507035720">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606507718839">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336994346" />
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507035720" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507718839" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -660,30 +656,30 @@
     </state>
     <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336052896" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1605966679300" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606507257075">
+    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606507615810">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
     <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261019" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1606507257075" />
-    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606507257075">
+    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1606507615810" />
+    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606507615809">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
     <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261018" />
-    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1606507257075" />
-    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606507257074">
+    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1606507615809" />
+    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606507615808">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
     <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261017" />
-    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1606507257074" />
-    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606507257075">
+    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1606507615808" />
+    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606507615810">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
     <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261018" />
-    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1606507257075" />
+    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1606507615810" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1606031096038">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -765,11 +761,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605989081342" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606507038349">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606507727369">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336997385" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507038349" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606507727369" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

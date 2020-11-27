@@ -2,7 +2,7 @@ import {
   ComponentFactoryResolver,
   ComponentRef,
   Directive,
-  Host,
+  Host, HostListener,
   Inject,
   OnInit,
   Optional,
@@ -13,7 +13,7 @@ import { NgControl } from "@angular/forms";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { ErrorTextFnMap, FORM_ERRORS } from "../errors-token";
 import { FormSubmitDirective } from "./form-submit.directive";
-import { EMPTY, merge, Observable } from "rxjs";
+import { EMPTY, merge, Observable, Subject } from "rxjs";
 import { ErrorHintCreatorService } from "./error-hint-creator.service";
 import { ControlErrorComponent } from "./control-error/control-error.component";
 
@@ -26,6 +26,8 @@ import { ControlErrorComponent } from "./control-error/control-error.component";
 })
 export class ControlErrorDirective implements OnInit {
   private readonly submit: Observable<Event>;
+  private readonly onBlur = new Subject<void>();
+
   private ref: ComponentRef<ControlErrorComponent>;
 
   constructor(
@@ -39,10 +41,16 @@ export class ControlErrorDirective implements OnInit {
     this.submit = this.form ? this.form.submit : EMPTY;
   }
 
+  @HostListener("blur")
+  private dispatchOnBlur(): void {
+    this.onBlur.next();
+  }
+
   public ngOnInit(): void {
     merge(
       this.submit,
-      this.control.valueChanges
+      this.control.valueChanges,
+      this.onBlur
     ).pipe(
       untilDestroyed(this)
     ).subscribe({
