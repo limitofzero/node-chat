@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/register.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/register.service.ts" afterDir="false" />
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="refactor(back): add reset ps service">
+      <change afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/control-error.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/error-controls/form-submit.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/errors-token.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/form-errors/src/lib/form-errors.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/form-errors/src/lib/form-errors.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +95,7 @@
       <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev:docker:up">
+  <component name="RunManager" selected="npm.start (1)">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
@@ -136,8 +140,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.start:back" />
       </list>
     </recent_temporary>
@@ -224,49 +228,10 @@
       <workItem from="1605965014388" duration="3330000" />
       <workItem from="1605976833407" duration="10968000" />
       <workItem from="1606149733242" duration="241000" />
-      <workItem from="1606159752958" duration="4959000" />
-    </task>
-    <task id="LOCAL-00060" summary="feat(): add routing">
-      <created>1604167990277</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1604167990277</updated>
-    </task>
-    <task id="LOCAL-00061" summary="feat(): add tab routing">
-      <created>1604171083245</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1604171083245</updated>
-    </task>
-    <task id="LOCAL-00062" summary="feat(): add form">
-      <created>1604172190684</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1604172190684</updated>
-    </task>
-    <task id="LOCAL-00063" summary="feat(): add login mechanism">
-      <created>1604175630749</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1604175630749</updated>
-    </task>
-    <task id="LOCAL-00064" summary="feat(): add akite">
-      <created>1604175986968</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1604175986968</updated>
-    </task>
-    <task id="LOCAL-00065" summary="feat(): add session store">
-      <created>1604176998960</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1604176998960</updated>
+      <workItem from="1606159752958" duration="5680000" />
+      <workItem from="1606205201917" duration="1000" />
+      <workItem from="1606334479735" duration="3012000" />
+      <workItem from="1606497314508" duration="4704000" />
     </task>
     <task id="LOCAL-00066" summary="feat(): add loader">
       <created>1604216312614</created>
@@ -569,7 +534,49 @@
       <option name="project" value="LOCAL" />
       <updated>1606164847705</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="refactor(back): add email service for register.service.ts">
+      <created>1606164926577</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1606164926577</updated>
+    </task>
+    <task id="LOCAL-00110" summary="feat(back): checking field equals">
+      <created>1606334917605</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1606334917605</updated>
+    </task>
+    <task id="LOCAL-00111" summary="refactor(back): add reset ps service">
+      <created>1606335920218</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1606335920218</updated>
+    </task>
+    <task id="LOCAL-00112" summary="refactor(back): move confirm-email to register service">
+      <created>1606336068749</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1606336068749</updated>
+    </task>
+    <task id="LOCAL-00113" summary="refactor(back): add confirm email dto">
+      <created>1606336630310</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1606336630310</updated>
+    </task>
+    <task id="LOCAL-00114" summary="feat(front): add library for reducing form error boilerplate">
+      <created>1606336994583</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1606336994583</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,12 +609,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(): add Akita prod mode" />
-    <MESSAGE value="feat(): add env variables for yml file" />
-    <MESSAGE value="feat(): share -&gt; shareReplay" />
-    <MESSAGE value="feat(): remove console.log" />
-    <MESSAGE value="refactor(): create register service" />
-    <MESSAGE value="feat(): add secret" />
     <MESSAGE value="feat(): add confirm-user endpoint" />
     <MESSAGE value="feat(): catch json decode error" />
     <MESSAGE value="fix(): styles for auth forms" />
@@ -627,23 +628,24 @@
     <MESSAGE value="feat(front): add reset password form" />
     <MESSAGE value="feat(back): add reset password supprot" />
     <MESSAGE value="refactor(back): add email service" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(back): add email service" />
+    <MESSAGE value="refactor(back): add email service for register.service.ts" />
+    <MESSAGE value="feat(back): checking field equals" />
+    <MESSAGE value="refactor(back): add reset ps service" />
+    <MESSAGE value="refactor(back): move confirm-email to register service" />
+    <MESSAGE value="refactor(back): add confirm email dto" />
+    <MESSAGE value="feat(front): add library for reducing form error boilerplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(front): add library for reducing form error boilerplate" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="395" key="#Notifications" timestamp="1597773360112">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="623" y="395" key="#Notifications/0.0.1792.1120@0.0.1792.1120" timestamp="1597773360112" />
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605978415644">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
-    <state x="360" y="222" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597779159623" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606164847540">
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1606336994346">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164847540" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336994346" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969856460" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -653,39 +655,34 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="394" y="285" key="DBNavigator.ProjectSettingsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604695954992" />
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1606030694378">
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1606336052896">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606030694378" />
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336052896" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1605966679300" />
-    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/52.23.1740.1097@52.23.1740.1097" timestamp="1597780284586" />
-    <state x="683" y="334" key="FileChooserDialogImpl" timestamp="1597778797212">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="683" y="334" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1597778797212" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606164282783">
+    <state width="884" height="352" key="GridCell.Tab.0.bottom" timestamp="1606374261019">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
-    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282783" />
+    <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261019" />
     <state width="884" height="352" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606164282782">
+    <state width="884" height="352" key="GridCell.Tab.0.center" timestamp="1606374261018">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
-    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282782" />
+    <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261018" />
     <state width="884" height="352" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
-    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606164282781">
+    <state width="884" height="352" key="GridCell.Tab.0.left" timestamp="1606374261017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096035" />
-    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282781" />
+    <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261017" />
     <state width="884" height="352" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866258" />
-    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606164282782">
+    <state width="884" height="352" key="GridCell.Tab.0.right" timestamp="1606374261018">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1606031096036" />
-    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164282782" />
+    <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606374261018" />
     <state width="884" height="352" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1605969866259" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1606031096038">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -759,47 +756,39 @@
     </state>
     <state width="885" height="384" key="GridCell.Tab.3.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605977522180" />
     <state width="885" height="384" key="GridCell.Tab.3.right/0.0.1792.1120@0.0.1792.1120" timestamp="1597942437288" />
-    <state x="433" y="335" key="SettingsEditor" timestamp="1604696001571">
+    <state x="433" y="335" key="SettingsEditor" timestamp="1606335648574">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="433" y="335" key="SettingsEditor/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604696001571" />
+    <state x="433" y="335" key="SettingsEditor/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606335648574" />
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1604435273021" />
     <state x="677" y="182" key="VCS.ChangeListViewerDialog" timestamp="1605989081342">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605989081342" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606164849862">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606336997385">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164849862" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336997385" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605969859083" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604863146863" />
-    <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597778760770">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="692" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1597778760770" />
     <state x="595" y="299" width="602" height="522" key="find.popup" timestamp="1605985649698">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605985649698" />
     <state x="595" y="299" width="602" height="522" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604691526458" />
-    <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog" timestamp="1597778798148">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="620" y="387" key="jetbrains.nodejs.interpreters-dialog/0.0.1792.1120@0.0.1792.1120" timestamp="1597778798148" />
-    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1606164279317">
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate" timestamp="1606506815165">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606164279317" />
-    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1604346838756" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1606163559265">
+    <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1606506815165" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1606336576191">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606163559265" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336576191" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1605966929841" />
   </component>
   <component name="debuggerHistoryManager">
