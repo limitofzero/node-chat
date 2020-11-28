@@ -24,6 +24,9 @@
       ],
       "@messenger/form-errors": [
         "libs/form-errors/src/index.ts"
+      ],
+      "@messenger/api-errors": [
+        "libs/api-errors/src/index.ts"
       ]
     }
   },

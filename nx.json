@@ -43,6 +43,9 @@
     },
     "form-errors": {
       "tags": []
+    },
+    "api-errors": {
+      "tags": []
     }
   }
 }
