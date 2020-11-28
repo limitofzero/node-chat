@@ -27,7 +27,6 @@ export class RegisterService {
       map(user => !user ? this.createUser(registerRequest) : null), // todo error
       mergeMap(user => this.sendEmailAndSaveUser(user)),
       catchError((err: any) => {
-        console.log(err);
         return throwError(new BadRequestException(err));
       })
     );
