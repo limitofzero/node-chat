@@ -1,12 +1,10 @@
 import { BadRequestException, ValidationError } from "@nestjs/common";
-import { DtoPropertyError } from "@messenger/api-errors";
+import { DtoPropertyError } from "../dto-errors/dto-property-error.interface";
+import { InvalidArgumentsException } from "../exceptions/invalid-arguments.exception";
 
 export function dtoExceptionFactory(errors: ValidationError[]): BadRequestException {
   const convertedErrors = convertDtoErrors(errors);
-
-  return new BadRequestException({
-    errors: convertedErrors
-  });
+  return new InvalidArgumentsException({ errors: convertedErrors });
 }
 
 function convertDtoErrors(errors: ValidationError[]): DtoPropertyError[] {
