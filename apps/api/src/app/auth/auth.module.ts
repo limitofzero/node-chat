@@ -9,6 +9,7 @@ import { TokenService } from "./api/token/token.service";
 import { CaptchaService } from "./api/captcha/captcha.service";
 import { MailService } from "./api/email/mail.service";
 import { ResetPasswordService } from "./api/auth/reset-password.service";
+import { UserService } from "./api/auth/user.service";
 
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { ResetPasswordService } from "./api/auth/reset-password.service";
     TokenService,
     CaptchaService,
     MailService,
-    ResetPasswordService
+    ResetPasswordService,
+    UserService
   ],
   controllers: [
     AuthController

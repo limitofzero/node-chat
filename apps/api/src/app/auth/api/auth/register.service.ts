@@ -8,11 +8,12 @@ import { RegisterRequestDto } from "@messenger/dto";
 import { TokenService } from "../token/token.service";
 import { CaptchaService } from "../captcha/captcha.service";
 import { MailService } from "../email/mail.service";
+import { UserService } from "./user.service";
 
 @Injectable()
 export class RegisterService {
   constructor(
-    @InjectRepository(User) private readonly userRep: Repository<User>,
+    private readonly userService: UserService,
     private readonly token: TokenService,
     private readonly mail: MailService,
     private readonly captcha: CaptchaService
@@ -23,7 +24,7 @@ export class RegisterService {
     const { email, username, recaptcha } = registerRequest;
 
     return this.captcha.validateCaptcha(recaptcha).pipe(
-      mergeMap(() => this.userRep.findOne({ email, username })),
+      mergeMap(() => this.userService.findOneBy({ email, username })),
       map(user => !user ? this.createUser(registerRequest) : null), // todo error
       mergeMap(user => this.sendEmailAndSaveUser(user)),
       catchError((err: any) => {
@@ -34,13 +35,13 @@ export class RegisterService {
 
   public confirmUser(token: string): Observable<void> {
     return this.token.verifyJWT(token).pipe(
-      mergeMap(({ email }: { email: string }) => this.userRep.findOne({ email })),
+      mergeMap(({ email }: { email: string }) => this.userService.findOneBy({ email })),
       tap(user => {
         if (user) {
           user.isConfirmed = true;
         }
       }),
-      mergeMap(user => user ? this.userRep.save(user) : of(null)),
+      mergeMap(user => user ? this.userService.save(user) : of(null)),
       mapTo(null),
       catchError(error => {
         throw new BadRequestException(error);
@@ -63,7 +64,7 @@ export class RegisterService {
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {
     return (user ? this.mail.sendVerificationEmail(user) : throwError(new BadRequestException("User was not created"))).pipe(
-      mergeMap(() => this.userRep.save(user)),
+      mergeMap(() => this.userService.save(user)),
       mapTo(null)
     );
   }

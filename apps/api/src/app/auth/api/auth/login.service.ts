@@ -2,22 +2,21 @@ import { BadRequestException, Injectable } from "@nestjs/common";
 import { LoginRequestDto } from "@messenger/dto";
 import { from, Observable, throwError } from "rxjs";
 import { map, mergeMap } from "rxjs/operators";
-import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
-import { Repository } from "typeorm";
 import { TokenService } from "../token/token.service";
+import { UserService } from "./user.service";
 
 @Injectable()
 export class LoginService {
   constructor(
-    @InjectRepository(User) private readonly userRep: Repository<User>,
+    private readonly userService: UserService,
     private readonly token: TokenService
   ) {
   }
 
   public authorize(loginRequest: LoginRequestDto): Observable<{ token: string }> {
     const { password, email, rememberMe } = loginRequest;
-    return from(this.userRep.findOne({ email }))
+    return this.userService.findOneBy({ email })
       .pipe(
         mergeMap(user => user?.isPasswordValid(password) ?
           this.returnToken(user, rememberMe) :

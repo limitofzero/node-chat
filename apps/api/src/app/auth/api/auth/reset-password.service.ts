@@ -1,23 +1,22 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { defer, EMPTY, Observable, of, throwError } from "rxjs";
 import { catchError, mapTo, mergeMap } from "rxjs/operators";
-import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "../../../db/entity/user";
-import { Repository } from "typeorm/index";
 import { TokenService } from "../token/token.service";
 import { MailService } from "../email/mail.service";
+import { UserService } from "./user.service";
 
 @Injectable()
 export class ResetPasswordService {
   constructor(
-    @InjectRepository(User) private readonly userRep: Repository<User>,
+    private readonly userRep: UserService,
     private readonly mail: MailService,
     private readonly token: TokenService
   ) {
   }
 
   public sendResetPasswordLink(email: string): Observable<void> {
-    return defer(() => this.userRep.findOne({ email })).pipe(
+    return defer(() => this.userRep.findOneBy({ email })).pipe(
       mergeMap(user => user ? this.handleForgetPasswordRequest(user) : EMPTY)
     );
   }
@@ -27,7 +26,7 @@ export class ResetPasswordService {
       catchError(error => {
         throw new BadRequestException(error);
       }),
-      mergeMap(({ email }) => this.userRep.findOne({ email })),
+      mergeMap(({ email }) => this.userRep.findOneBy({ email })),
       mergeMap(user => {
         if (user) {
           return of(user);
