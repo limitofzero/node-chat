@@ -10,6 +10,8 @@ import { CaptchaService } from "./api/captcha/captcha.service";
 import { MailService } from "./api/email/mail.service";
 import { ResetPasswordService } from "./api/auth/reset-password.service";
 import { UserService } from "./api/auth/user.service";
+import { REDIS } from "./api/redis";
+import { createClient } from "redis";
 
 @Module({
   imports: [
@@ -24,7 +26,16 @@ import { UserService } from "./api/auth/user.service";
     CaptchaService,
     MailService,
     ResetPasswordService,
-    UserService
+    UserService,
+    {
+      provide: REDIS,
+      useFactory: () => {
+        const client = createClient(
+          +process.env.REDIS_PORT,
+          process.env.REDIS_HOST,
+        );
+      }
+    }
   ],
   controllers: [
     AuthController
