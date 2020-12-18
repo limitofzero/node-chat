@@ -12,6 +12,7 @@ import { ResetPasswordService } from "./api/auth/reset-password.service";
 import { UserService } from "./api/auth/user.service";
 import { REDIS } from "./api/redis";
 import { createClient } from "redis";
+import { KeyValueStoreService } from "./api/redis/key-value-store.service";
 
 @Module({
   imports: [
@@ -27,12 +28,13 @@ import { createClient } from "redis";
     MailService,
     ResetPasswordService,
     UserService,
+    KeyValueStoreService,
     {
       provide: REDIS,
       useFactory: () => {
-        const client = createClient(
+        return createClient(
           +process.env.REDIS_PORT,
-          process.env.REDIS_HOST,
+          process.env.REDIS_HOST
         );
       }
     }

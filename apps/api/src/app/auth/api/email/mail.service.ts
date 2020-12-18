@@ -4,6 +4,7 @@ import { User } from "../../../db/entity/user";
 import { Observable } from "rxjs";
 import { mergeMap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
+import { KeyValueStoreService } from "../redis/key-value-store.service";
 
 @Injectable()
 export class MailService {
@@ -12,7 +13,8 @@ export class MailService {
 
   constructor(
     private readonly mail: MailTransporterService,
-    private readonly token: TokenService
+    private readonly token: TokenService,
+    private readonly keyValueStore: KeyValueStoreService
   ) {
   }
 
