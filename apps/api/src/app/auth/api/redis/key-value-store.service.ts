@@ -13,6 +13,8 @@ export class KeyValueStoreService {
   constructor(
     @Inject(REDIS) private readonly redis: RedisClient
   ) {
+    this.getValue = this.getValue.bind(this.redis);
+    this.setValue = this.setValue.bind(this.redis);
   }
 
   public get(key: string): Observable<string> {
@@ -22,7 +24,7 @@ export class KeyValueStoreService {
   public set<T>(key: string, value: T): Observable<void> {
     const valueAsString = JSON.stringify(value);
     return defer(() => this.setValue(key, valueAsString)).pipe(
-      mapTo(null)
+      mapTo(null),
     );
   }
 }

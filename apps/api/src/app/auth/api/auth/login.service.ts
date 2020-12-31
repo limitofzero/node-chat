@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { LoginRequestDto } from "@messenger/dto";
-import { from, Observable, throwError } from "rxjs";
+import { Observable, throwError } from "rxjs";
 import { map, mergeMap } from "rxjs/operators";
 import { User } from "../../../db/entity/user";
 import { TokenService } from "../token/token.service";
@@ -21,7 +21,7 @@ export class LoginService {
         mergeMap(user => user?.isPasswordValid(password) ?
           this.returnToken(user, rememberMe) :
           throwError(new BadRequestException("User with this email/password doesn't exist"))
-        )
+        ),
       );
   }
 
@@ -30,7 +30,7 @@ export class LoginService {
     const expiresIn = this.getExpiresIn(rememberMe);
 
     return this.token.createJWT({ username, email }, { expiresIn }).pipe(
-      map(token => ({ token }))
+      map(token => ({ token })),
     );
   }
 

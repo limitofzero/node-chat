@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { MailTransporterService } from "../../../mail/mail-transporter.service";
 import { User } from "../../../db/entity/user";
 import { Observable } from "rxjs";
-import { mergeMap } from "rxjs/operators";
+import { mapTo, mergeMap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
 import { KeyValueStoreService } from "../redis/key-value-store.service";
 
@@ -10,6 +10,8 @@ import { KeyValueStoreService } from "../redis/key-value-store.service";
 export class MailService {
   private readonly host = "http://localhost:4200"; // todo replace by env
   private readonly from = "\"limitofzero 👻\" <limitofzero2@gmail.com>";
+
+  private id = 0;
 
   constructor(
     private readonly mail: MailTransporterService,
@@ -20,15 +22,20 @@ export class MailService {
 
   public sendResetPasswordEmail(user: User): Observable<void> {
     const email = user.email;
+    this.id++;
 
     return this.generateToken(user, "20m").pipe(
-      mergeMap(token => this.mail.sendEmail({
+      mergeMap(token => this.keyValueStore.set((this.id).toString(), token)
+        .pipe(mapTo(this.id))
+      ),
+      mergeMap(key => this.mail.sendEmail({
         from: this.from,
         to: email,
         subject: "Hello ✔",
         text: "You were registered!!!",
-        html: `Reset password link: ${this.host}/auth/reset-password?reset-password-token=${token}`
-      }))
+        html: `Reset password link: ${this.host}/auth/reset-password?reset-password-token=${key}`
+      })),
+      mapTo(null),
     );
   }
 
