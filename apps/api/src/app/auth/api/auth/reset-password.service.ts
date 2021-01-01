@@ -26,8 +26,7 @@ export class ResetPasswordService {
   }
 
   public resetPassword(key: string, newPassword: string, repeatNewPassword: string): Observable<void> {
-    return this.keyStore.get(key).pipe(
-      tap(console.log),
+    return this.keyStore.get<string>(key).pipe(
       mergeMap(token => this.token.verifyJWT<{ email: string }>(token)),
       catchError(error => {
         throw new BadRequestException(error);

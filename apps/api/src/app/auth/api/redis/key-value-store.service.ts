@@ -3,12 +3,22 @@ import { REDIS } from "./index";
 import { RedisClient } from "redis";
 import { defer, Observable } from "rxjs";
 import { promisify } from "util";
-import { mapTo } from "rxjs/operators";
+import { map, mapTo } from "rxjs/operators";
+
+export interface SetOptions {
+  mode: string;
+  exp: number;
+}
+
+interface SetValueFn {
+  (key: string, value: string, mode?: string, duration?: number): Promise<void>;
+}
 
 @Injectable()
 export class KeyValueStoreService {
   private readonly getValue = promisify(this.redis.get);
-  private readonly setValue = promisify(this.redis.set);
+  private readonly setValue: SetValueFn = promisify(this.redis.set);
+  private readonly defaultExpTime = 1200000;
 
   constructor(
     @Inject(REDIS) private readonly redis: RedisClient
@@ -17,14 +27,20 @@ export class KeyValueStoreService {
     this.setValue = this.setValue.bind(this.redis);
   }
 
-  public get(key: string): Observable<string> {
-    return defer(() => this.getValue(key));
+  public get<T>(key: string): Observable<T> {
+    return defer(() => this.getValue(key)).pipe(
+      map(value => JSON.parse(value) as T)
+    );
   }
 
-  public set<T>(key: string, value: T): Observable<void> {
+  public set<T>(key: string, value: T, options?: SetOptions): Observable<void> {
     const valueAsString = JSON.stringify(value);
-    return defer(() => this.setValue(key, valueAsString)).pipe(
-      mapTo(null),
+
+    const mode = options ? options.mode : "EX";
+    const exp = options ? options.exp : this.defaultExpTime;
+
+    return defer(() => this.setValue(key, valueAsString, mode, exp)).pipe(
+      mapTo(null)
     );
   }
 }
