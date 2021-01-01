@@ -42,12 +42,13 @@ services:
     volumes:
       - chat_pgadming:/data/admin
     ports:
-      - "80:8090"
+      - "80:80"
     expose:
       - "8090"
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_CONSOLE_LOG_LEVEL: ${PGADMIN_CONFIG_CONSOLE_LOG_LEVEL}
 
 
   redis:
