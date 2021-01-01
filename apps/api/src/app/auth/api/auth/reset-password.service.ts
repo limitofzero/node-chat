@@ -1,17 +1,21 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
+import { BadRequestException, Inject, Injectable } from "@nestjs/common";
 import { defer, EMPTY, Observable, of, throwError } from "rxjs";
-import { catchError, mapTo, mergeMap } from "rxjs/operators";
+import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
 import { User } from "../../../db/entity/user";
 import { TokenService } from "../token/token.service";
 import { MailService } from "../email/mail.service";
 import { UserService } from "./user.service";
+import { REDIS } from "../redis";
+import { RedisClient } from "redis";
+import { KeyValueStoreService } from "../redis/key-value-store.service";
 
 @Injectable()
 export class ResetPasswordService {
   constructor(
     private readonly userRep: UserService,
     private readonly mail: MailService,
-    private readonly token: TokenService
+    private readonly token: TokenService,
+    private readonly keyStore: KeyValueStoreService
   ) {
   }
 
@@ -21,8 +25,10 @@ export class ResetPasswordService {
     );
   }
 
-  public resetPassword(token: string, newPassword: string, repeatNewPassword: string): Observable<void> {
-    return this.token.verifyJWT<{ email: string }>(token).pipe(
+  public resetPassword(key: string, newPassword: string, repeatNewPassword: string): Observable<void> {
+    return this.keyStore.get(key).pipe(
+      tap(console.log),
+      mergeMap(token => this.token.verifyJWT<{ email: string }>(token)),
       catchError(error => {
         throw new BadRequestException(error);
       }),

@@ -5,6 +5,8 @@ volumes:
     name: node_chat_db
   node_chat_redis:
     name: node_chat_redis
+  chat_pgadming:
+    name: chat_pg_admin
 
 services:
   app:
@@ -33,6 +35,20 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DATABASE}
+
+  pgadmin:
+    container_name: pgadmin-chat-db
+    image: dpage/pgadmin4:latest
+    volumes:
+      - chat_pgadming:/data/admin
+    ports:
+      - "80:8090"
+    expose:
+      - "8090"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+
 
   redis:
     container_name: node_chat_redis
