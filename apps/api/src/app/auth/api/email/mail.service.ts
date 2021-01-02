@@ -6,6 +6,8 @@ import { mapTo, mergeMap } from "rxjs/operators";
 import { TokenService } from "../token/token.service";
 import { KeyValueStoreService } from "../redis/key-value-store.service";
 
+const DEFAULT_PS_EXP_SEC = 1200;
+
 @Injectable()
 export class MailService {
   private readonly host = "http://localhost:4200"; // todo replace by env
@@ -24,8 +26,11 @@ export class MailService {
     const email = user.email;
     this.id++;
 
-    return this.generateToken(user, "20m").pipe(
-      mergeMap(token => this.keyValueStore.set((this.id).toString(), token)
+    const RESET_PS_TOKEN_EXP_SEC = process.env.RESET_PS_TOKEN_EXP_SEC;
+    const expiresIn = RESET_PS_TOKEN_EXP_SEC ? +RESET_PS_TOKEN_EXP_SEC : DEFAULT_PS_EXP_SEC;
+
+    return this.generateToken(user, expiresIn).pipe(
+      mergeMap(token => this.keyValueStore.setWithExp((this.id).toString(), token, expiresIn)
         .pipe(mapTo(this.id))
       ),
       mergeMap(key => this.mail.sendEmail({
@@ -35,7 +40,7 @@ export class MailService {
         text: "You were registered!!!",
         html: `Reset password link: ${this.host}/auth/reset-password?reset-password-token=${key}`
       })),
-      mapTo(null),
+      mapTo(null)
     );
   }
 
@@ -53,7 +58,7 @@ export class MailService {
     );
   }
 
-  private generateToken(user: User, expiresIn: string): Observable<string> {
+  private generateToken(user: User, expiresIn: string | number): Observable<string> {
     const { email } = user;
 
     return this.token.createJWT({ email }, { expiresIn });

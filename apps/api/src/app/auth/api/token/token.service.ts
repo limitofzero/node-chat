@@ -3,7 +3,7 @@ import { sign, verify } from "jsonwebtoken";
 import { Observable, of, throwError } from "rxjs";
 
 export interface JWTOptions {
-  expiresIn: string;
+  expiresIn: string | number;
 }
 
 @Injectable()
