@@ -31,7 +31,7 @@ export class ResetPasswordService {
         if (token) {
           return this.token.verifyJWT<{ email: string }>(token);
         } else {
-          return throwError(new BadRequestException("token doesn't exist"));
+          return throwError(new BadRequestException("Link is expired"));
         }
       }),
       catchError(error => {
