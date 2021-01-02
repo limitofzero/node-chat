@@ -8,7 +8,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MainModule } from "./main/main.module";
 import { SessionModule } from "./session/session.module";
 import { FormErrorsModule } from "@messenger/form-errors";
-import { TuiRootModule } from "@taiga-ui/core";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +18,6 @@ import { TuiRootModule } from "@taiga-ui/core";
     AppRoutingModule,
     MainModule,
     SessionModule,
-    TuiRootModule,
     FormErrorsModule.forRoot({
       required: () => "This field is required",
       email: () => "This field is not containing email"
