@@ -11,8 +11,8 @@ import { MailService } from "./api/email/mail.service";
 import { ResetPasswordService } from "./api/auth/reset-password.service";
 import { UserService } from "./api/auth/user.service";
 import { REDIS } from "./api/redis";
-import { createClient } from "redis";
 import { KeyValueStoreService } from "./api/redis/key-value-store.service";
+import * as Redis from "ioredis";
 
 @Module({
   imports: [
@@ -32,10 +32,10 @@ import { KeyValueStoreService } from "./api/redis/key-value-store.service";
     {
       provide: REDIS,
       useFactory: () => {
-        return createClient(
-          +process.env.REDIS_PORT,
-          process.env.REDIS_HOST
-        );
+        return new Redis({
+          port: +process.env.REDIS_PORT,
+          host: process.env.REDIS_HOST
+        });
       }
     }
   ],
