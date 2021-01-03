@@ -1,12 +1,10 @@
-import { BadRequestException, Inject, Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { defer, EMPTY, Observable, of, throwError } from "rxjs";
-import { catchError, mapTo, mergeMap, tap } from "rxjs/operators";
+import { catchError, mapTo, mergeMap } from "rxjs/operators";
 import { User } from "../../../db/entity/user";
 import { TokenService } from "../token/token.service";
 import { MailService } from "../email/mail.service";
 import { UserService } from "./user.service";
-import { REDIS } from "../redis";
-import { RedisClient } from "redis";
 import { KeyValueStoreService } from "../redis/key-value-store.service";
 
 @Injectable()
