@@ -3,6 +3,8 @@ version: "3"
 volumes:
   app_prod:
     name: app_prod
+  front_prod:
+    name: front_prod
   app_prod_db:
     name: app_prod_db
   redis_prod_db:
@@ -21,8 +23,19 @@ services:
     ports:
       - "3000:3000"
     links:
+      - front_prod
       - postgres
       - redis
+
+  front_prod:
+    container_name: front_prod
+    build:
+      context: .
+      dockerfile: front.Dockerfille.prod
+    volumes:
+      - front_prod:/front
+    ports:
+      - "8080:8080"
 
   postgres:
     container_name: app-prod-db
