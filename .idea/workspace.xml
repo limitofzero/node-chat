@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(back): new dto errors format">
+    <list default="true" id="0bce92f1-de6d-4d17-bf9e-d821b47e287e" name="Default Changelist" comment="feat(front): add taiga-ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/auth/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/email/mail.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/email/mail.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api/src/app/auth/api/redis/key-value-store.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/app/auth/api/redis/key-value-store.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,20 +79,20 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/env" />
+      <recent name="$PROJECT_DIR$/libs/dto/src/lib/auth" />
+      <recent name="$PROJECT_DIR$/shared-models/auth/sign-in" />
+      <recent name="$PROJECT_DIR$/server/src/db" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/api/src/app/mail" />
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs/dto/src/lib/auth" />
-      <recent name="$PROJECT_DIR$/shared-models/auth/sign-in" />
-      <recent name="$PROJECT_DIR$/server/src/db" />
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/server/src" />
-    </key>
   </component>
-  <component name="RunManager" selected="npm.dev:docker:up">
+  <component name="RunManager" selected="npm.prod:docker:up">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
@@ -106,6 +104,16 @@
       <command value="run" />
       <scripts>
         <script value="dev:docker:up" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prod:docker:up" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prod:docker:up" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -136,9 +144,11 @@
       <item itemvalue="npm.dev:docker:up" />
       <item itemvalue="npm.start (1)" />
       <item itemvalue="npm.start:back" />
+      <item itemvalue="npm.prod:docker:up" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.prod:docker:up" />
         <item itemvalue="npm.dev:docker:up" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start:back" />
@@ -239,20 +249,16 @@
       <workItem from="1608746712818" duration="233000" />
       <workItem from="1609259986882" duration="598000" />
       <workItem from="1609423173434" duration="1184000" />
-    </task>
-    <task id="LOCAL-00072" summary="feat(): add navigationg after login">
-      <created>1604349648821</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1604349648821</updated>
-    </task>
-    <task id="LOCAL-00073" summary="feat(): add dto lib">
-      <created>1604428863262</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1604428863262</updated>
+      <workItem from="1609833567349" duration="3047000" />
+      <workItem from="1609851621943" duration="315000" />
+      <workItem from="1610131463547" duration="2579000" />
+      <workItem from="1610364406644" duration="480000" />
+      <workItem from="1610365707568" duration="9000" />
+      <workItem from="1611329504159" duration="877000" />
+      <workItem from="1611512827494" duration="1637000" />
+      <workItem from="1611517643199" duration="488000" />
+      <workItem from="1611595327906" duration="1252000" />
+      <workItem from="1611596925653" duration="5135000" />
     </task>
     <task id="LOCAL-00074" summary="feat(): add mailer">
       <created>1604518038239</created>
@@ -583,7 +589,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608322572260</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="feat(front): add prod config for nginx">
+      <created>1611517334746</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1611517334747</updated>
+    </task>
+    <task id="LOCAL-00122" summary="feat(front): configured nginx">
+      <created>1611600484148</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1611600484148</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,8 +636,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor(): bad request" />
-    <MESSAGE value="refactor(): add token service" />
     <MESSAGE value="feat(front): add recaptcha" />
     <MESSAGE value="feat(backend): validate captcha" />
     <MESSAGE value="feat(backend): worked validate captcha" />
@@ -641,22 +659,36 @@
     <MESSAGE value="feat(redis): add redis" />
     <MESSAGE value="feat(back): add user service" />
     <MESSAGE value="feat(back): add key-value-store service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(back): add key-value-store service" />
+    <MESSAGE value="feat(front): add prod config for nginx" />
+    <MESSAGE value="feat(front): configured nginx" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(front): configured nginx" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="660" y="274" key="#New_Docker_Connection" timestamp="1611597343566">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="660" y="274" key="#New_Docker_Connection/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611597343566" />
+    <state x="626" y="395" key="#Notifications" timestamp="1611596935835">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="626" y="395" key="#Notifications/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611596935835" />
+    <state x="600" y="290" key="#Servers" timestamp="1611596985336">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="600" y="290" key="#Servers/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1611596985336" />
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605978415644">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="721" y="113" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605978415644" />
-    <state x="594" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608320641890">
+    <state x="594" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609834604914">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="594" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608320641890" />
-    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1608322571911">
+    <state x="594" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1609834604914" />
+    <state x="473" y="49" key="CommitChangelistDialog2" timestamp="1611600483905">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608322571911" />
+    <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611600483905" />
     <state x="473" y="49" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1607024809046" />
     <state x="743" y="445" width="306" height="232" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604695420900">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -666,35 +698,35 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="394" y="285" key="DBNavigator.ProjectSettingsDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1604695954992" />
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1606336052896">
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1611600467303">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606336052896" />
+    <state x="49" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611600467303" />
     <state x="49" y="79" width="1640" height="940" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1605966679300" />
-    <state width="1771" height="408" key="GridCell.Tab.0.bottom" timestamp="1609424309281">
+    <state width="1750" height="408" key="GridCell.Tab.0.bottom" timestamp="1611603612362">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1608323646250" />
-    <state width="1771" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608747390025" />
-    <state width="1771" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1609424309281" />
-    <state width="1771" height="408" key="GridCell.Tab.0.center" timestamp="1609424309281">
+    <state width="1750" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1611596793942" />
+    <state width="1750" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611603612362" />
+    <state width="1750" height="408" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1611518223199" />
+    <state width="1750" height="408" key="GridCell.Tab.0.center" timestamp="1611603612361">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="408" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1608323646249" />
-    <state width="1771" height="408" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608747390024" />
-    <state width="1771" height="408" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1609424309281" />
-    <state width="1771" height="408" key="GridCell.Tab.0.left" timestamp="1609424309280">
+    <state width="1750" height="408" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1611596793941" />
+    <state width="1750" height="408" key="GridCell.Tab.0.center/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611603612361" />
+    <state width="1750" height="408" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1611518223198" />
+    <state width="1750" height="408" key="GridCell.Tab.0.left" timestamp="1611603612360">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="408" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1608323646248" />
-    <state width="1771" height="408" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608747390023" />
-    <state width="1771" height="408" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1609424309280" />
-    <state width="1771" height="408" key="GridCell.Tab.0.right" timestamp="1609424309281">
+    <state width="1750" height="408" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1611596793940" />
+    <state width="1750" height="408" key="GridCell.Tab.0.left/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611603612360" />
+    <state width="1750" height="408" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1611518223197" />
+    <state width="1750" height="408" key="GridCell.Tab.0.right" timestamp="1611603612361">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="408" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1608323646250" />
-    <state width="1771" height="408" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608747390024" />
-    <state width="1771" height="408" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1609424309281" />
+    <state width="1750" height="408" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1611596793941" />
+    <state width="1750" height="408" key="GridCell.Tab.0.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611603612361" />
+    <state width="1750" height="408" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1611518223198" />
     <state width="885" height="384" key="GridCell.Tab.1.bottom" timestamp="1606031096038">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -751,19 +783,19 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="885" height="384" key="GridCell.Tab.3.right/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605977522180" />
-    <state x="433" y="335" key="SettingsEditor" timestamp="1606335648574">
+    <state x="433" y="335" key="SettingsEditor" timestamp="1611597219921">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="433" y="335" key="SettingsEditor/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606335648574" />
+    <state x="433" y="335" key="SettingsEditor/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611597219921" />
     <state x="433" y="335" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1604435273021" />
     <state x="677" y="182" key="VCS.ChangeListViewerDialog" timestamp="1605989081342">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="677" y="182" key="VCS.ChangeListViewerDialog/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1605989081342" />
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608322574357">
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2" timestamp="1611600486425">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608322574357" />
+    <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611600486425" />
     <state x="496" y="296" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1607024913052" />
     <state x="790" y="454" width="341" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604863146863">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -779,11 +811,11 @@
     </state>
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1608320625994" />
     <state x="768" y="454" width="350" height="300" key="org.angular.cli.generate/0.0.1792.1120@0.0.1792.1120" timestamp="1608149293598" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1609259999328">
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1611599263810">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1417.2560.1417@0.0.1792.1120" timestamp="1604175380549" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1606942425044" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/-341.-1440.2560.1440@0.0.1792.1120" timestamp="1611599263810" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1609259999328" />
   </component>
   <component name="debuggerHistoryManager">
