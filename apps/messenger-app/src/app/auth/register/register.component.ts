@@ -5,6 +5,8 @@ import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { Router } from "@angular/router";
 import { NotificationService } from "../../notifications/notification.service";
 import { environment } from "../../../environments/environment";
+import { BehaviorSubject } from "rxjs";
+import { doWithLoading } from "@messenger/common";
 
 @UntilDestroy()
 @Component({
@@ -15,6 +17,7 @@ import { environment } from "../../../environments/environment";
 export class RegisterComponent {
   public form: FormGroup;
   public captchaKey = environment.recaptchaKey;
+  public isLoading = new BehaviorSubject<boolean>(false);
 
   constructor(
     private readonly fb: FormBuilder,
@@ -35,7 +38,7 @@ export class RegisterComponent {
       return;
     }
 
-    this.auth.signUp(this.form.value).pipe(
+    doWithLoading(this.auth.signUp(this.form.value), this.isLoading).pipe(
       untilDestroyed(this)
     ).subscribe({
       next: () => {

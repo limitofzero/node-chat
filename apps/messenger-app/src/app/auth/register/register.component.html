@@ -19,5 +19,6 @@
                   theme="dark"
                   formControlName="recaptcha">
   </ngx-recaptcha2>
-  <button type="submit" mat-button>Sign up</button>
+  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
+  <button *ngIf="(isLoading | async) === false" type="submit" mat-button>Sign up</button>
 </form>
