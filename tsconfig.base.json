@@ -27,6 +27,9 @@
       ],
       "@messenger/api-errors": [
         "libs/api-errors/src/index.ts"
+      ],
+      "@messenger/common": [
+        "libs/common/src/index.ts"
       ]
     }
   },
