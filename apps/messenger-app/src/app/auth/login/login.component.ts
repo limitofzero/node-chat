@@ -4,6 +4,8 @@ import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { SessionStore } from "../../session/session.store";
 import { Router } from "@angular/router";
+import { SessionQuery } from "../../session/session.query";
+import { doWithLoading } from "@messenger/common";
 
 @UntilDestroy()
 @Component({
@@ -12,12 +14,14 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent {
-  public form: FormGroup;
+  public readonly form: FormGroup;
+  public readonly isLoading = this.sessionQuery.selectLoading();
 
   constructor(
     private readonly fb: FormBuilder,
     private readonly auth: AuthService,
     private readonly session: SessionStore,
+    private readonly sessionQuery: SessionQuery,
     private readonly router: Router
   ) {
     this.form = fb.group({
@@ -32,15 +36,13 @@ export class LoginComponent {
       return;
     }
 
-    this.session.setLoading(true);
-    this.auth.signIn(this.form.value).pipe(
+    doWithLoading(this.auth.signIn(this.form.value), this.session).pipe(
       untilDestroyed(this)
     ).subscribe({
       next: ({ token }) => {
         this.session.update({ token });
         this.router.navigate(["../../"]);
       },
-      complete: () => this.session.setLoading(false)
     });
   }
 }

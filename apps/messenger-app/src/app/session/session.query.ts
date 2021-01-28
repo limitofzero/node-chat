@@ -1,7 +1,7 @@
 import { Query } from "@datorama/akita";
 import { SessionState, SessionStore } from "./session.store";
 import { Observable } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { Injectable } from "@angular/core";
 
 @Injectable({ providedIn: "root" })

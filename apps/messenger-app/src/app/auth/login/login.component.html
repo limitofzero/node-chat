@@ -14,5 +14,6 @@
                 formControlName="rememberMe">
     remember me
   </mat-checkbox>
-  <button type="submit" mat-button>Sign in</button>
+  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
+  <button *ngIf="!(isLoading | async)" type="submit" mat-button>Sign in</button>
 </form>
