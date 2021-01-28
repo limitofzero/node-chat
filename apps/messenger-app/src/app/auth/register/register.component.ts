@@ -7,6 +7,7 @@ import { NotificationService } from "../../notifications/notification.service";
 import { environment } from "../../../environments/environment";
 import { BehaviorSubject } from "rxjs";
 import { doWithLoading } from "@messenger/common";
+import { HttpErrorResponse } from "@angular/common/http";
 
 @UntilDestroy()
 @Component({
@@ -44,6 +45,9 @@ export class RegisterComponent {
       next: () => {
         this.notification.show({ message: "You was registered" });
         this.router.navigate([".."]);
+      },
+      error: (err: HttpErrorResponse) => {
+        this.notification.error({ message: err.error.message });
       }
     });
   }
