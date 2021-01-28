@@ -9,6 +9,11 @@ export interface Notification {
   duration?: number;
 }
 
+export interface ErrorNotification {
+  message: string;
+  duration?: number;
+}
+
 @Injectable()
 export class NotificationService {
   constructor(private readonly snackBar: MatSnackBar) {
@@ -22,5 +27,9 @@ export class NotificationService {
     this.snackBar.open(message, action, {
       duration
     });
+  }
+
+  public error(notification: ErrorNotification) {
+    this.show({ ...notification, action: "error" });
   }
 }

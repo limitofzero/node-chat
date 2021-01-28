@@ -6,6 +6,8 @@ import { SessionStore } from "../../session/session.store";
 import { Router } from "@angular/router";
 import { SessionQuery } from "../../session/session.query";
 import { doWithLoading } from "@messenger/common";
+import { NotificationService } from "../../notifications/notification.service";
+import { HttpErrorResponse } from "@angular/common/http";
 
 @UntilDestroy()
 @Component({
@@ -22,7 +24,8 @@ export class LoginComponent {
     private readonly auth: AuthService,
     private readonly session: SessionStore,
     private readonly sessionQuery: SessionQuery,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly notification: NotificationService
   ) {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
@@ -43,6 +46,10 @@ export class LoginComponent {
         this.session.update({ token });
         this.router.navigate(["../../"]);
       },
+      error: (err: HttpErrorResponse) => {
+        console.error(err);
+        this.notification.error({ message: err.error.message });
+      }
     });
   }
 }
