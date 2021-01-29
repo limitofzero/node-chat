@@ -16,9 +16,9 @@ import { HttpErrorResponse } from "@angular/common/http";
   styleUrls: ["./register.component.scss"]
 })
 export class RegisterComponent {
-  public form: FormGroup;
-  public captchaKey = environment.recaptchaKey;
-  public isLoading = new BehaviorSubject<boolean>(false);
+  public readonly form: FormGroup;
+  public readonly captchaKey = environment.recaptchaKey;
+  public readonly isLoading = new BehaviorSubject<boolean>(false);
 
   constructor(
     private readonly fb: FormBuilder,
