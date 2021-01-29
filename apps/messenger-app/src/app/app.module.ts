@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MainModule } from "./main/main.module";
 import { SessionModule } from "./session/session.module";
 import { FormErrorsModule } from "@messenger/form-errors";
+import { TuiRootModule } from "@taiga-ui/core";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { FormErrorsModule } from "@messenger/form-errors";
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    TuiRootModule,
     MainModule,
     SessionModule,
     FormErrorsModule.forRoot({

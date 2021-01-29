@@ -1,14 +1,18 @@
-<main>
-  <mat-card>
-    <nav mat-tab-nav-bar>
-      <ng-container *ngFor="let link of links">
-        <a mat-tab-link
-           [routerLink]="link.link"
-           [active]="(activeLink | async) === link.link"> {{link.label}} </a>
-      </ng-container>
-    </nav>
+<main class="tui-container tui-container_adaptive">
+  <div class="tui-row tui-row_adaptive">
+    <div class="tui-col_xs-12 tui-col_s-8" style="background-color: red">
+      <mat-card>
+        <nav mat-tab-nav-bar>
+          <ng-container *ngFor="let link of links">
+            <a mat-tab-link
+               [routerLink]="link.link"
+               [active]="(activeLink | async) === link.link"> {{link.label}} </a>
+          </ng-container>
+        </nav>
 
-    <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
 
-  </mat-card>
+      </mat-card>
+    </div>
+  </div>
 </main>
