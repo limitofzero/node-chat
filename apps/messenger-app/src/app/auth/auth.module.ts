@@ -22,6 +22,7 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
 import { FormErrorsModule } from "../../../../../libs/form-errors/src";
 import { CardModule } from "../../../../../libs/ui/src";
 import { MatCardModule } from "@angular/material/card";
+import { TuiTabsModule } from "@taiga-ui/kit";
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MatCardModule } from "@angular/material/card";
     NgxCaptchaModule,
     FormErrorsModule,
     CardModule,
-    MatCardModule
+    MatCardModule,
+    TuiTabsModule
   ],
   providers: [
     AuthService
