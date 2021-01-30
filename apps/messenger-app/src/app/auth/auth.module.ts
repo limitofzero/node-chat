@@ -22,7 +22,8 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
 import { FormErrorsModule } from "../../../../../libs/form-errors/src";
 import { CardModule } from "../../../../../libs/ui/src";
 import { MatCardModule } from "@angular/material/card";
-import { TuiTabsModule } from "@taiga-ui/kit";
+import { TuiInputModule, TuiInputPasswordModule, TuiTabsModule } from "@taiga-ui/kit";
+import { TuiHintControllerModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,11 @@ import { TuiTabsModule } from "@taiga-ui/kit";
     FormErrorsModule,
     CardModule,
     MatCardModule,
-    TuiTabsModule
+    TuiTabsModule,
+    TuiInputModule,
+    TuiHintControllerModule,
+    TuiTextfieldControllerModule,
+    TuiInputPasswordModule
   ],
   providers: [
     AuthService
