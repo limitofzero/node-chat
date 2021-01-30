@@ -22,8 +22,14 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
 import { FormErrorsModule } from "../../../../../libs/form-errors/src";
 import { CardModule } from "../../../../../libs/ui/src";
 import { MatCardModule } from "@angular/material/card";
-import { TuiInputModule, TuiInputPasswordModule, TuiTabsModule } from "@taiga-ui/kit";
-import { TuiHintControllerModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
+import {
+  TuiCheckboxLabeledModule,
+  TuiCheckboxModule,
+  TuiInputModule,
+  TuiInputPasswordModule,
+  TuiTabsModule
+} from "@taiga-ui/kit";
+import { TuiButtonModule, TuiHintControllerModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -56,7 +62,9 @@ import { TuiHintControllerModule, TuiTextfieldControllerModule } from "@taiga-ui
     TuiInputModule,
     TuiHintControllerModule,
     TuiTextfieldControllerModule,
-    TuiInputPasswordModule
+    TuiInputPasswordModule,
+    TuiButtonModule,
+    TuiCheckboxLabeledModule
   ],
   providers: [
     AuthService
