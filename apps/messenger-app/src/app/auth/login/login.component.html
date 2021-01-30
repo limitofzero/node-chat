@@ -1,11 +1,9 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <p>
-    <tui-input formControlName="email"
-               tuiTextfieldExampleText="mail@mail.ru"
-               tuiHintContent="It will be used for sending documents">
-      Email
-    </tui-input>
-  </p>
+  <tui-input formControlName="email"
+             tuiTextfieldExampleText="mail@mail.ru"
+             tuiHintContent="It will be used for sending documents">
+    Email
+  </tui-input>
   <p>
     <tui-input-password formControlName="password">
       Password
