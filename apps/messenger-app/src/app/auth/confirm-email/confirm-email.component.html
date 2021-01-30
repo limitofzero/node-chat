@@ -1,25 +1,40 @@
-<main>
-  <mat-card>
-    <ng-container *ngIf="!(token | async)">
-      <h1>Token is undefined</h1>
-    </ng-container>
+<main class="tui-container tui-container_adaptive">
+  <div class="tui-row tui-row_adaptive">
+    <div
+      class="tui-col_xs-12 tui-col_s-10tui-col-offset_s-1 tui-col_sm-8 tui-col-offset_sm-2 tui-col_md-6 tui-col-offset_md-3 tui-col_lg-6 tui-col-offset_lg-3">
 
-    <ng-container *ngIf="(token | async)">
-      <ng-container *ngIf="(loading | async)">
-        <mat-spinner></mat-spinner>
-      </ng-container>
+      <messenger-card>
+        <messenger-card-content>
+          <ng-container *ngIf="!(token | async)">
+            <h1>Token is undefined</h1>
+          </ng-container>
 
-      <ng-container *ngIf="(error | async) as error">
-        <div class="error">
-          {{ error }}
-        </div>
-      </ng-container>
+          <ng-container *ngIf="(token | async)">
+            <ng-container *ngIf="(loading | async)">
+              <tui-loader
+                class="inline-flex tui-space_right-2"
+                [showLoader]="true"
+                [inheritColor]="true"
+                [overlay]="true"
+              >
+              </tui-loader>
+            </ng-container>
 
-      <ng-container *ngIf="!(error | async) && !(loading | async)">
-        <div>
-          You are verified! Go to <a routerLink="../login"></a> to sign in.
-        </div>
-      </ng-container>
-    </ng-container>
-  </mat-card>
+            <ng-container *ngIf="(error | async) as error">
+              <div class="error">
+                {{ error }}
+              </div>
+            </ng-container>
+
+            <ng-container *ngIf="!(error | async) && !(loading | async)">
+              <div>
+                You are verified! Go to <a tuiLink routerLink="../login"></a> to sign in.
+              </div>
+            </ng-container>
+          </ng-container>
+        </messenger-card-content>
+      </messenger-card>
+
+    </div>
+  </div>
 </main>

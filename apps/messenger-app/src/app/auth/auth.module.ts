@@ -29,7 +29,13 @@ import {
   TuiInputPasswordModule,
   TuiTabsModule
 } from "@taiga-ui/kit";
-import { TuiButtonModule, TuiHintControllerModule, TuiLinkModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
+import {
+  TuiButtonModule,
+  TuiHintControllerModule,
+  TuiLinkModule,
+  TuiLoaderModule,
+  TuiTextfieldControllerModule
+} from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -66,7 +72,8 @@ import { TuiButtonModule, TuiHintControllerModule, TuiLinkModule, TuiTextfieldCo
     TuiButtonModule,
     TuiCheckboxLabeledModule,
     TuiLinkModule,
-    TuiFieldErrorModule
+    TuiFieldErrorModule,
+    TuiLoaderModule
   ],
   providers: [
     AuthService

@@ -17,8 +17,14 @@
       Remember me
     </tui-checkbox-labeled>
   </p>
-  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
-  <button tuiButton *ngIf="!(isLoading | async)" type="submit">
-    Sign in
-  </button>
+  <tui-loader
+    [showLoader]="isLoading | async"
+    [inheritColor]="true"
+    [overlay]="true"
+  >
+    <button class="width-100" tuiButton type="submit">
+      Sign in
+    </button>
+  </tui-loader>
+
 </form>

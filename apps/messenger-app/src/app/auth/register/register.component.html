@@ -25,6 +25,11 @@
                     formControlName="recaptcha">
     </ngx-recaptcha2>
   </p>
-  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
-  <button tuiButton *ngIf="(isLoading | async) === false" type="submit">Sign up</button>
+  <tui-loader
+    [showLoader]="isLoading | async"
+    [inheritColor]="true"
+    [overlay]="true"
+  >
+    <button class="width-100" tuiButton type="submit">Sign up</button>
+  </tui-loader>
 </form>
