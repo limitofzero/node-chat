@@ -1,7 +1,7 @@
 <main class="tui-container tui-container_adaptive">
   <div class="tui-row tui-row_adaptive">
-    <div class="tui-col_xs-12 tui-col_s-8" style="background-color: red">
-      <mat-card>
+    <div class="tui-col_xs-12 tui-col_s-8">
+      <messenger-card>
         <nav mat-tab-nav-bar>
           <ng-container *ngFor="let link of links">
             <a mat-tab-link
@@ -12,7 +12,7 @@
 
         <router-outlet></router-outlet>
 
-      </mat-card>
+      </messenger-card>
     </div>
   </div>
 </main>

@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { AuthFormComponent } from "./auth-form/auth-form.component";
 import { AuthRoutingModule } from "./auth-routing.module";
 import { LoginComponent } from "./login/login.component";
-import { MatCardModule } from "@angular/material/card";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
@@ -21,6 +20,8 @@ import { NgxCaptchaModule } from "ngx-captcha";
 import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 import { FormErrorsModule } from "../../../../../libs/form-errors/src";
+import { CardModule } from "../../../../../libs/ui/src";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { FormErrorsModule } from "../../../../../libs/form-errors/src";
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MatCardModule,
     MatTabsModule,
     MatFormFieldModule,
     MatIconModule,
@@ -47,7 +47,9 @@ import { FormErrorsModule } from "../../../../../libs/form-errors/src";
     NotificationsModule,
     MatProgressSpinnerModule,
     NgxCaptchaModule,
-    FormErrorsModule
+    FormErrorsModule,
+    CardModule,
+    MatCardModule
   ],
   providers: [
     AuthService
