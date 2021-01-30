@@ -5,9 +5,11 @@ import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { Router } from "@angular/router";
 import { NotificationService } from "../../notifications/notification.service";
 import { environment } from "../../../environments/environment";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, throwError } from "rxjs";
 import { doWithLoading } from "@messenger/common";
 import { HttpErrorResponse } from "@angular/common/http";
+import { TuiNotificationsService } from "@taiga-ui/core";
+import { catchError, switchMapTo } from "rxjs/operators";
 
 @UntilDestroy()
 @Component({
@@ -24,7 +26,7 @@ export class RegisterComponent {
     private readonly fb: FormBuilder,
     private readonly auth: AuthService,
     private readonly router: Router,
-    private readonly notification: NotificationService
+    private readonly notification: TuiNotificationsService
   ) {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
@@ -40,15 +42,17 @@ export class RegisterComponent {
     }
 
     doWithLoading(this.auth.signUp(this.form.value), this.isLoading).pipe(
+      catchError(err => {
+        return this.notification.show(err.error.message ?? err.message).pipe(
+          switchMapTo(throwError(err))
+        );
+      }),
       untilDestroyed(this)
     ).subscribe({
       next: () => {
-        this.notification.show({ message: "You was registered" });
+        this.notification.show("You was registered").subscribe();
         this.router.navigate([".."]);
       },
-      error: (err: HttpErrorResponse) => {
-        this.notification.error({ message: err.error.message });
-      }
     });
   }
 }

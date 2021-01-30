@@ -6,6 +6,7 @@ module.exports = {
     "<rootDir>/libs/dto",
     "<rootDir>/libs/form-errors",
     "<rootDir>/libs/api-errors",
-    "<rootDir>/libs/common"
+    "<rootDir>/libs/common",
+    "<rootDir>/libs/ui"
   ],
 };

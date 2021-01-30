@@ -1,24 +1,35 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <mat-form-field appearance="standard">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput placeholder="email" formControlName="email">
-    <mat-hint>Enter your email</mat-hint>
-  </mat-form-field>
-  <mat-form-field appearance="standard">
-    <mat-label>Username</mat-label>
-    <input type="email" matInput placeholder="email" formControlName="username">
-    <mat-hint>Enter your username</mat-hint>
-  </mat-form-field>
-  <mat-form-field appearance="standard">
-    <mat-label>Password</mat-label>
-    <input type="password" matInput placeholder="password" formControlName="password">
-    <mat-hint>Enter your password</mat-hint>
-  </mat-form-field>
-  <ngx-recaptcha2 [siteKey]="captchaKey"
-                  [useGlobalDomain]="false"
-                  theme="dark"
-                  formControlName="recaptcha">
-  </ngx-recaptcha2>
-  <mat-spinner *ngIf="isLoading | async"></mat-spinner>
-  <button *ngIf="(isLoading | async) === false" type="submit" mat-button>Sign up</button>
+  <tui-input formControlName="email"
+             tuiTextfieldExampleText="mail@mail.ru"
+             tuiHintContent="Enter your email">
+    Email
+  </tui-input>
+  <tui-field-error formControlName="email"></tui-field-error>
+  <p>
+    <tui-input formControlName="username"
+               tuiTextfieldExampleText="Denis Makarov"
+               tuiHintContent="Enter your username">
+      Username
+    </tui-input>
+    <tui-field-error formControlName="username"></tui-field-error>
+  </p>
+
+  <tui-input-password formControlName="password">
+    Password
+  </tui-input-password>
+  <tui-field-error formControlName="password"></tui-field-error>
+  <p class="captcha-container">
+    <ngx-recaptcha2 [siteKey]="captchaKey"
+                    [useGlobalDomain]="false"
+                    theme="dark"
+                    formControlName="recaptcha">
+    </ngx-recaptcha2>
+  </p>
+  <tui-loader
+    [showLoader]="isLoading | async"
+    [inheritColor]="true"
+    [overlay]="true"
+  >
+    <button class="width-100" tuiButton type="submit">Sign up</button>
+  </tui-loader>
 </form>

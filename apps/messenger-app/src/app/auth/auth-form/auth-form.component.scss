@@ -1,9 +1,9 @@
-main {
-  width: 30rem;
+:host {
+  display: block;
 }
 
 nav {
-  a {
+  button {
     text-transform: capitalize;
   }
 }

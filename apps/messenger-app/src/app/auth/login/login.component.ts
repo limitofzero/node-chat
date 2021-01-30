@@ -6,8 +6,10 @@ import { SessionStore } from "../../session/session.store";
 import { Router } from "@angular/router";
 import { SessionQuery } from "../../session/session.query";
 import { doWithLoading } from "@messenger/common";
-import { NotificationService } from "../../notifications/notification.service";
 import { HttpErrorResponse } from "@angular/common/http";
+import { TuiNotificationsService } from "@taiga-ui/core";
+import { catchError, switchMapTo } from "rxjs/operators";
+import { throwError } from "rxjs";
 
 @UntilDestroy()
 @Component({
@@ -25,7 +27,7 @@ export class LoginComponent {
     private readonly session: SessionStore,
     private readonly sessionQuery: SessionQuery,
     private readonly router: Router,
-    private readonly notification: NotificationService
+    private readonly notification: TuiNotificationsService
   ) {
     this.form = fb.group({
       email: fb.control("", [Validators.required, Validators.email]),
@@ -40,15 +42,17 @@ export class LoginComponent {
     }
 
     doWithLoading(this.auth.signIn(this.form.value), this.session).pipe(
+      catchError(err => {
+        return this.notification.show(err.error.message ?? err.message).pipe(
+          switchMapTo(throwError(err))
+        );
+      }),
       untilDestroyed(this)
     ).subscribe({
       next: ({ token }) => {
         this.session.update({ token });
         this.router.navigate(["../../"]);
       },
-      error: (err: HttpErrorResponse) => {
-        this.notification.error({ message: err.error.message });
-      }
     });
   }
 }

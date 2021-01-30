@@ -30,6 +30,9 @@
       ],
       "@messenger/common": [
         "libs/common/src/index.ts"
+      ],
+      "@messenger/ui": [
+        "libs/ui/src/index.ts"
       ]
     }
   },

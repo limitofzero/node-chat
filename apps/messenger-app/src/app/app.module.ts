@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { MainModule } from "./main/main.module";
 import { SessionModule } from "./session/session.module";
-import { FormErrorsModule } from "@messenger/form-errors";
+import { TuiNotificationsModule, TuiRootModule } from "@taiga-ui/core";
+import { TUI_VALIDATION_ERRORS } from "@taiga-ui/kit";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,14 +17,20 @@ import { FormErrorsModule } from "@messenger/form-errors";
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    TuiRootModule,
+    TuiNotificationsModule,
     MainModule,
-    SessionModule,
-    FormErrorsModule.forRoot({
-      required: () => "This field is required",
-      email: () => "This field is not containing email"
-    })
+    SessionModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: TUI_VALIDATION_ERRORS,
+      useValue: {
+        required: "Field is required",
+        email: "This field is not containing email"
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

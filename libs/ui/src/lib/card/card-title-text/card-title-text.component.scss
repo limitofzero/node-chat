@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  text-transform: capitalize;
+  height: var(--tui-height-l);
+  box-shadow: inset 0 -1px var(--tui-base-03);
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
