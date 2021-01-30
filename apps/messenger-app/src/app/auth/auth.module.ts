@@ -24,12 +24,12 @@ import { CardModule } from "../../../../../libs/ui/src";
 import { MatCardModule } from "@angular/material/card";
 import {
   TuiCheckboxLabeledModule,
-  TuiCheckboxModule,
+  TuiFieldErrorModule,
   TuiInputModule,
   TuiInputPasswordModule,
   TuiTabsModule
 } from "@taiga-ui/kit";
-import { TuiButtonModule, TuiHintControllerModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
+import { TuiButtonModule, TuiHintControllerModule, TuiLinkModule, TuiTextfieldControllerModule } from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -64,7 +64,9 @@ import { TuiButtonModule, TuiHintControllerModule, TuiTextfieldControllerModule 
     TuiTextfieldControllerModule,
     TuiInputPasswordModule,
     TuiButtonModule,
-    TuiCheckboxLabeledModule
+    TuiCheckboxLabeledModule,
+    TuiLinkModule,
+    TuiFieldErrorModule
   ],
   providers: [
     AuthService

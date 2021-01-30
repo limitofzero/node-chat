@@ -4,12 +4,13 @@
              tuiHintContent="It will be used for sending documents">
     Email
   </tui-input>
+  <tui-field-error formControlName="email"></tui-field-error>
   <p>
     <tui-input-password formControlName="password">
       Password
     </tui-input-password>
   </p>
-  <a class="forget-ps" routerLink="../forget-password">Forget password</a>
+  <a tuiLink routerLink="../forget-password">Forget password</a>
   <p>
     <tui-checkbox-labeled formControlName="rememberMe" size="l">
       Remember me
