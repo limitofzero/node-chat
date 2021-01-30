@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthService } from "../auth.service";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { Router } from "@angular/router";
-import { NotificationService } from "../../notifications/notification.service";
 import { environment } from "../../../environments/environment";
 import { BehaviorSubject, throwError } from "rxjs";
 import { doWithLoading } from "@messenger/common";
@@ -42,7 +41,7 @@ export class RegisterComponent {
     }
 
     doWithLoading(this.auth.signUp(this.form.value), this.isLoading).pipe(
-      catchError(err => {
+      catchError((err: HttpErrorResponse) => {
         return this.notification.show(err.error.message ?? err.message).pipe(
           switchMapTo(throwError(err))
         );

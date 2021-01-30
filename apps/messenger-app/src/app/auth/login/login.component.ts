@@ -42,7 +42,7 @@ export class LoginComponent {
     }
 
     doWithLoading(this.auth.signIn(this.form.value), this.session).pipe(
-      catchError(err => {
+      catchError((err: HttpErrorResponse) => {
         return this.notification.show(err.error.message ?? err.message).pipe(
           switchMapTo(throwError(err))
         );
