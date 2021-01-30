@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "./auth.service";
 import { SessionModule } from "../session/session.module";
 import { RegisterComponent } from "./register/register.component";
-import { NotificationsModule } from "../notifications/notifications.module";
 import { ConfirmEmailComponent } from "./confirm-email/confirm-email.component";
 import { NgxCaptchaModule } from "ngx-captcha";
 import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
@@ -44,7 +43,6 @@ import { CardModule } from "../../../../../libs/ui/src";
     FormsModule,
     ReactiveFormsModule,
     SessionModule,
-    NotificationsModule,
     NgxCaptchaModule,
     CardModule,
     TuiTabsModule,

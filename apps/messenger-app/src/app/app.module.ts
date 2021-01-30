@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { MainModule } from "./main/main.module";
 import { SessionModule } from "./session/session.module";
-import { TuiRootModule } from "@taiga-ui/core";
+import { TuiNotificationsModule, TuiRootModule } from "@taiga-ui/core";
 import { TUI_VALIDATION_ERRORS } from "@taiga-ui/kit";
 
 @NgModule({
@@ -18,6 +18,7 @@ import { TUI_VALIDATION_ERRORS } from "@taiga-ui/kit";
     BrowserAnimationsModule,
     AppRoutingModule,
     TuiRootModule,
+    TuiNotificationsModule,
     MainModule,
     SessionModule
   ],
