@@ -2,5 +2,6 @@
   display: block;
   border-radius: 12px;
   padding: 32px;
-  background-color: var(--tui-base-02);
+  border: 1px solid var(--tui-base-03);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
 }
