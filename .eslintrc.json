@@ -6,7 +6,7 @@
     ],
     "quotes": [
       "error",
-      "double"
+      "single"
     ],
     "jsx-quotes": [
       "error",
