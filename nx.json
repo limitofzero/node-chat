@@ -41,9 +41,6 @@
     "dto": {
       "tags": []
     },
-    "form-errors": {
-      "tags": []
-    },
     "api-errors": {
       "tags": []
     },

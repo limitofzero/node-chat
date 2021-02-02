@@ -226,34 +226,6 @@
         }
       }
     },
-    "form-errors": {
-      "projectType": "library",
-      "root": "libs/form-errors",
-      "sourceRoot": "libs/form-errors/src",
-      "prefix": "messenger",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/form-errors/src/**/*.ts"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/form-errors/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
     "api-errors": {
       "root": "libs/api-errors",
       "sourceRoot": "libs/api-errors/src",

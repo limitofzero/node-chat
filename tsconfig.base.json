@@ -22,9 +22,6 @@
       "@messenger/dto": [
         "libs/dto/src/index.ts"
       ],
-      "@messenger/form-errors": [
-        "libs/form-errors/src/index.ts"
-      ],
       "@messenger/api-errors": [
         "libs/api-errors/src/index.ts"
       ],
