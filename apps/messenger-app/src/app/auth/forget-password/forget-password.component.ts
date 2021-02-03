@@ -1,15 +1,15 @@
-import { Component } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../auth.service";
-import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
-import { ForgetPasswordDto } from "@messenger/dto";
-import { BehaviorSubject } from "rxjs";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { ForgetPasswordDto } from '@messenger/dto';
+import { BehaviorSubject } from 'rxjs';
 
 @UntilDestroy()
 @Component({
-  selector: "messenger-reset-password",
-  templateUrl: "./forget-password.component.html",
-  styleUrls: ["./forget-password.component.scss"]
+  selector: 'messenger-reset-password',
+  templateUrl: './forget-password.component.html',
+  styleUrls: ['./forget-password.component.scss']
 })
 export class ForgetPasswordComponent {
   public readonly form: FormGroup;
@@ -20,7 +20,7 @@ export class ForgetPasswordComponent {
     private readonly auth: AuthService
   ) {
     this.form = fb.group({
-      email: fb.control("", [Validators.required, Validators.email])
+      email: fb.control('', [Validators.required, Validators.email])
     });
   }
 

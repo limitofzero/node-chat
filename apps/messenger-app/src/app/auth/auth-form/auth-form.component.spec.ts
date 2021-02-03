@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthFormComponent } from "./auth-form.component";
+import { AuthFormComponent } from './auth-form.component';
 
-describe("AuthFormComponent", () => {
+describe('AuthFormComponent', () => {
   let component: AuthFormComponent;
   let fixture: ComponentFixture<AuthFormComponent>;
 
@@ -19,7 +19,7 @@ describe("AuthFormComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

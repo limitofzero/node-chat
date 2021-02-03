@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConfirmEmailComponent } from "./confirm-email.component";
+import { ConfirmEmailComponent } from './confirm-email.component';
 
-describe("ConfirmEmailComponent", () => {
+describe('ConfirmEmailComponent', () => {
   let component: ConfirmEmailComponent;
   let fixture: ComponentFixture<ConfirmEmailComponent>;
 
@@ -19,7 +19,7 @@ describe("ConfirmEmailComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,21 +1,21 @@
-import { Component } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../auth.service";
-import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
-import { SessionStore } from "../../session/session.store";
-import { Router } from "@angular/router";
-import { SessionQuery } from "../../session/session.query";
-import { doWithLoading } from "@messenger/common";
-import { HttpErrorResponse } from "@angular/common/http";
-import { TuiNotificationsService } from "@taiga-ui/core";
-import { catchError, switchMapTo } from "rxjs/operators";
-import { throwError } from "rxjs";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { SessionStore } from '../../session/session.store';
+import { Router } from '@angular/router';
+import { SessionQuery } from '../../session/session.query';
+import { doWithLoading } from '@messenger/common';
+import { HttpErrorResponse } from '@angular/common/http';
+import { TuiNotificationsService } from '@taiga-ui/core';
+import { catchError, switchMapTo } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @UntilDestroy()
 @Component({
-  selector: "messenger-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: 'messenger-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   public readonly form: FormGroup;
@@ -30,8 +30,8 @@ export class LoginComponent {
     private readonly notification: TuiNotificationsService
   ) {
     this.form = fb.group({
-      email: fb.control("", [Validators.required, Validators.email]),
-      password: fb.control("", [Validators.required]),
+      email: fb.control('', [Validators.required, Validators.email]),
+      password: fb.control('', [Validators.required]),
       rememberMe: fb.control(true)
     });
   }
@@ -51,7 +51,7 @@ export class LoginComponent {
     ).subscribe({
       next: ({ token }) => {
         this.session.update({ token });
-        this.router.navigate(["../../"]);
+        this.router.navigate(['../../']);
       },
     });
   }

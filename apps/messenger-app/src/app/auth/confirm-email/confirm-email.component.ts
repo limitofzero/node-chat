@@ -1,15 +1,15 @@
-import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
-import { filter, finalize, map, shareReplay, switchMap, take } from "rxjs/operators";
-import { AuthService } from "../auth.service";
-import { BehaviorSubject, Observable } from "rxjs";
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { filter, finalize, map, shareReplay, switchMap, take } from 'rxjs/operators';
+import { AuthService } from '../auth.service';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @UntilDestroy()
 @Component({
-  selector: "messenger-confirm-email",
-  templateUrl: "./confirm-email.component.html",
-  styleUrls: ["./confirm-email.component.scss"],
+  selector: 'messenger-confirm-email',
+  templateUrl: './confirm-email.component.html',
+  styleUrls: ['./confirm-email.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConfirmEmailComponent implements OnInit {
@@ -25,7 +25,7 @@ export class ConfirmEmailComponent implements OnInit {
 
   public ngOnInit(): void {
     this.token = this.route.queryParams.pipe(
-      map(params => params["confirm-token"] as string ?? ""),
+      map(params => params['confirm-token'] as string ?? ''),
       shareReplay()
     );
 
