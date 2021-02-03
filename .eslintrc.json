@@ -51,6 +51,10 @@
     "quotes": [
       "error",
       "single"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
     ]
   },
   "overrides": [
