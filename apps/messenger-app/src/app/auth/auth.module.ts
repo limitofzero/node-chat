@@ -26,7 +26,7 @@ import {
   TuiLoaderModule,
   TuiTextfieldControllerModule
 } from "@taiga-ui/core";
-import { CardModule } from "../../../../../libs/ui/src";
+import { CardModule } from "@messenger/ui";
 
 @NgModule({
   declarations: [
