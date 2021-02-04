@@ -23,7 +23,12 @@
             "aot": true,
             "assets": [
               "apps/messenger-app/src/favicon.ico",
-              "apps/messenger-app/src/assets"
+              "apps/messenger-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/@taiga-ui/icons/src",
+                "output": "assets/taiga-ui/icons"
+              }
             ],
             "styles": [
               "apps/messenger-app/src/styles.scss",
