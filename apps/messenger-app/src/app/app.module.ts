@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainModule } from './main/main.module';
 import { SessionModule } from './session/session.module';
 import { TuiNotificationsModule, TuiRootModule } from '@taiga-ui/core';
-import { TUI_VALIDATION_ERRORS } from '@taiga-ui/kit';
+import { TUI_VALIDATION_ERRORS } from "@taiga-ui/kit";
+import { HeaderModule } from "@messenger/ui";
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,8 @@ import { TUI_VALIDATION_ERRORS } from '@taiga-ui/kit';
     TuiRootModule,
     TuiNotificationsModule,
     MainModule,
-    SessionModule
+    SessionModule,
+    HeaderModule
   ],
   providers: [
     {
