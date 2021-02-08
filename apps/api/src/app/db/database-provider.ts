@@ -1,14 +1,14 @@
-import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
-import * as dotenv from "dotenv";
-import { User } from "./entity/user";
-import { CreateFirstUser1596659507467 } from "./migrations/1596659507467-CreateFirstUser";
+import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
+import * as dotenv from 'dotenv';
+import { User } from './entity/user';
+import { CreateFirstUser1596659507467 } from './migrations/1596659507467-CreateFirstUser';
 
 dotenv.config();
 
 const { env } = process;
 
 export const typeOrmConfig: PostgresConnectionOptions = {
-    type: "postgres",
+    type: 'postgres',
     host: env.POSTGRES_HOST,
     // tslint:disable-next-line:radix
     port: parseInt(env.POSTGRES_PORT as string),

@@ -1,8 +1,8 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { REDIS } from "./index";
-import { defer, Observable } from "rxjs";
-import { map, mapTo, mergeMap } from "rxjs/operators";
-import * as IORedis from "ioredis";
+import { Inject, Injectable } from '@nestjs/common';
+import { REDIS } from './index';
+import { defer, Observable } from 'rxjs';
+import { map, mapTo, mergeMap } from 'rxjs/operators';
+import * as IORedis from 'ioredis';
 
 const DEFAULT_KEY_EXP_TIME = 1200000;
 
@@ -48,7 +48,7 @@ export class KeyValueStoreService {
   public setWithExp<T>(key: string, value: T, expTime: number): Observable<void> {
     const valueAsString = JSON.stringify(value);
 
-    return defer(() => this.redis.set(key, valueAsString, "EX", expTime)).pipe(
+    return defer(() => this.redis.set(key, valueAsString, 'EX', expTime)).pipe(
       mapTo(null)
     );
   }

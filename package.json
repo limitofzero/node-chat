@@ -14,7 +14,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
-    "lint:fix": "ng lint --fix",
+    "lint:fix": "nx run-many --all --fix --target=lint",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",

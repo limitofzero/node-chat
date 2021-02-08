@@ -1,14 +1,14 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
-import { User } from "../../../db/entity/user";
-import { Repository } from "typeorm";
-import { Observable, of, throwError } from "rxjs";
-import { catchError, map, mapTo, mergeMap, tap } from "rxjs/operators";
-import { RegisterRequestDto } from "@messenger/dto";
-import { TokenService } from "../token/token.service";
-import { CaptchaService } from "../captcha/captcha.service";
-import { MailService } from "../email/mail.service";
-import { UserService } from "./user.service";
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { User } from '../../../db/entity/user';
+import { Repository } from 'typeorm';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, map, mapTo, mergeMap, tap } from 'rxjs/operators';
+import { RegisterRequestDto } from '@messenger/dto';
+import { TokenService } from '../token/token.service';
+import { CaptchaService } from '../captcha/captcha.service';
+import { MailService } from '../email/mail.service';
+import { UserService } from './user.service';
 
 @Injectable()
 export class RegisterService {
@@ -63,7 +63,7 @@ export class RegisterService {
   }
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {
-    return (user ? this.mail.sendVerificationEmail(user) : throwError(new BadRequestException("User was not created"))).pipe(
+    return (user ? this.mail.sendVerificationEmail(user) : throwError(new BadRequestException('User was not created'))).pipe(
       mergeMap(() => this.userService.save(user)),
       mapTo(null)
     );

@@ -1,7 +1,7 @@
-import { Injectable } from "@nestjs/common";
-import { createTransport, Transporter } from "nodemailer";
-import { from, Observable } from "rxjs";
-import { Options } from "nodemailer/lib/mailer";
+import { Injectable } from '@nestjs/common';
+import { createTransport, Transporter } from 'nodemailer';
+import { from, Observable } from 'rxjs';
+import { Options } from 'nodemailer/lib/mailer';
 
 @Injectable()
 export class MailTransporterService {

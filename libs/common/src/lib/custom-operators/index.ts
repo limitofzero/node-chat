@@ -1,1 +1,1 @@
-export * from "./loading/do-with-loading";
+export * from './loading/do-with-loading';

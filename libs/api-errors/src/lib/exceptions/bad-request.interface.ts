@@ -1,4 +1,4 @@
-import { Exceptions } from "./exceptions.enum";
+import { Exceptions } from './exceptions.enum';
 
 export interface BadRequest<T> {
   code: Exceptions,

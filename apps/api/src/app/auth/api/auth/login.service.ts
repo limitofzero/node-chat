@@ -1,10 +1,10 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
-import { LoginRequestDto } from "@messenger/dto";
-import { Observable, throwError } from "rxjs";
-import { map, mergeMap } from "rxjs/operators";
-import { User } from "../../../db/entity/user";
-import { TokenService } from "../token/token.service";
-import { UserService } from "./user.service";
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { LoginRequestDto } from '@messenger/dto';
+import { Observable, throwError } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { User } from '../../../db/entity/user';
+import { TokenService } from '../token/token.service';
+import { UserService } from './user.service';
 
 @Injectable()
 export class LoginService {
@@ -20,7 +20,7 @@ export class LoginService {
       .pipe(
         mergeMap(user => user?.isPasswordValid(password) ?
           this.returnToken(user, rememberMe) :
-          throwError(new BadRequestException("User with this email/password doesn't exist"))
+          throwError(new BadRequestException('User with this email/password doesn\'t exist'))
         ),
       );
   }
@@ -35,6 +35,6 @@ export class LoginService {
   }
 
   private getExpiresIn(rememberMe: boolean): string {
-    return rememberMe ? "30d" : "1h";
+    return rememberMe ? '30d' : '1h';
   }
 }

@@ -1,8 +1,8 @@
-import { User } from "../../../db/entity/user";
-import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
-import { defer, Observable } from "rxjs";
+import { User } from '../../../db/entity/user';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { defer, Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {

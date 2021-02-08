@@ -1,6 +1,6 @@
-import { BehaviorSubject, Observable } from "rxjs";
-import { finalize } from "rxjs/operators";
-import { Store } from "@datorama/akita";
+import { BehaviorSubject, Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
+import { Store } from '@datorama/akita';
 
 export function doWithLoading<T, K>(
   observable: Observable<T>,

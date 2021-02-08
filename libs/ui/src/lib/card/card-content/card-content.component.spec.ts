@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardContentComponent } from "./card-content.component";
+import { CardContentComponent } from './card-content.component';
 
-describe("CardContentComponent", () => {
+describe('CardContentComponent', () => {
   let component: CardContentComponent;
   let fixture: ComponentFixture<CardContentComponent>;
 
@@ -19,7 +19,7 @@ describe("CardContentComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

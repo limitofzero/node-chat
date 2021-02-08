@@ -1,11 +1,11 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
-import { defer, EMPTY, Observable, of, throwError } from "rxjs";
-import { catchError, mapTo, mergeMap } from "rxjs/operators";
-import { User } from "../../../db/entity/user";
-import { TokenService } from "../token/token.service";
-import { MailService } from "../email/mail.service";
-import { UserService } from "./user.service";
-import { KeyValueStoreService } from "../redis/key-value-store.service";
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { defer, EMPTY, Observable, of, throwError } from 'rxjs';
+import { catchError, mapTo, mergeMap } from 'rxjs/operators';
+import { User } from '../../../db/entity/user';
+import { TokenService } from '../token/token.service';
+import { MailService } from '../email/mail.service';
+import { UserService } from './user.service';
+import { KeyValueStoreService } from '../redis/key-value-store.service';
 
 @Injectable()
 export class ResetPasswordService {
@@ -29,7 +29,7 @@ export class ResetPasswordService {
         if (token) {
           return this.token.verifyJWT<{ email: string }>(token);
         } else {
-          return throwError(new BadRequestException("Link is expired"));
+          return throwError(new BadRequestException('Link is expired'));
         }
       }),
       catchError(error => {
@@ -41,11 +41,11 @@ export class ResetPasswordService {
           return of(user);
         }
 
-        return throwError(new BadRequestException("Email is invalid"));
+        return throwError(new BadRequestException('Email is invalid'));
       }),
       mergeMap(user => {
         if (repeatNewPassword !== newPassword) {
-          return throwError(new BadRequestException("Passwords fields are not equal"));
+          return throwError(new BadRequestException('Passwords fields are not equal'));
         }
 
         user.password = newPassword;
