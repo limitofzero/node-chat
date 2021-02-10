@@ -2,7 +2,7 @@ import { Controller } from "@nestjs/common";
 
 import { UserService } from "./user.service";
 import { GrpcMethod } from "@nestjs/microservices";
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 import { User, VerifyUserDto } from "@messenger/user";
 
 @Controller()
@@ -12,12 +12,6 @@ export class UserController {
 
   @GrpcMethod("UserService", "VerifyUser")
   verifyUser(user: VerifyUserDto): Observable<User> {
-    return of({
-      id: 202,
-      username: "test",
-      email: "test@mail.ru",
-      isConfirmed: true,
-      ...user
-    });
+    return this.userService.verifyUser(user);
   }
 }
