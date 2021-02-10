@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/common',
     '<rootDir>/libs/ui',
     '<rootDir>/apps/user-svc',
+    '<rootDir>/libs/user'
   ],
 };

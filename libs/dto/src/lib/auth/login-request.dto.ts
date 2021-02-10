@@ -10,5 +10,6 @@ export class LoginRequestDto {
 
   @IsNotEmpty()
   public password: string;
+
   public rememberMe: boolean;
 }

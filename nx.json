@@ -19,14 +19,33 @@
     "messenger-app": { "tags": [] },
     "messenger-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["messenger-app"]
+      "implicitDependencies": [
+        "messenger-app"
+      ]
     },
-    "api": { "tags": [] },
-    "api-interfaces": { "tags": [] },
-    "dto": { "tags": [] },
-    "api-errors": { "tags": [] },
-    "common": { "tags": [] },
-    "ui": { "tags": [] },
-    "user-svc": { "tags": [] }
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    },
+    "dto": {
+      "tags": []
+    },
+    "api-errors": {
+      "tags": []
+    },
+    "common": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "user-svc": {
+      "tags": []
+    },
+    "user": {
+      "tags": []
+    }
   }
 }

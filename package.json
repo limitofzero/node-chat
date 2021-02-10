@@ -7,6 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
     "start": "ng serve",
+    "start:user": "ng serve user-svc",
     "start:back": "ng serve api",
     "dev:docker:up": "docker-compose up --build",
     "prod:docker:up": "docker-compose --file docker-compose.prod.yml up --build",

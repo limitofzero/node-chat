@@ -37,7 +37,7 @@ message ResetPasswordReq {
 message Empty {}
 
 service UserService {
-  rpc CreateUser (CreateUserReq) returns (User) {}
+  rpc CreateUser (CreateUserReq) returns (Empty) {}
 
   // replace Empty
   rpc ConfirmEmail (ConfirmEmailReq) returns (Empty) {}
