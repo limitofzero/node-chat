@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package user;
+
+message CreateUserReq {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message User {
+  string id = 1;
+  string username = 2;
+  string email = 3;
+  bool isConfirmed = 4;
+}
+
+message ConfirmEmailReq {
+  string email = 1;
+}
+
+message VerifyUserReq {
+  string email = 1;
+  string password = 2;
+}
+
+message ForgetPasswordReq {
+  string email = 1;
+}
+
+message ResetPasswordReq {
+  string oldPassword = 1;
+  string newPassword = 2;
+  string repeatPassword = 3;
+}
+
+message Empty {}
+
+service UserService {
+  rpc CreateUser (CreateUserReq) returns (User) {}
+
+  // replace Empty
+  rpc ConfirmEmail (ConfirmEmailReq) returns (Empty) {}
+
+  rpc VerifyUser (VerifyUserReq) returns (User) {}
+
+  rpc ResetPassword (ResetPasswordReq) returns (Empty) {}
+
+  // replace Empty
+  rpc ForgetPassword (ForgetPasswordReq) returns (Empty) {}
+}

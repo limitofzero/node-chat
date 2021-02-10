@@ -1,14 +1,9 @@
 {
   "npmScope": "messenger",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -17,38 +12,21 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "messenger-app": {
-      "tags": []
-    },
+    "messenger-app": { "tags": [] },
     "messenger-app-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "messenger-app"
-      ]
+      "implicitDependencies": ["messenger-app"]
     },
-    "api": {
-      "tags": []
-    },
-    "api-interfaces": {
-      "tags": []
-    },
-    "dto": {
-      "tags": []
-    },
-    "api-errors": {
-      "tags": []
-    },
-    "common": {
-      "tags": []
-    },
-    "ui": {
-      "tags": []
-    }
+    "api": { "tags": [] },
+    "api-interfaces": { "tags": [] },
+    "dto": { "tags": [] },
+    "api-errors": { "tags": [] },
+    "common": { "tags": [] },
+    "ui": { "tags": [] },
+    "user-svc": { "tags": [] }
   }
 }
