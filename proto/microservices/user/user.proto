@@ -24,14 +24,11 @@ message VerifyUserReq {
   string password = 2;
 }
 
-message ForgetPasswordReq {
-  string email = 1;
-}
-
 message ResetPasswordReq {
-  string oldPassword = 1;
-  string newPassword = 2;
-  string repeatPassword = 3;
+  string email = 1;
+  string oldPassword = 2;
+  string newPassword = 3;
+  string repeatPassword = 4;
 }
 
 message Empty {}
@@ -44,7 +41,4 @@ service UserService {
   rpc VerifyUser (VerifyUserReq) returns (User) {}
 
   rpc ResetPassword (ResetPasswordReq) returns (Empty) {}
-
-  // replace Empty
-  rpc ForgetPassword (ForgetPasswordReq) returns (Empty) {}
 }

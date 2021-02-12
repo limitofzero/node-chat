@@ -3,8 +3,8 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { defer, Observable, throwError } from "rxjs";
 import { User as UserEntity } from "../db/entity/user";
 import { Repository } from "typeorm/index";
-import { CreateUserDto, User, VerifyUserDto } from "@messenger/user";
-import { catchError, map, mergeMap } from "rxjs/operators";
+import { CreateUserDto, ResetPasswordDto, User, VerifyUserDto } from "@messenger/user";
+import { catchError, map, mapTo, mergeMap } from "rxjs/operators";
 import { RpcException } from "@nestjs/microservices";
 
 @Injectable()
@@ -60,6 +60,32 @@ export class UserService {
         }
       })
     );
+  }
+
+  public resetPassword(resetPasswordDto: ResetPasswordDto): Observable<Record<string, unknown>> {
+    const { email, oldPassword, newPassword, repeatPassword } = resetPasswordDto;
+    return this.findOneBy({ email }).pipe(
+      mergeMap(user => {
+        if (user) {
+          if (newPassword !== repeatPassword) {
+            return throwError(new RpcException('Passwords are not equal'));
+          }
+
+          if (!user.isPasswordValid(oldPassword)) {
+            return throwError(new RpcException('Password is incorrect'));
+          }
+
+          user.password = newPassword;
+          user.hashPassword();
+
+          return this.save(user).pipe(
+            mapTo({}),
+          );
+        }
+
+        return throwError(new RpcException('Incorrect email or password'));
+      })
+    )
   }
 
   private findOneBy(options: Partial<User>): Observable<UserEntity> {
