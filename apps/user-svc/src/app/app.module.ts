@@ -1,8 +1,8 @@
-import { Module } from "@nestjs/common";
+import { Module } from '@nestjs/common';
 
-import { TypeOrmModule } from "@nestjs/typeorm";
-import { typeOrmConfig } from "./db/database-provider";
-import { UserModule } from "./user/user.module";
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { typeOrmConfig } from './db/database-provider';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [

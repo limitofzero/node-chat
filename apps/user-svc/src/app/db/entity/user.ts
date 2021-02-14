@@ -1,8 +1,8 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
-import { compareSync, hashSync } from "bcrypt";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, Unique } from 'typeorm';
+import { compareSync, hashSync } from 'bcrypt';
 
 @Entity()
-@Unique(["username"])
+@Unique(['username'])
 export class User {
   @PrimaryGeneratedColumn()
   public id: number;

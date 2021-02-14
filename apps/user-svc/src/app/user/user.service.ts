@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from "@nestjs/typeorm";
-import { defer, Observable, throwError } from "rxjs";
-import { User as UserEntity } from "../db/entity/user";
-import { Repository } from "typeorm/index";
-import { CreateUserDto, ResetPasswordDto, User, VerifyUserDto } from "@messenger/user";
-import { catchError, map, mapTo, mergeMap } from "rxjs/operators";
-import { RpcException } from "@nestjs/microservices";
+import { InjectRepository } from '@nestjs/typeorm';
+import { defer, Observable, throwError } from 'rxjs';
+import { User as UserEntity } from '../db/entity/user';
+import { Repository } from 'typeorm/index';
+import { CreateUserDto, ResetPasswordDto, User, VerifyUserDto } from '@messenger/user';
+import { catchError, map, mapTo, mergeMap } from 'rxjs/operators';
+import { RpcException } from '@nestjs/microservices';
 
 @Injectable()
 export class UserService {
