@@ -8,4 +8,8 @@ export class ApiException<T> extends BadRequestException {
       payload
     });
   }
+
+  public getResponse(): { code: Exceptions, payload: T } {
+    return super.getResponse() as { code: Exceptions, payload: T };
+  }
 }

@@ -1,11 +1,11 @@
 import { ArgumentsHost, Catch, RpcExceptionFilter } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
 import { Observable, throwError } from 'rxjs';
+import { InvalidArgumentsException } from '@messenger/api-errors';
 
-@Catch()
-export class ExceptionFilter implements RpcExceptionFilter {
-  public catch(exception: RpcException, host: ArgumentsHost): Observable<any> {
-    console.log(exception, host);
-    return throwError(exception.getError());
+@Catch(InvalidArgumentsException)
+export class ExceptionFilter implements RpcExceptionFilter<InvalidArgumentsException> {
+  public catch(exception: InvalidArgumentsException, _: ArgumentsHost): Observable<unknown> {
+    const errorAsString = JSON.stringify(exception.getResponse().payload);
+    return throwError({ code : 3, message: errorAsString })
   }
 }
