@@ -9,8 +9,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { Transport } from '@nestjs/microservices';
 import { join } from 'path';
-import { ExceptionFilter } from '../../../libs/common/src/lib/rpc-filters/exception.filter';
-import { dtoExceptionFactory } from '@messenger/api-errors';
+import { dtoExceptionFactory, GrpcExceptionFilter } from '@messenger/api-errors';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, {
@@ -26,7 +25,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     exceptionFactory: dtoExceptionFactory
   }));
-  app.useGlobalFilters(new ExceptionFilter());
+  app.useGlobalFilters(new GrpcExceptionFilter());
 
   await app.listenAsync();
 }
