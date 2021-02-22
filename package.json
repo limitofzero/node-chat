@@ -9,7 +9,7 @@
     "start": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng serve",
     "start:back": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng serve api",
     "dev:docker:up": "docker-compose up",
-    "predev:docker:up": "docker-compose build --no-cache",
+    "predev:docker:up": "docker-compose build",
     "prod:docker:up": "docker-compose --file docker-compose.prod.yml up --build",
     "build:api": "ng build api",
     "build": "ng build",
