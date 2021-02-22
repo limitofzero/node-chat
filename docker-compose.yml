@@ -1,12 +1,10 @@
 version: "3"
 
 volumes:
+  node_modules:
   node_chat_db:
-    name: node_chat_db
   node_chat_redis:
-    name: node_chat_redis
   chat_pgadming:
-    name: chat_pg_admin
 
 services:
   app:
@@ -15,7 +13,7 @@ services:
     build: .
     volumes:
       - ./:/usr/src/app
-      - /usr/src/app/node_modules
+      - node_modules:/usr/src/app/node_modules
     ports:
       - "3000:3000"
     links:
