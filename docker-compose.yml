@@ -11,19 +11,19 @@ services:
     container_name: node_chat
     build: .
     restart: unless-stopped
-    command: "npm run start:back"
+    command: npm run start:back
     volumes:
       - ./:/usr/src/app
       - node_modules:/usr/src/app/node_modules
     ports:
       - "3000:3000"
-    links:
+    depends_on:
       - postgres
       - redis
 
   postgres:
     container_name: postgres-node-chat
-    image: postgres
+    image: postgres:13.2-alpine
     volumes:
       - node_chat_db:/data/db
     ports:
@@ -50,7 +50,7 @@ services:
 
   redis:
     container_name: node_chat_redis
-    image: redis:6.0
+    image: redis:6.2.0-alpine
     volumes:
       - node_chat_redis:/data/redis
     ports:
