@@ -9,8 +9,9 @@ volumes:
 services:
   app:
     container_name: node_chat
-    restart: always
     build: .
+    restart: unless-stopped
+    command: "npm run start:back"
     volumes:
       - ./:/usr/src/app
       - node_modules:/usr/src/app/node_modules

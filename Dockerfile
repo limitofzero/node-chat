@@ -1,10 +1,7 @@
-FROM node:12.18.3
+FROM node:14.16.0-alpine3.10
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json .
 RUN npm install
 COPY . .
-CMD ["npm", "run", "start:back"]
-
-EXPOSE 3000
