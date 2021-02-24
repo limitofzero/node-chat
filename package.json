@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "nx",
     "nx": "nx",
-    "start": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng serve",
+    "start": "nx serve",
     "start:back": "nx serve api",
     "dev:docker:up": "docker-compose up --build",
     "prod:docker:up": "docker-compose --file docker-compose.prod.yml up --build",
@@ -71,9 +71,9 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1101.2",
-    "@angular-devkit/core": "^11.2.1",
+    "@angular-devkit/core": "11.2.1",
     "@angular/cli": "11.2.1",
-    "@angular/compiler-cli": "11.1.1",
+    "@angular/compiler-cli": "11.2.3",
     "@angular/language-service": "11.1.1",
     "@datorama/akita-cli": "^6.1.1",
     "@nestjs/schematics": "7.2.7",
@@ -83,7 +83,6 @@
     "@nrwl/jest": "11.3.0",
     "@nrwl/nest": "11.3.0",
     "@nrwl/node": "11.3.0",
-    "@nrwl/schematics": "^8.12.11",
     "@nrwl/tao": "11.3.0",
     "@nrwl/workspace": "11.3.0",
     "@types/bcrypt": "^3.0.0",

@@ -47,7 +47,6 @@ services:
     logging:
       driver: none
 
-
   redis:
     container_name: node_chat_redis
     image: redis:6.2.0-alpine
@@ -55,4 +54,3 @@ services:
       - node_chat_redis:/data/redis
     ports:
       - "6379:6379"
-
