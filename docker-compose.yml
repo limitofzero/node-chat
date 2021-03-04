@@ -1,20 +1,21 @@
 version: "3"
 
 volumes:
-  node_modules:
   node_chat_db:
   node_chat_redis:
   chat_pgadming:
+  node_modules:
 
 services:
   app:
     container_name: node_chat
-    build: .
+    build:
+      context: .
     restart: unless-stopped
-    command: npm run start:back
     volumes:
       - ./:/usr/src/app
       - node_modules:/usr/src/app/node_modules
+    command: npm run start:back
     ports:
       - "3000:3000"
     depends_on:
