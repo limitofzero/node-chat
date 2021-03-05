@@ -1,12 +1,14 @@
 import { Body, Controller, HttpException, Post } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import {  LoginRequestDto } from '@task-manager/dto';
+import { LoginRequestDto, RegisterRequestDto } from '@task-manager/dto';
 import { LoginService } from './login.service';
+import { RegisterService } from './register.service';
 
 @Controller()
 export class AuthController {
   constructor(
     private readonly loginService: LoginService,
+    private readonly registerService: RegisterService,
   ) {
   }
 
@@ -14,12 +16,11 @@ export class AuthController {
   public login(@Body() loginRequest: LoginRequestDto): Observable<{ token: string } | HttpException> {
     return this.loginService.authorize(loginRequest);
   }
-  //
-  // @Post('register')
-  // public register(@Body() registerRequest: RegisterRequestDto): Observable<void> {
-  //   // return this.registerService.createUserAndSendConfirmationEmail(registerRequest);
-  //   return of(null);
-  // }
+
+  @Post('register')
+  public register(@Body() registerRequest: RegisterRequestDto): Observable<void> {
+    return this.registerService.createUserAndSendConfirmationEmail(registerRequest);
+  }
   //
   // @Post('confirm-user')
   // public verify(@Body() verifyRequest: ConfirmEmailDto): Observable<void> {

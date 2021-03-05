@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { MailTransporterService } from '../../../mail/mail-transporter.service';
 import { User } from '../../../db/entity/user';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { mapTo, mergeMap } from 'rxjs/operators';
 import { TokenService } from '../token/token.service';
 import { KeyValueStoreService } from '../redis/key-value-store.service';
@@ -45,7 +45,8 @@ export class MailService {
   }
 
   public sendVerificationEmail(user: User): Observable<void> {
-    const email = user.email;
+    return of(null); // todo
+    const email = user.email; // test
 
     return this.generateToken(user, '24h').pipe(
       mergeMap(token => this.mail.sendEmail({

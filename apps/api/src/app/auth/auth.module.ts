@@ -8,6 +8,9 @@ import { AuthController } from './api/auth/auth.controller';
 import { UserModule } from '../user/user.module';
 import { LoginService } from './api/auth/login.service';
 import { TokenService } from './api/token/token.service';
+import { RegisterService } from './api/auth/register.service';
+import { CaptchaService } from './api/captcha/captcha.service';
+import { MailService } from './api/email/mail.service';
 
 @Module({
   imports: [
@@ -20,6 +23,9 @@ import { TokenService } from './api/token/token.service';
     KeyValueStoreService,
     LoginService,
     TokenService,
+    RegisterService,
+    CaptchaService,
+    MailService,
     {
       provide: REDIS,
       useFactory: () => {

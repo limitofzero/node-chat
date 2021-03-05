@@ -2,19 +2,18 @@ import { IsEmail, IsNotEmpty, MaxLength, MinLength } from 'class-validator';
 
 export class RegisterRequestDto {
   @IsNotEmpty()
-  username: string;
+  public username: string;
 
   @IsNotEmpty()
   @IsEmail()
-  email: string;
+  public email: string;
 
   @IsNotEmpty()
   @MinLength(8, {
     message: 'Password is too short'
   })
   @MaxLength(20)
-  password: string;
+  public password: string;
 
-  @IsNotEmpty()
-  recaptcha: string;
+  public recaptcha: string;
 }
