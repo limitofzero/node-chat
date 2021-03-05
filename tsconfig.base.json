@@ -16,22 +16,22 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@messenger/api-interfaces": [
+      "@task-manager/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
       ],
-      "@messenger/dto": [
+      "@task-manager/dto": [
         "libs/dto/src/index.ts"
       ],
-      "@messenger/api-errors": [
+      "@task-manager/api-errors": [
         "libs/api-errors/src/index.ts"
       ],
-      "@messenger/common": [
+      "@task-manager/common": [
         "libs/common/src/index.ts"
       ],
-      "@messenger/ui": [
+      "@task-manager/ui": [
         "libs/ui/src/index.ts"
       ],
-      "@messenger/user": [
+      "@task-manager/user": [
         "libs/user/src/index.ts"
       ]
     }

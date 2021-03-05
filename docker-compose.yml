@@ -1,14 +1,30 @@
 version: "3"
 
 volumes:
-  node_chat_db:
-  node_chat_redis:
+  task-manager:
+  task-manager_redis:
   chat_pgadming:
   node_modules:
 
 services:
+  front:
+    container_name: task-manager-front
+    build:
+      context: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    ports:
+      - "4200:4200"
+    command: npm run start:front:dock
+    depends_on:
+      - app
+
   app:
-    container_name: node_chat
+    container_name: task-manager
     build:
       context: .
     restart: unless-stopped
@@ -28,7 +44,7 @@ services:
     container_name: postgres-node-chat
     image: postgres:13.2-alpine
     volumes:
-      - node_chat_db:/data/db
+      - task-manager:/data/db
     ports:
       - "5432:5432"
     environment:
@@ -36,24 +52,10 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DATABASE}
 
-  pgadmin:
-    container_name: pgadmin-chat-db
-    image: dpage/pgadmin4:latest
-    volumes:
-      - chat_pgadming:/data/admin
-    ports:
-      - "80:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_CONFIG_CONSOLE_LOG_LEVEL: ${PGADMIN_CONFIG_CONSOLE_LOG_LEVEL}
-    logging:
-      driver: none
-
   redis:
-    container_name: node_chat_redis
+    container_name: task-manager_redis
     image: redis:6.2.0-alpine
     volumes:
-      - node_chat_redis:/data/redis
+      - task-manager_redis:/data/redis
     ports:
       - "6379:6379"

@@ -4,7 +4,7 @@ import { User } from '../../../db/entity/user';
 import { Repository } from 'typeorm';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, mapTo, mergeMap, tap } from 'rxjs/operators';
-import { RegisterRequestDto } from '@messenger/dto';
+import { RegisterRequestDto } from '@task-manager/dto';
 import { TokenService } from '../token/token.service';
 import { CaptchaService } from '../captcha/captcha.service';
 import { MailService } from '../email/mail.service';

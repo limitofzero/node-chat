@@ -3,31 +3,31 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "messenger-app",
+  "defaultProject": "task-manager",
   "projects": {
-    "messenger-app": {
+    "task-manager": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/messenger-app",
-      "sourceRoot": "apps/messenger-app/src",
-      "prefix": "messenger",
+      "root": "apps/task-manager",
+      "sourceRoot": "apps/task-manager/src",
+      "prefix": "task-manager",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/messenger-app",
-            "index": "apps/messenger-app/src/index.html",
-            "main": "apps/messenger-app/src/main.ts",
-            "polyfills": "apps/messenger-app/src/polyfills.ts",
-            "tsConfig": "apps/messenger-app/tsconfig.app.json",
+            "outputPath": "dist/apps/task-manager",
+            "index": "apps/task-manager/src/index.html",
+            "main": "apps/task-manager/src/main.ts",
+            "polyfills": "apps/task-manager/src/polyfills.ts",
+            "tsConfig": "apps/task-manager/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/messenger-app/src/favicon.ico",
-              "apps/messenger-app/src/assets",
+              "apps/task-manager/src/favicon.ico",
+              "apps/task-manager/src/assets",
               {
                 "glob": "**/*",
                 "input": "node_modules/@taiga-ui/icons/src",
@@ -35,7 +35,7 @@
               }
             ],
             "styles": [
-              "apps/messenger-app/src/styles.scss",
+              "apps/task-manager/src/styles.scss",
               "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
               "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
             ],
@@ -45,8 +45,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/messenger-app/src/environments/environment.ts",
-                  "with": "apps/messenger-app/src/environments/environment.prod.ts"
+                  "replace": "apps/task-manager/src/environments/environment.ts",
+                  "with": "apps/task-manager/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -75,58 +75,32 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "messenger-app:build",
-            "proxyConfig": "apps/messenger-app/proxy.conf.json"
+            "browserTarget": "task-manager:build",
+            "proxyConfig": "apps/task-manager/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "messenger-app:build:production"
+              "browserTarget": "task-manager:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "messenger-app:build"
+            "browserTarget": "task-manager:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/messenger-app/src/**/*.ts"]
+            "lintFilePatterns": ["apps/task-manager/src/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/messenger-app/jest.config.js",
+            "jestConfig": "apps/task-manager/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "messenger-app-e2e": {
-      "root": "apps/messenger-app-e2e",
-      "sourceRoot": "apps/messenger-app-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/messenger-app-e2e/cypress.json",
-            "tsConfig": "apps/messenger-app-e2e/tsconfig.e2e.json",
-            "devServerTarget": "messenger-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "messenger-app:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/messenger-app-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -269,7 +243,7 @@
       "projectType": "library",
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
-      "prefix": "messenger",
+      "prefix": "task-manager",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",

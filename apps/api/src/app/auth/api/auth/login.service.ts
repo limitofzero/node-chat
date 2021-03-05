@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { LoginRequestDto } from '@messenger/dto';
+import { LoginRequestDto } from '@task-manager/dto';
 import { Observable, throwError } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import { User } from '../../../db/entity/user';

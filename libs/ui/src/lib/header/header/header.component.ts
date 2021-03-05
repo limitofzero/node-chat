@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'messenger-header',
+  selector: 'task-manager-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

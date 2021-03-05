@@ -1,6 +1,6 @@
 module.exports = {
   projects: [
-    '<rootDir>/apps/messenger-app',
+    '<rootDir>/apps/task-manager',
     '<rootDir>/apps/api',
     '<rootDir>/libs/api-interfaces',
     '<rootDir>/libs/dto',

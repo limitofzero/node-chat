@@ -1,5 +1,5 @@
 {
-  "name": "messenger",
+  "name": "task-manager",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "nx serve",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "start:back": "ng serve api",
+    "start:front:dock": "nx serve task-manager --host 0.0.0.0 --port 4200",
     "dev:docker:up": "docker-compose up",
     "predev:docker:up": "docker-compose build",
     "prod:docker:up": "docker-compose --file docker-compose.prod.yml up --build",
@@ -35,6 +36,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/architect": "^0.1102.3",
     "@angular/animations": "11.1.1",
     "@angular/common": "11.1.1",
     "@angular/compiler": "11.1.1",

@@ -1,4 +1,4 @@
-import { DtoPropertyError } from '@messenger/api-errors';
+import { DtoPropertyError } from '@task-manager/api-errors';
 
 export interface InvalidArgumentsPayload {
   errors: DtoPropertyError[];

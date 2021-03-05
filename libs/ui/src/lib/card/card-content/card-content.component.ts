@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'messenger-card-content',
+  selector: 'task-manager-card-content',
   templateUrl: './card-content.component.html',
   styleUrls: ['./card-content.component.scss']
 })

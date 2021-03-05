@@ -1,5 +1,5 @@
 {
-  "npmScope": "messenger",
+  "npmScope": "task-manager",
   "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
@@ -16,13 +16,7 @@
     }
   },
   "projects": {
-    "messenger-app": { "tags": [] },
-    "messenger-app-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "messenger-app"
-      ]
-    },
+    "task-manager": { "tags": [] },
     "api": {
       "tags": []
     },

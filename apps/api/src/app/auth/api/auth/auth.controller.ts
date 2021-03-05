@@ -1,9 +1,9 @@
 import { Body, Controller, HttpException, Post } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto, ConfirmEmailDto } from '@messenger/dto';
+import { RegisterRequestDto, LoginRequestDto, ResetPasswordDto, ConfirmEmailDto } from '@task-manager/dto';
 import { LoginService } from './login.service';
 import { RegisterService } from './register.service';
-import { ForgetPasswordDto } from '@messenger/dto';
+import { ForgetPasswordDto } from '@task-manager/dto';
 import { ResetPasswordService } from './reset-password.service';
 
 @Controller()
