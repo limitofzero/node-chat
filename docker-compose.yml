@@ -8,7 +8,7 @@ volumes:
 
 services:
   front:
-    container_name: task-manager-front
+    container_name: task-manager_front
     build:
       context: .
     restart: unless-stopped
@@ -41,7 +41,7 @@ services:
       - redis
 
   postgres:
-    container_name: postgres-node-chat
+    container_name: postgres_task-manager
     image: postgres:13.2-alpine
     volumes:
       - task-manager:/data/db
