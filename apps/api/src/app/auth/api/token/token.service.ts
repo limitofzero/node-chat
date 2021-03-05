@@ -8,7 +8,7 @@ export interface JWTOptions {
 
 @Injectable()
 export class TokenService {
-  public createJWT<T extends object>(payload: T, options: JWTOptions): Observable<string> {
+  public createJWT<T extends Record<string, unknown>>(payload: T, options: JWTOptions): Observable<string> {
     const secret = process.env.SECRET ?? '';
     const { expiresIn } = options;
 

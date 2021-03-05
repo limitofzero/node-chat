@@ -1,7 +1,5 @@
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import * as dotenv from 'dotenv';
-import { User } from './entity/user';
-import { CreateFirstUser1596659507467 } from './migrations/1596659507467-CreateFirstUser';
 
 dotenv.config();
 
@@ -18,10 +16,9 @@ export const typeOrmConfig: PostgresConnectionOptions = {
     synchronize: true,
     logging: false,
     entities: [
-        User
+        // User
     ],
     migrations: [
-        CreateFirstUser1596659507467
     ],
     migrationsRun: true
 };
