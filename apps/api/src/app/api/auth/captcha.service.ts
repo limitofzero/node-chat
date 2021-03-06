@@ -14,17 +14,14 @@ export class CaptchaService {
   private readonly secret = process.env.CAPTCHA_SECRET_KEY;
   private readonly captchaApi = process.env.CAPTCHA_API;
 
-  constructor(
-    private readonly http: HttpService
-  ) {
-  }
+  constructor(private readonly http: HttpService) {}
 
   public validateCaptcha(response: string): Observable<boolean> {
     return of(true); // todo
     const request = `${this.captchaApi}?response=${response}&secret=${this.secret}`;
 
     return this.http.post<CaptchaResponse>(request).pipe(
-      mergeMap(response => {
+      mergeMap((response) => {
         if (response.status === 200) {
           const data = response.data;
 
@@ -37,7 +34,7 @@ export class CaptchaService {
         }
 
         return throwError({ message: response.statusText });
-      })
+      }),
     );
   }
 }

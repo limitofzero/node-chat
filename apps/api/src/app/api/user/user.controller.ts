@@ -1,14 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
-import { UserService } from './user.service';
-import { Observable, of } from 'rxjs';
-import { User } from '../db/entity/user';
+
+import { User } from '../../db/entity/user';
+import { UserService } from '../../services/user/user.service';
 
 @Controller()
 export class UserController {
-  constructor(
-    protected readonly user: UserService,
-  ) {
-  }
+  constructor(protected readonly user: UserService) {}
 
   @Get('users')
   public async getUsers(): Promise<User[]> {

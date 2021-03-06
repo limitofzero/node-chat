@@ -1,12 +1,13 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { User } from '../../../db/entity/user';
+import { RegisterRequestDto } from '@task-manager/dto';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, mapTo, mergeMap, tap } from 'rxjs/operators';
-import { RegisterRequestDto } from '@task-manager/dto';
-import { TokenService } from '../token/token.service';
-import { CaptchaService } from '../captcha/captcha.service';
-import { MailService } from '../email/mail.service';
-import { UserService } from '../../../user/user.service';
+
+import { User } from '../../db/entity/user';
+import { UserService } from '../../services/user/user.service';
+import { CaptchaService } from './captcha.service';
+import { MailService } from './mail.service';
+import { TokenService } from './token.service';
 
 @Injectable()
 export class RegisterService {
@@ -14,18 +15,19 @@ export class RegisterService {
     private readonly userService: UserService,
     private readonly token: TokenService,
     private readonly mail: MailService,
-    private readonly captcha: CaptchaService
-  ) {
-  }
+    private readonly captcha: CaptchaService,
+  ) {}
 
-  public createUserAndSendConfirmationEmail(registerRequest: RegisterRequestDto): Observable<void> {
+  public createUserAndSendConfirmationEmail(
+    registerRequest: RegisterRequestDto,
+  ): Observable<void> {
     const { email, recaptcha } = registerRequest;
 
     return this.captcha.validateCaptcha(recaptcha).pipe(
       mergeMap(() => this.userService.getUserByEmail(email)),
       tap(console.log),
-      map(user => !user ? registerRequest : null), // todo error
-      mergeMap(user => this.sendEmailAndSaveUser(user)),
+      map((user) => (!user ? registerRequest : null)), // todo error
+      mergeMap((user) => this.sendEmailAndSaveUser(user)),
       catchError((err: any) => {
         return throwError(new BadRequestException(err));
       }),
@@ -49,7 +51,10 @@ export class RegisterService {
   // }
 
   private sendEmailAndSaveUser(user: User | null): Observable<void> {
-    return (user ? this.mail.sendVerificationEmail(user) : throwError(new BadRequestException('User was not created'))).pipe(
+    return (user
+      ? this.mail.sendVerificationEmail(user)
+      : throwError(new BadRequestException('User was not created'))
+    ).pipe(
       mergeMap(() => this.userService.save(user)),
       mapTo(null),
     );
